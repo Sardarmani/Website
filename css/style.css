@@ -94,11 +94,10 @@ body{
     justify-content: space-between;
     width: 100%;
     padding: 1rem 2rem;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     z-index: 100;
-    position: fixed;
     background: transparent;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -118,7 +117,7 @@ body{
 }
 
 .header .logo img{
-    width: 130%;
+    width: auto;
     height: 3rem;
     top: 0;
     left: 0;
@@ -154,6 +153,21 @@ body{
     cursor: pointer;
     font-size: 3rem;
     display: none;
+}
+
+/* Legal links slim bar below header */
+.legal-links-bar {
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.legal-links-bar a {
+    color: #002e5f;
+    font-size: 1.4rem;
+}
+.legal-links-bar a:hover {
+    color: #00bfff;
+    text-decoration: underline;
 }
 
 /* Modern Hero Section */
@@ -1339,11 +1353,10 @@ body{
     }
 
     .header .logo img{
-        width: 20%;
-        height: 3rem;
+        width: auto;
+        height: 3.2rem;
         top: 0;
         left: 0;
-        background-size: cover;
     }
 
     .header .fa-bars{
@@ -1387,8 +1400,11 @@ body{
     }
 
     .header .nav-toggle{
-        top: 5.8rem;
+        top: calc(6rem + 40px); /* header height + legal bar */
     }
+
+    /* Hide legal links bar on small screens to reduce clutter */
+    .legal-links-bar{ display: none; }
 
     .home h1{
         color: #fff;
