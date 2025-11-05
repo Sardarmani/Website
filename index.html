@@ -74,6 +74,10 @@
                 <li><a href="psx-analysis.html">PSX Analysis</a></li>
                 <li><a href="#contact">contact</a></li>
                 <li><a href="#faq">FAQ</a></li>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li><a href="terms-and-conditions.html">Terms</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="cookie-policy.html">Cookies</a></li>
             </ul>
         </nav>
     </header>
@@ -421,6 +425,10 @@
                           <li><i class="ion-ios-arrow-forward"></i> <a href="psx-analysis.html">PSX Analysis</a></li>
                           <li><i class="ion-ios-arrow-forward"></i> <a href="#contact">Contact</a></li>
                           <li><i class="ion-ios-arrow-forward"></i> <a href="#faq">FAQ</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="disclaimer.html">Disclaimer</a></li>
+                          <li><i class="ion-ios-arrow-forward"></i> <a href="cookie-policy.html">Cookie Policy</a></li>
                       </ul>
                   </div>
 
@@ -464,5 +472,33 @@
   </div>
 
   <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+  <div id="cookie-consent" style="position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;padding:12px 16px;display:none;z-index:9999;box-shadow:0 -2px 10px rgba(0,0,0,.2);">
+    <div class="container d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+      <p class="mb-2 mb-md-0" style="margin:0;font-size:14px;">We use cookies for site functionality and analytics. See our <a href="cookie-policy.html" style="color:#00bfff;text-decoration:underline;">Cookie Policy</a>.</p>
+      <div>
+        <a href="privacy-policy.html" class="btn btn-link p-0 mr-3" style="color:#00bfff;text-decoration:underline;">Privacy</a>
+        <button id="cookie-accept" class="btn btn-sm btn-primary">Accept</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      try{
+        var key='cookie_consent';
+        if(!localStorage.getItem(key)){
+          var bar=document.getElementById('cookie-consent');
+          if(bar) bar.style.display='block';
+        }
+        var btn=document.getElementById('cookie-accept');
+        if(btn){
+          btn.addEventListener('click',function(){
+            localStorage.setItem(key,'1');
+            var bar=document.getElementById('cookie-consent');
+            if(bar) bar.style.display='none';
+          });
+        }
+      }catch(e){}
+    })();
+  </script>
 </body>
 </html>
