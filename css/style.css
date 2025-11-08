@@ -98,7 +98,7 @@ body{
     top: 0;
     left: 0;
     z-index: 100;
-    background: transparent;
+    background: #002e5f;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
