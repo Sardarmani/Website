@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PIA / PIAHCL — What Are You Buying? (Updated Nov 12, 2025)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; background:#fbfbfd; }
+  .chart-container { position:relative; width:100%; max-width:880px; margin:0 auto; height:380px; }
+  @media (min-width: 768px) { .chart-container { height:420px; } }
+  .pill { display:inline-block; padding:.25rem .6rem; border-radius:9999px; font-weight:600; font-size:.85rem; }
+  .good { background:#dcfce7; color:#166534; }
+  .bad { background:#fee2e2; color:#991b1b; }
+  .warn { background:#fef3c7; color:#92400e; }
+  .note { font-size:.88rem; color:#4b5563; }
+  .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; }
+  .grid-2 { display:grid; grid-template-columns:1fr; gap:1rem; }
+  .grid-3 { display:grid; grid-template-columns:1fr; gap:1rem; }
+  @media (min-width: 992px) { .grid-2 { grid-template-columns:1fr 1fr; } .grid-3 { grid-template-columns:repeat(3, 1fr); } }
+  .card { background:white; border-left:4px solid #1e3a8a; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .badge { border:1px solid rgba(0,0,0,.08); padding:.25rem .5rem; border-radius:.5rem; font-weight:600; font-size:.8rem; }
+  .verdict-badge { padding:.35rem .6rem; border-radius:.5rem; font-weight:700; }
+</style>
+</head>
+<body class="text-gray-800">
+<div class="max-w-6xl mx-auto p-4 md:p-8 space-y-8">
+  <!-- Back button -->
+  <div class="mb-6">
+    <a href="psx-analysis.html" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+      </svg>
+      Back to PSX Analysis
+    </a>
+  </div>
+
+  <!-- Page title -->
+  <header class="space-y-3 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-900">PIA / PIAHCL — What Are You Buying?</h1>
+    <p class="text-gray-600 text-lg">GoodCo vs BadCo, debt transfer, and a practical investor verdict.</p>
+    <p class="text-sm text-gray-500">Refreshed on Nov 12, 2025. Educational content — not investment advice.</p>
+    <div class="mt-2"><span class="pill good">Disclosure: I hold shares</span></div>
+  </header>
+
+  <!-- Investor warning - More Assertive -->
+  <section class="rounded-xl p-5 border bg-amber-50 border-amber-300">
+    <h2 class="text-xl md:text-2xl font-bold text-amber-900">CRITICAL Investor Alert: You are NOT buying the operating airline</h2>
+    <p class="mt-2 leading-7 text-amber-900">PIAHCL (the listed security) is the holding / legacy company that warehoused most old legacy obligations. The operating airline (PIACL) — aircraft, routes, brand, staff — was separated for privatization and is not what trades on PSX.</p>
+    <ul class="list-disc list-inside mt-2 text-amber-900 leading-7">
+      <li>PIAHCL equity does not equal airline profits. Airline turnaround benefits do not automatically accrue to PIAHCL shareholders.</li>
+      <li>Upside for PIAHCL depends on debt resolution, asset monetization, and policy decisions — not flight revenue.</li>
+    </ul>
+  </section>
+
+  <!-- Structure -->
+  <section class="card rounded-xl p-6 space-y-4">
+    <h2 class="text-2xl font-bold text-blue-900">Structure at a Glance: GoodCo vs. BadCo</h2>
+    <div class="grid-2">
+      <div class="bg-white rounded-xl p-6 shadow-sm border">
+        <h3 class="text-xl font-semibold text-green-800">GoodCo — PIACL (The Operating Airline)</h3>
+        <ul class="list-disc list-inside leading-7">
+          <li>Owns/leases fleet, operates routes, holds brand & slots.</li>
+          <li>Cleaner balance sheet after legacy obligations were moved.</li>
+          <li><span class="badge">Target of privatization</span> <span class="badge">Unlisted (as of today)</span></li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm border">
+        <h3 class="text-xl font-semibold text-red-800">BadCo — PIAHCL (The Holding / Legacy Entity)</h3>
+        <ul class="list-disc list-inside leading-7">
+          <li>Holds most legacy obligations (approx. 650bn of ~825bn; rounded).</li>
+          <li>May hold non‑core assets and stakes for monetization.</li>
+          <li><span class="badge">Listed on PSX (what you trade)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Charts -->
+  <section class="space-y-8">
+    <h2 class="text-3xl font-bold text-blue-900 text-center">Key Charts</h2>
+    <div class="bg-white rounded-xl p-6 shadow-sm border space-y-6">
+      <h3 class="text-xl font-semibold">PIAHCL (PSX) Price Trend (Illustrative, 2024–2025)</h3>
+      <p class="note">Quarterly points approximated to public trading ranges. This chart illustrates the speculative run-up based on privatization news.</p>
+      <div class="chart-container"><canvas id="priceChart"></canvas></div>
+    </div>
+    <div class="bg-white rounded-xl p-6 shadow-sm border space-y-6">
+      <h3 class="text-xl font-semibold">Legacy Debt Transfer (Rounded, bn PKR)</h3>
+      <p class="note">Total Legacy Obligations reported: ~825bn PKR. This shows the split of debt transferred to the holding company (PIAHCL).</p>
+      <div class="chart-container"><canvas id="debtChart"></canvas></div>
+    </div>
+    <div class="bg-white rounded-xl p-6 shadow-sm border space-y-6">
+      <h3 class="text-xl font-semibold">PIA: 2023 Loss vs. 2024 Profit</h3>
+      <p class="note">FY2024 net profit reported publicly after ~21 years of losses; the Rs 2.26bn net profit for 2024 is a critical headline figure but does not benefit PIAHCL directly.</p>
+      <div class="chart-container"><canvas id="resultsChart"></canvas></div>
+    </div>
+  </section>
+
+  <!-- Should you buy -->
+  <section class="card rounded-xl p-6 space-y-5" id="should-you-buy">
+    <h2 class="text-2xl font-bold text-blue-900">Should Investors Buy PIAHCL? The Speculative Trade</h2>
+    <div class="grid-3">
+      <div class="bg-green-50 rounded-lg p-5 border-l-4 border-green-600">
+        <h3 class="font-semibold text-green-800 mb-2">When it can make sense</h3>
+        <ul class="list-disc list-inside leading-7">
+          <li>You view it as a special-situation / cleanup trade, not an airline stock.</li>
+          <li>You accept policy & execution risk around debt resolution and asset sales.</li>
+          <li>Position size is small and disciplined within a diversified portfolio.</li>
+        </ul>
+      </div>
+      <div class="bg-yellow-50 rounded-lg p-5 border-l-4 border-yellow-600">
+        <h3 class="font-semibold text-yellow-800 mb-2">What must go right</h3>
+        <ul class="list-disc list-inside leading-7">
+          <li>Clear privatization terms and debt-service plan for PIAHCL.</li>
+          <li>Some value accrues to equity (e.g., via asset monetization or settlement).</li>
+          <li>Continued operational improvement at the airline sustains the broader narrative.</li>
+        </ul>
+      </div>
+      <div class="bg-red-50 rounded-lg p-5 border-l-4 border-red-600">
+        <h3 class="font-semibold text-red-800 mb-2">When to avoid</h3>
+        <ul class="list-disc list-inside leading-7">
+          <li>If you expect to own airline profits via this ticker — you won’t.</li>
+          <li>If your risk tolerance is low or you need near-term cash flows.</li>
+          <li>If deal terms dilute minority holders or prioritize creditors only.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rounded-lg p-5 border bg-white">
+      <div class="flex items-center gap-3">
+        <span class="verdict-badge bg-yellow-100 text-yellow-800">Verdict: Speculative — Only for High‑Risk Investors</span>
+      </div>
+      <p class="mt-3 leading-7">Treat PIAHCL as a distressed/special‑situation equity. Upside is possible if liabilities are settled below carrying values and shareholders participate in residual value. Otherwise, returns can lag even if the airline thrives.</p>
+      <p class="note mt-2">Disclaimer: This is not investment advice. Do your own research and consider professional guidance.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white rounded-xl p-6 shadow-sm border space-y-4">
+    <h2 class="text-2xl font-bold text-blue-900">FAQs</h2>
+    <details class="p-3 border rounded-lg">
+      <summary class="font-semibold">Why is PIAHCL’s price rising if it’s a holding company?</summary>
+      <p class="mt-2">Speculation around privatization milestones, debt relief, and asset monetization can drive sentiment, even though airline profits do not directly accrue to PIAHCL.</p>
+    </details>
+    <details class="p-3 border rounded-lg">
+      <summary class="font-semibold">What exact debt numbers should I track?</summary>
+      <p class="mt-2">Watch official statements and audited reports for the split. For visualization we show ~825bn total legacy obligations, ~650bn moved to PIAHCL, ~175bn residual — rounded to match widely reported ranges.</p>
+    </details>
+    <details class="p-3 border rounded-lg">
+      <summary class="font-semibold">Which ticker matters for investors today?</summary>
+      <p class="mt-2">PIAHCL is the PSX‑listed entity you can trade. The operating airline (PIACL) is the privatization target and is not currently listed.</p>
+    </details>
+  </section>
+
+  <footer class="text-center pt-8 border-t">
+    <p class="text-gray-500">© 2025 MantrixEdge.com • Educational content only — not investment advice.</p>
+  </footer>
+</div>
+
+<script>
+(function() {
+  // ---------- PRICE (illustrative quarterly) ----------
+  const priceLabels = ['Q2-2024','Q3-2024','Q4-2024','Q1-2025','Q2-2025','Q3-2025','Q4-2025'];
+  const priceData = [11.2, 15.8, 18.0, 23.0, 25.0, 27.8, 29.0]; // aligned to public ranges
+  const priceCtx = document.getElementById('priceChart');
+  if (priceCtx) {
+    new Chart(priceCtx, {
+      type: 'line',
+      data: {
+        labels: priceLabels,
+        datasets: [{
+          label: 'PIAHCL (PKR) — trend',
+          data: priceData,
+          borderColor: '#1e3a8a',
+          backgroundColor: 'rgba(30,58,138,0.12)',
+          fill: true,
+          tension: 0.25,
+          pointRadius: 3
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { title: { display: true, text: 'PIAHCL on PSX — 2024–2025' } },
+        scales: { y: { beginAtZero: false } }
+      }
+    });
+  }
+
+  // ---------- DEBT TRANSFER ----------
+  const totalDebt = 825; // bn PKR (approx.)
+  const toHolding = 650; // bn transferred to PIAHCL
+  const remaining = totalDebt - toHolding; // ~175
+  const debtCtx = document.getElementById('debtChart');
+  if (debtCtx) {
+    new Chart(debtCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Transferred to PIAHCL (~650)','Residual with Airline/others (~175)'],
+        datasets: [{
+          data: [toHolding, remaining],
+          backgroundColor: ['#0ea5e9','rgba(239,68,68,.75)'],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { title: { display: true, text: 'Legacy Debt & Liabilities (bn PKR, rounded)' } }
+      }
+    });
+  }
+
+  // ---------- RESULTS ----------
+  const resultsCtx = document.getElementById('resultsChart');
+  if (resultsCtx) {
+    new Chart(resultsCtx, {
+      type: 'bar',
+      data: {
+        labels: ['2023 (Net Loss)','2024 (Net Profit)'],
+        datasets: [{
+          label: 'PKR (bn)',
+          data: [-75, 2.26], // public reporting indicated ~Rs2.26bn net profit for FY2024
+          backgroundColor: ['#ef4444','#10b981']
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          title: { display: true, text: 'PIA: Loss to Profit (headline figures)' },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => (ctx.raw < 0 ? 'Loss: ' : 'Profit: ') + Math.abs(ctx.raw) + ' bn'
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { callback: (v) => v + ' bn' }
+          }
+        }
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
