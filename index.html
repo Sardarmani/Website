@@ -1,36 +1,66 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MantrixEdge - Data Science & AI Solutions</title>
-    <meta name="description" content="MantrixEdge delivers data science, AI, and machine learning solutions: predictive analytics, computer vision, NLP, and PSX market analysis. Islamabad, Pakistan.">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="MantrixEdge - Data Science & AI Solutions">
-    <meta property="og:description" content="Data science, AI, and ML consulting: predictive analytics, computer vision, NLP, PSX analysis.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://mantrixedge.com/images/image.png">
-    <meta property="og:url" content="https://mantrixedge.com/">
-    <meta property="og:locale" content="en_PK">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MantrixEdge - Data Science & AI Solutions">
-    <meta name="twitter:description" content="Data science, AI, and ML consulting: predictive analytics, computer vision, NLP, PSX analysis.">
-    <meta name="twitter:image" content="https://mantrixedge.com/images/image.png">
-    <link rel="canonical" href="https://mantrixedge.com/">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" href="./images/image.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MantrixEdge - Data Science & AI Solutions</title>
+  <meta name="description"
+    content="MantrixEdge delivers data science, AI, and machine learning solutions: predictive analytics, computer vision, NLP, and PSX market analysis. Islamabad, Pakistan.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="MantrixEdge - Data Science & AI Solutions">
+  <meta property="og:description"
+    content="Data science, AI, and ML consulting: predictive analytics, computer vision, NLP, PSX analysis.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://mantrixedge.com/images/image.png">
+  <meta property="og:url" content="https://mantrixedge.com/">
+  <meta property="og:locale" content="en_PK">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MantrixEdge - Data Science & AI Solutions">
+  <meta name="twitter:description"
+    content="Data science, AI, and ML consulting: predictive analytics, computer vision, NLP, PSX analysis.">
+  <meta name="twitter:image" content="https://mantrixedge.com/images/image.png">
+  <link rel="canonical" href="https://mantrixedge.com/">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0f172a',
+              primary: '#3b82f6',
+              accent: '#06b6d4',
+              surface: '#1e293b'
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+  <!-- Legacy Styles (kept for compatibility, but will be overridden) -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <link rel="icon" href="./images/image.png">
+
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -51,466 +81,870 @@
       }]
     }
     </script>
-    <script type="application/ld+json">
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "MantrixEdge"
     }
     </script>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .glass {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
 </head>
-<body>
-    <div class="legal-links-bar" style="background:#f8f9fa;border-top:1px solid #eee;border-bottom:1px solid #eee;">
-      <div class="container" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;padding:8px 12px;font-size:14px;">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
-        <a href="disclaimer.html">Disclaimer</a>
-        <a href="cookie-policy.html">Cookie Policy</a>
+
+<body class="text-2xl bg-brand-dark text-white font-sans antialiased leading-relaxed">
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
+    <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/10"></div>
+    <div class="container mx-auto px-6 py-6 relative">
+      <div class="flex items-center justify-between">
+        <a href="#" class="flex items-center gap-4 group">
+          <img src="./images/image.png" alt="MantrixEdge Logo"
+            class="h-14 w-auto transition-transform group-hover:scale-110">
+          <span class="text-4xl font-bold text-white tracking-tight">Mantrix<span
+              class="text-brand-accent">Edge</span></span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-10">
+          <a href="#home"
+            class="text-gray-200 hover:text-brand-accent transition-colors text-xl font-bold uppercase tracking-wider">Home</a>
+          <a href="#about"
+            class="text-gray-200 hover:text-brand-accent transition-colors text-xl font-bold uppercase tracking-wider">About</a>
+          <a href="#service"
+            class="text-gray-200 hover:text-brand-accent transition-colors text-xl font-bold uppercase tracking-wider">Services</a>
+          <a href="#portfolio"
+            class="text-gray-200 hover:text-brand-accent transition-colors text-xl font-bold uppercase tracking-wider">Projects</a>
+          <a href="psx-analysis.html"
+            class="text-brand-accent hover:text-white transition-colors text-xl font-bold uppercase tracking-wider border-2 border-brand-accent/50 px-8 py-3 rounded-full hover:bg-brand-accent/10">PSX
+            Analysis</a>
+          <a href="#contact"
+            class="bg-brand-primary hover:bg-blue-600 text-white px-10 py-4 rounded-full transition-all transform hover:scale-105 text-xl font-bold shadow-lg shadow-blue-500/30">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+          <i class="fas fa-bars text-4xl"></i>
+        </button>
       </div>
     </div>
-    <header class="header">
-        <a href="#" class="logo"><img src="./images/image.png" alt="MantrixEdge logo"></a>
-        <div class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#service">services</a></li>
-                                <li><a href="#portfolio">projects</a></li>
-                <li><a href="#testimonials">reviews</a></li>
-                <li><a href="#hire">hire</a></li>
-                <li><a href="psx-analysis.html">PSX Analysis</a></li>
-                <li><a href="#contact">contact</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
 
-  <section id="home" class="home">
-      <h1><span class="gradient-text">MantrixEdge</span></h1>
-      <h2>Data Science & AI Solutions</h2>
-    <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 py-6">
+      <div class="flex flex-col space-y-6 px-8">
+        <a href="#home" class="text-gray-200 hover:text-brand-accent block py-2 text-xl font-bold">Home</a>
+        <a href="#about" class="text-gray-200 hover:text-brand-accent block py-2 text-xl font-bold">About</a>
+        <a href="#service" class="text-gray-200 hover:text-brand-accent block py-2 text-xl font-bold">Services</a>
+        <a href="#portfolio" class="text-gray-200 hover:text-brand-accent block py-2 text-xl font-bold">Projects</a>
+        <a href="psx-analysis.html" class="text-brand-accent font-bold block py-2 text-xl">PSX Analysis</a>
+        <a href="#contact" class="text-brand-primary font-bold block py-2 text-xl">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark pt-20">
+    <!-- Background Effects -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute top-40 -left-20 w-72 h-72 bg-brand-accent/20 rounded-full blur-3xl animate-pulse"
+        style="animation-delay: 1s;"></div>
+      <div
+        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-brand-dark to-transparent">
+      </div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 text-center">
+      <div
+        class="inline-block mb-6 px-4 py-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/10 backdrop-blur-sm">
+        <span class="text-brand-accent text-sm font-semibold tracking-wide uppercase">Innovating the Future</span>
+      </div>
+
+      <h1 class="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
+        Transforming Data into <br>
+        <span class="gradient-text">Intelligent Decisions</span>
+      </h1>
+
+      <p class="text-3xl md:text-4xl text-gray-200 mb-16 max-w-5xl mx-auto leading-relaxed font-light">
+        We deliver cutting-edge Data Science, AI, and Machine Learning solutions that empower your business to predict,
+        optimize, and grow.
+      </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <a href="#portfolio"
+          class="w-full md:w-auto px-10 py-5 bg-brand-primary hover:bg-blue-600 text-white rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center justify-center gap-3">
+          View Our Work <i class="fas fa-arrow-right text-lg"></i>
+        </a>
+        <a href="psx-analysis.html"
+          class="w-full md:w-auto px-10 py-5 bg-transparent border-2 border-white/20 hover:bg-white/5 text-white rounded-full font-bold text-xl transition-all backdrop-blur-sm flex items-center justify-center gap-3">
+          <i class="fas fa-chart-line text-brand-accent text-2xl"></i> PSX Analysis
+        </a>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" class="text-gray-500 hover:text-white transition-colors">
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </div>
   </section>
 
-  <section id="about" class="about">
-    <h1 class="heading">about us</h1>
-    <div class="row">
-        <div class="content">
-            <h3>Leading Data Science & AI Solutions Provider</h3>
-            <p>MantrixEdge specializes in delivering cutting-edge data science and artificial intelligence solutions to businesses worldwide.<br>
-                Founded by Muneeb Tariq, we combine deep technical expertise with business acumen to help organizations unlock the power of their data and build intelligent systems that drive growth and innovation.</p>
-            <a href="#portfolio"><button class="btn">View Our Projects</button></a>
-        </div>
-    </div>
-  </section>
+  <script>
+    // Mobile Menu Toggle
+    const btn = document.getElementById('mobileMenuBtn');
+    const menu = document.getElementById('mobileMenu');
+    const nav = document.getElementById('mainNav');
 
-  <div class="pt-5 pb-5" style="background-color: #f2f2f2;">
-    <div class="container">
-      <div class="row">
-        <div class="section-head col-sm-12" id="service">
-          <h1>Our Services</h1>
-          <p>We provide comprehensive data science and machine learning solutions to help businesses make data-driven decisions and build intelligent systems.
-            </p>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-brain"></i></span>
-            <h6>Machine Learning</h6>
-            <p>We develop and deploy machine learning models for various applications including predictive analytics, computer vision, natural language processing, and deep learning solutions.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-chart-line"></i></span>
-            <h6>Data Analysis</h6>
-            <p>We provide comprehensive data analysis services including exploratory data analysis, statistical modeling, data visualization, and business intelligence solutions to help you understand your data better.</p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-database"></i></span>
-            <h6>Data Science</h6>
-            <p>We offer end-to-end data science solutions including data preprocessing, feature engineering, model development, and deployment to help businesses make data-driven decisions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        const icon = btn.querySelector('i');
+        if (menu.classList.contains('hidden')) {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        } else {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        }
+      });
+    }
 
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('shadow-lg');
+      } else {
+        nav.classList.remove('shadow-lg');
+      }
+    });
+  </script>
 
-<!-- Removed jQuery slim to avoid conflicts; full jQuery is already loaded in head -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-  <section class="counters">
-    <div class="container">
-        <div>
-            <i class="fas fa-project-diagram fa-4x"></i>
-            <div class="counter" data-target="12">12</div>
-            <h3>Projects Done</h3>
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-brand-surface relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+          <h2 class="text-5xl font-bold text-white mb-8">About <span class="gradient-text">MantrixEdge</span></h2>
+          <h3 class="text-3xl text-brand-primary font-semibold mb-8">Leading Data Science & AI Solutions Provider</h3>
+          <p class="text-gray-200 text-2xl leading-relaxed mb-10">
+            MantrixEdge specializes in delivering cutting-edge data science and artificial intelligence solutions to
+            businesses worldwide.
+            <br><br>
+            Founded by Muneeb Tariq, we combine deep technical expertise with business acumen to help organizations
+            unlock the power of their data and build intelligent systems that drive growth and innovation.
+          </p>
+          <a href="#portfolio"
+            class="inline-flex items-center gap-2 text-brand-accent font-bold hover:text-white transition-colors group">
+            View Our Projects <i
+              class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+          </a>
         </div>
-        <div>
-            <i class="fas fa-smile fa-4x"></i>
-            <div class="counter" data-target="10">10</div>
-            <h3>Happy Clients</h3>
-        </div>
-    </div>
-</section>
-
-<div class="pt-5 pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="section-head-1 col-sm-12" style="text-align: center;">
-          <h4 style="margin-top: -5rem;" id="portfolio"><span>Our</span> Projects</h4>
-          
-          <p>Here are some of our recent projects showcasing our expertise in <br>machine learning, data science, and deep learning applications.
-            </p>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-brain"></i></span>
-            <h6>Brain Tumor Detection</h6>
-            <p>Deep learning model for brain tumor detection from MRI scans using Convolutional Neural Networks. Achieved high accuracy in medical image classification.<br><br>
-            <a href="https://github.com/Sardarmani/BrainTumorDetection" target="_blank" style="color: #00bfff;">View Project →</a></p>
+        <div class="lg:w-1/2 relative">
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-accent/20 rounded-2xl blur-2xl transform rotate-3">
           </div>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-chart-line"></i></span>
-            <h6>Parkinson's Disease Classification</h6>
-            <p>Machine learning project for Parkinson's disease classification using voice measurements. Implemented SVM, Neural Networks, CNN, and Random Forest algorithms.<br><br>
-            <a href="https://github.com/Sardarmani/parkinson-s-disease-Classification" target="_blank" style="color: #00bfff;">View Project →</a></p>
-          </div>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-coins"></i></span>
-            <h6>Crypto Token Analysis</h6>
-            <p>Cryptocurrency token holder analysis tool built with Python. Provides insights into token distribution and holder behavior patterns.<br><br>
-            <a href="https://github.com/Sardarmani/Crypto-Token-Holder-Analysis" target="_blank" style="color: #00bfff;">View Project →</a></p>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-chart-bar"></i></span>
-            <h6>Stock Exchange Predictor</h6>
-            <p>Machine learning model for stock price prediction using historical data and technical indicators. Built with Python and various ML algorithms.<br><br>
-            <a href="https://github.com/Sardarmani/stock_exchange_predictor" target="_blank" style="color: #00bfff;">View Project →</a></p>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-plane"></i></span>
-            <h6>PIA (PIAHCL) Analysis</h6>
-            <p>In-depth analysis of Pakistan International Airlines (PIA) stock, including financial performance, market position, and investment potential.<br><br>
-            <a href="pia-psx.html" style="color: #00bfff;">View Analysis →</a></p>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-dna"></i></span>
-            <h6>Protein Function Prediction</h6>
-            <p>Bioinformatics project for protein function prediction using machine learning techniques. Analyzes protein sequences to predict their biological functions.<br><br>
-            <a href="https://github.com/Sardarmani/Protein-Function-Prediction" target="_blank" style="color: #00bfff;">View Project →</a></p>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-sm-6">
-          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-microphone"></i></span>
-            <h6>Audio Classification</h6>
-            <p>Deep learning project for audio classification using neural networks. Classifies different types of audio signals and sounds with high accuracy.<br><br>
-            <a href="https://github.com/Sardarmani/Audio-Classificaion-Using-Deep-Learning" target="_blank" style="color: #00bfff;">View Project →</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-</div>
-
-<div class="communicate">
-    <h3>Ready to transform your business with AI?</h3>
-    <p>Let's discuss how MantrixEdge can help you unlock the power of your data.</p>
-    <a href="#contact"><button class="btn">Contact Now</button></a>
-</div>
-
-<section class="upwork-cta" id="hire">
-    <div class="upwork-inner">
-        <h2>Hire MantrixEdge on Upwork</h2>
-        <p>Partner with a Top Rated data scientist for production-grade AI, predictive modeling, and analytics. We deliver fast iterations, transparent communication, and measurable impact.</p>
-        <a class="btn upwork-btn" href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share" target="_blank" rel="noopener">View Upwork Profile</a>
-    </div>
-</section>
-
-<div class="testimonials mt-100">
-    <div class="container">
-        <div class="section-header" style="text-align: center;">
-            <h2 style="margin-top: -15rem;" id="testimonials">Client Reviews</h2>
-            <p style="font-size: 2rem;">What my clients say about my work</p>
-        </div>
-
-        <div id="reviewsCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#reviewsCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#reviewsCarousel" data-slide-to="1"></li>
-                <li data-target="#reviewsCarousel" data-slide-to="2"></li>
-                <li data-target="#reviewsCarousel" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="testimonial-item row align-items-center">
-                        <div class="testimonial-img">
-                            <img src="./images/testimonial-1.jpg" alt="John Burrotn">
-                        </div>
-                        <div class="testimonial-text">
-                            <h3>John Burrotn</h3>
-                            <h4>Client</h4>
-                            <p>"Easy to work with, tool is working great.Muhammad did a great job, it was a very difficult what i was asking for and he didn't let that slow him down at all.  Handled it all very well, I highly recommend him, you wont be disappointed. Thank you"</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial-item row align-items-center">
-                        <div class="testimonial-img">
-                            <img src="./images/testimonial-2.jpg" alt="Liam">
-                        </div>
-                        <div class="testimonial-text">
-                            <h3>Liam</h3>
-                            <h4>Client</h4>
-                            <p>"Muhammad did a great job with our first project. I will definitely utilize him again for future services."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial-item row align-items-center">
-                        <div class="testimonial-img">
-                            <img src="./images/testimonial-3.jpg" alt="Stephen Flynn">
-                        </div>
-                        <div class="testimonial-text">
-                            <h3>Stephen Flynn</h3>
-                            <h4>Client</h4>
-                            <p>"Added significant value with clear communication and fast delivery. Great experience and highly recommended."</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial-item row align-items-center">
-                        <div class="testimonial-img">
-                            <img src="./images/testimonial-4.jpg" alt="Fritjof Schmidt">
-                        </div>
-                        <div class="testimonial-text">
-                            <h3>Fritjof Schmidt</h3>
-                            <h4>Client</h4>
-                            <p>"Professional and dependable. The solution met our objectives and the collaboration was smooth from start to finish."</p>
-                        </div>
-                    </div>
-                </div>
+          <div class="relative bg-brand-dark border border-white/10 rounded-2xl p-8 shadow-2xl">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-brand-primary/20 flex items-center justify-center">
+                <i class="fas fa-code text-brand-primary text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold">Technical Excellence</h4>
+                <p class="text-sm text-gray-500">State-of-the-art algorithms</p>
+              </div>
             </div>
-            <a class="carousel-control-prev" href="#reviewsCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#reviewsCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center">
+                <i class="fas fa-chart-pie text-brand-accent text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold">Business Impact</h4>
+                <p class="text-sm text-gray-500">Data-driven growth</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
+                <i class="fas fa-rocket text-purple-500 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-white font-bold">Innovation</h4>
+                <p class="text-sm text-gray-500">Future-ready solutions</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-
-<!-- Clients section removed as requested -->
-
-<a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/lightbox/js/lightbox.min.js"></script>
-<script src="./js/main.js"></script>
-
-<section class="team" style="margin-top: 7rem;">
-  <h1 class="heading" style="margin-top: -1.5rem;" id="team">Our Founder</h1>
-  <p></p>
-  <div class="row">
-          <div class="card">
-          <div class="image">
-              <img src="./images/pexels-andrea-piacquadio-845434.jpg" alt="Muneeb Tariq">
-          </div>
-          <div class="info">
-              <h3>Muneeb Tariq</h3>
-              <span>Founder & CEO</span>
-              <div class="icons">
-                  <a href="https://www.linkedin.com/in/muneebtariq07/" class="fab fa-linkedin" aria-label="LinkedIn"></a>
-                  <a href="https://github.com/Sardarmani" class="fab fa-github" aria-label="GitHub"></a>
-                  <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share" class="fab fa-upwork" aria-label="Upwork"></a>
-              </div>
-          </div>
       </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-    <h1 class="heading">get in touch</h1>
-</section>
-<div class="contact-in">
-    <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.546613224773!2d73.0479!3d33.6844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf9fc02ad6c7%3A0x8d9f0a5f49f4f5b4!2sIslamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-    <div class="contact-form">
-        <form action="#" method="GET" onsubmit="window.location='mailto:neurofinancelab@gmail.com?subject=Website%20Contact%20-%20MantrixEdge&body=Name:%20'+encodeURIComponent(this.name.value)+'%0APhone:%20'+encodeURIComponent(this.phone.value)+'%0AEmail:%20'+encodeURIComponent(this.email.value)+'%0AMessage:%20'+encodeURIComponent(this.message.value); return false;">
-            <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
-            <input type="tel" id="phone" name="phone" pattern="[+0-9]{10,15}" required placeholder="Contact number (e.g., +923369939547)" maxlength="15" class="contact-form-phone">
-            <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
-            <textarea placeholder="Your Message" name="message" class="contact-form-txtarea" required></textarea>
-            <input type="submit" value="Submit" name="submit" class="contact-form-btn">
-        </form>
-    </div>
-    </div>
-
-    <section class="faq">
-      <h1 class="heading" style="margin-top: -2rem; color: #00bfff;" id="faq">FAQ</h1>
-      <div class="row">
-          <div class="accordion-container">
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>What services do you offer?</h3>
-                  </div>
-                  <div class="accordion-body" style="display: none;">
-                      <p>We offer comprehensive data science and machine learning services including predictive modeling, data analysis, deep learning solutions, computer vision, natural language processing, and business intelligence. We also provide end-to-end project development from data collection to model deployment.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>How long does a typical project take?</h3>
-                  </div>
-                  <div class="accordion-body" style="display: none;">
-                      <p>Project duration varies based on complexity and scope. Simple data analysis projects may take 1-2 weeks, while complex machine learning models with custom algorithms can take 1-3 months. We provide detailed timelines during our initial consultation and keep you updated throughout the project.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>Do you work with small businesses?</h3>
-                  </div>
-                  <div class="accordion-body" style="display: none;">
-                      <p>Absolutely! We work with businesses of all sizes, from startups to large enterprises. We offer flexible engagement models including hourly consulting, project-based work, and ongoing support contracts. We're particularly experienced in helping small businesses leverage data science to grow their operations.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>What technologies do you use?</h3>
-                  </div>
-                  <div class="accordion-body" style="display: none;">
-                      <p>We work with Python, R, TensorFlow, PyTorch, scikit-learn, pandas, NumPy, and various cloud platforms. We're also experienced with SQL, NoSQL databases, and deployment technologies like Docker and AWS. We stay updated with the latest tools and frameworks in the data science ecosystem.</p>
-                  </div>
-              </div>
-              <div class="accordion">
-                  <div class="accordion-header">
-                      <span>+</span>
-                      <h3>How do I get started?</h3>
-                  </div>
-                  <div class="accordion-body" style="display: none;">
-                      <p>Simply contact us through the contact form or email. We'll schedule a free consultation to understand your needs, discuss your project requirements, and provide a detailed proposal with timeline and pricing. We're available for both one-time projects and ongoing partnerships.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
   </section>
 
-    <div class="footer">
-      <div class="footer-top">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-3 col-md-6 footer-links">
-                      <h4>About Us</h4>
-                      <ul>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#home">Home</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#about">About us</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#service">Our services</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#portfolio">Projects</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="psx-analysis.html">PSX Analysis</a></li>
-                      </ul>
-                  </div>
-
-                  <div class="col-lg-3 col-md-6 footer-links">
-                      <h4>Quick Links</h4>
-                      <ul>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#portfolio">Projects</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#testimonials">Reviews</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="psx-analysis.html">PSX Analysis</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#contact">Contact</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="#faq">FAQ</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="privacy-policy.html">Privacy Policy</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="disclaimer.html">Disclaimer</a></li>
-                          <li><i class="ion-ios-arrow-forward"></i> <a href="cookie-policy.html">Cookie Policy</a></li>
-                      </ul>
-                  </div>
-
-                  <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
-                      <h4>Contact Us</h4>
-                      <p>
-                          MantrixEdge<br>
-                          Data Science & AI Solutions<br>
-                          Islamabad, Pakistan<br>
-                          <strong>Email:</strong> neurofinancelab@gmail.com<br>
-                          <strong>Phone:</strong> +923369939547<br>
-                      </p>
-
-                      <div class="social-links">
-                          <a href="https://www.linkedin.com/in/muneebtariq07/" aria-label="LinkedIn"><i class="ion-logo-linkedin"></i></a>
-                          <a href="https://github.com/Sardarmani" aria-label="GitHub"><i class="ion-logo-github"></i></a>
-                          <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share" aria-label="Upwork"><i class="fab fa-upwork"></i></a>
-                      </div>
-
-                  </div>
-
-                  <div class="col-lg-3 col-md-6 footer-newsletter">
-                      <h4>PSX Analysis Updates</h4>
-                      <p>Subscribe to get notified about our Pakistan Stock Exchange analysis series, including market trends, sector performance, and investment insights.</p>
-                      <form action="" method="post">
-                          <input type="email" name="email" placeholder="Your email"><input type="submit"  value="Subscribe">
-                      </form>
-                  </div>
-
-              </div>
-          </div>
+  <!-- Services Section -->
+  <section id="service" class="py-24 bg-brand-dark relative">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold text-white mb-6">Our <span class="gradient-text">Services</span></h2>
+        <p class="text-gray-200 text-2xl max-w-4xl mx-auto">
+          We provide comprehensive data science and machine learning solutions to help businesses make data-driven
+          decisions and build intelligent systems.
+        </p>
       </div>
 
-      <div class="container">
-          <div class="row align-items-center">
-              <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
-                  Copyright &copy; 2024 MantrixEdge. All Rights Reserved.
-              </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div
+          class="group p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-primary/10">
+          <div
+            class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors">
+            <i class="fas fa-brain text-3xl text-brand-primary"></i>
           </div>
-      </div>
-  </div>
+          <h3 class="text-3xl font-bold text-white mb-6">Machine Learning</h3>
+          <p class="text-gray-200 text-xl leading-relaxed">
+            We develop and deploy machine learning models for various applications including predictive analytics,
+            computer vision, natural language processing, and deep learning solutions.
+          </p>
+        </div>
 
-  <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-  <div id="cookie-consent" style="position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;padding:12px 16px;display:none;z-index:9999;box-shadow:0 -2px 10px rgba(0,0,0,.2);">
-    <div class="container d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
-      <p class="mb-2 mb-md-0" style="margin:0;font-size:14px;">We use cookies for site functionality and analytics. See our <a href="cookie-policy.html" style="color:#00bfff;text-decoration:underline;">Cookie Policy</a>.</p>
+        <!-- Service 2 -->
+        <div
+          class="group p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-brand-accent/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/10">
+          <div
+            class="w-16 h-16 rounded-2xl bg-brand-accent/10 flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
+            <i class="fas fa-chart-line text-3xl text-brand-accent"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-white mb-6">Data Analysis</h3>
+          <p class="text-gray-200 text-xl leading-relaxed">
+            We provide comprehensive data analysis services including exploratory data analysis, statistical modeling,
+            data visualization, and business intelligence solutions.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div
+          class="group p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-purple-500/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
+          <div
+            class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
+            <i class="fas fa-database text-3xl text-purple-500"></i>
+          </div>
+          <h3 class="text-3xl font-bold text-white mb-6">Data Science</h3>
+          <p class="text-gray-200 text-xl leading-relaxed">
+            We offer end-to-end data science solutions including data preprocessing, feature engineering, model
+            development, and deployment to help businesses make data-driven decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap script removed -->
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-brand-dark border-y border-white/5">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-6">
+          <i class="fas fa-project-diagram text-4xl text-brand-primary mb-4"></i>
+          <div class="text-4xl font-bold text-white mb-2 counter" data-target="12">0</div>
+          <p class="text-gray-400 uppercase tracking-wider text-sm">Projects Done</p>
+        </div>
+        <div class="p-6">
+          <i class="fas fa-smile text-4xl text-brand-accent mb-4"></i>
+          <div class="text-4xl font-bold text-white mb-2 counter" data-target="10">0</div>
+          <p class="text-gray-400 uppercase tracking-wider text-sm">Happy Clients</p>
+        </div>
+        <div class="p-6">
+          <i class="fas fa-code text-4xl text-purple-500 mb-4"></i>
+          <div class="text-4xl font-bold text-white mb-2 counter" data-target="5000">0</div>
+          <p class="text-gray-400 uppercase tracking-wider text-sm">Lines of Code</p>
+        </div>
+        <div class="p-6">
+          <i class="fas fa-coffee text-4xl text-yellow-500 mb-4"></i>
+          <div class="text-4xl font-bold text-white mb-2 counter" data-target="100">0</div>
+          <p class="text-gray-400 uppercase tracking-wider text-sm">Cups of Coffee</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="portfolio" class="py-24 bg-brand-surface">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold text-white mb-6">Our <span class="gradient-text">Projects</span></h2>
+        <p class="text-gray-200 text-2xl max-w-4xl mx-auto">
+          Here are some of our recent projects showcasing our expertise in machine learning, data science, and deep
+          learning applications.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-brand-primary/50 transition-all">
+          <div class="p-8">
+            <div class="w-12 h-12 rounded-full bg-brand-primary/20 flex items-center justify-center mb-6">
+              <i class="fas fa-brain text-brand-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Brain Tumor Detection</h3>
+            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+              Deep learning model for brain tumor detection from MRI scans using Convolutional Neural Networks. Achieved
+              high accuracy in medical image classification.
+            </p>
+            <a href="https://github.com/Sardarmani/BrainTumorDetection" target="_blank"
+              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
+              View Project <i class="fas fa-external-link-alt text-xs"></i>
+            </a>
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all">
+          <div class="p-8">
+            <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center mb-6">
+              <i class="fas fa-chart-line text-brand-accent"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Parkinson's Classification</h3>
+            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+              Machine learning project for Parkinson's disease classification using voice measurements. Implemented SVM,
+              Neural Networks, CNN, and Random Forest.
+            </p>
+            <a href="https://github.com/Sardarmani/parkinson-s-disease-Classification" target="_blank"
+              class="inline-flex items-center gap-2 text-brand-accent font-bold hover:text-white transition-colors">
+              View Project <i class="fas fa-external-link-alt text-xs"></i>
+            </a>
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-yellow-500/50 transition-all">
+          <div class="p-8">
+            <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center mb-6">
+              <i class="fas fa-coins text-yellow-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Crypto Token Analysis</h3>
+            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+              Cryptocurrency token holder analysis tool built with Python. Provides insights into token distribution and
+              holder behavior patterns.
+            </p>
+            <a href="https://github.com/Sardarmani/Crypto-Token-Holder-Analysis" target="_blank"
+              class="inline-flex items-center gap-2 text-yellow-500 font-bold hover:text-white transition-colors">
+              View Project <i class="fas fa-external-link-alt text-xs"></i>
+            </a>
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-green-500/50 transition-all">
+          <div class="p-8">
+            <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
+              <i class="fas fa-chart-bar text-green-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Stock Exchange Predictor</h3>
+            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+              Machine learning model for stock price prediction using historical data and technical indicators. Built
+              with Python and various ML algorithms.
+            </p>
+            <a href="https://github.com/Sardarmani/stock_exchange_predictor" target="_blank"
+              class="inline-flex items-center gap-2 text-green-500 font-bold hover:text-white transition-colors">
+              View Project <i class="fas fa-external-link-alt text-xs"></i>
+            </a>
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-blue-500/50 transition-all">
+          <div class="p-8">
+            <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-6">
+              <i class="fas fa-plane text-blue-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">PIA (PIAHCL) Analysis</h3>
+            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+              In-depth analysis of Pakistan International Airlines (PIA) stock, including financial performance, market
+              position, and investment potential.
+            </p>
+            <a href="pia-psx.html"
+              class="inline-flex items-center gap-2 text-blue-500 font-bold hover:text-white transition-colors">
+              View Analysis <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div
+          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-pink-500/50 transition-all">
+          <div class="p-8">
+            <div class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center mb-6">
+              <i class="fas fa-dna text-pink-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Protein Function Prediction</h3>
+            <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+              Bioinformatics project for protein function prediction using machine learning techniques. Analyzes protein
+              sequences to predict their biological functions.
+            </p>
+            <a href="https://github.com/Sardarmani/Protein-Function-Prediction" target="_blank"
+              class="inline-flex items-center gap-2 text-pink-500 font-bold hover:text-white transition-colors">
+              View Project <i class="fas fa-external-link-alt text-xs"></i>
+            </a>
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-primary to-brand-accent opacity-90"></div>
+    <div class="absolute inset-0 bg-[url('./images/bg-pattern.png')] opacity-10"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center">
+      <h2 class="text-5xl md:text-6xl font-bold text-white mb-8">Ready to transform your business?</h2>
+      <p class="text-3xl text-white/90 mb-12 max-w-4xl mx-auto">
+        Let's discuss how MantrixEdge can help you unlock the power of your data with custom AI solutions.
+      </p>
+      <a href="#contact"
+        class="inline-block px-12 py-5 bg-white text-brand-primary rounded-full font-bold text-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all transform">
+        Start Your Project
+      </a>
+    </div>
+  </section>
+
+  <!-- Upwork CTA -->
+  <section id="hire" class="py-16 bg-brand-surface border-y border-white/5">
+    <div class="container mx-auto px-6">
+      <div
+        class="bg-brand-dark rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-white/10 shadow-2xl">
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl font-bold text-white mb-4">Hire Us on <span class="text-[#14a800]">Upwork</span></h2>
+          <p class="text-gray-400 max-w-xl">
+            Partner with a Top Rated data scientist for production-grade AI, predictive modeling, and analytics. We
+            deliver fast iterations, transparent communication, and measurable impact.
+          </p>
+        </div>
+        <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share" target="_blank"
+          class="bg-[#14a800] hover:bg-[#14a800]/90 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-[#14a800]/20 flex items-center gap-2">
+          <i class="fab fa-upwork text-xl"></i> View Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-24 bg-brand-dark">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Client <span class="gradient-text">Reviews</span></h2>
+        <p class="text-gray-400 text-lg">What our clients say about our work</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Review 1 -->
+        <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 relative">
+          <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-brand-primary/10"></i>
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./images/testimonial-1.jpg" alt="John Burrotn"
+              class="w-14 h-14 rounded-full object-cover border-2 border-brand-primary">
+            <div>
+              <h4 class="text-white font-bold">John Burrotn</h4>
+              <p class="text-brand-primary text-sm">Client</p>
+            </div>
+          </div>
+          <p class="text-gray-400 italic">
+            "Easy to work with, tool is working great. Muhammad did a great job, it was a very difficult what i was
+            asking for and he didn't let that slow him down at all. Handled it all very well, I highly recommend him."
+          </p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 relative">
+          <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-brand-accent/10"></i>
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./images/testimonial-2.jpg" alt="Liam"
+              class="w-14 h-14 rounded-full object-cover border-2 border-brand-accent">
+            <div>
+              <h4 class="text-white font-bold">Liam</h4>
+              <p class="text-brand-accent text-sm">Client</p>
+            </div>
+          </div>
+          <p class="text-gray-400 italic">
+            "Muhammad did a great job with our first project. I will definitely utilize him again for future services."
+          </p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 relative">
+          <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-purple-500/10"></i>
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./images/testimonial-3.jpg" alt="Stephen Flynn"
+              class="w-14 h-14 rounded-full object-cover border-2 border-purple-500">
+            <div>
+              <h4 class="text-white font-bold">Stephen Flynn</h4>
+              <p class="text-purple-500 text-sm">Client</p>
+            </div>
+          </div>
+          <p class="text-gray-400 italic">
+            "Added significant value with clear communication and fast delivery. Great experience and highly
+            recommended."
+          </p>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 relative">
+          <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-pink-500/10"></i>
+          <div class="flex items-center gap-4 mb-6">
+            <img src="./images/testimonial-4.jpg" alt="Fritjof Schmidt"
+              class="w-14 h-14 rounded-full object-cover border-2 border-pink-500">
+            <div>
+              <h4 class="text-white font-bold">Fritjof Schmidt</h4>
+              <p class="text-pink-500 text-sm">Client</p>
+            </div>
+          </div>
+          <p class="text-gray-400 italic">
+            "Professional and dependable. The solution met our objectives and the collaboration was smooth from start to
+            finish."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-24 bg-brand-surface relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Our <span class="gradient-text">Founder</span></h2>
+      </div>
+
+      <div
+        class="max-w-4xl mx-auto bg-brand-dark rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col md:flex-row">
+        <div class="md:w-2/5 relative">
+          <img src="./images/pexels-andrea-piacquadio-845434.jpg" alt="Muneeb Tariq" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent md:bg-gradient-to-r"></div>
+        </div>
+        <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+          <h3 class="text-4xl font-bold text-white mb-4">Muneeb Tariq</h3>
+          <p class="text-brand-primary font-semibold text-2xl mb-8">Founder & CEO</p>
+          <p class="text-gray-200 text-xl mb-10 leading-relaxed">
+            Passionate about leveraging AI to solve real-world problems. With extensive experience in data science and
+            machine learning, I help businesses navigate the complex landscape of artificial intelligence.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://www.linkedin.com/in/muneebtariq07/"
+              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#0077b5] transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Sardarmani"
+              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share"
+              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#14a800] transition-colors">
+              <i class="fab fa-upwork"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-brand-dark relative">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Get in <span class="gradient-text">Touch</span></h2>
+        <p class="text-gray-400 text-lg">We'd love to hear from you</p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Map -->
+        <div class="rounded-2xl overflow-hidden h-[500px] border border-white/10 shadow-2xl relative group">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.546613224773!2d73.0479!3d33.6844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbf9fc02ad6c7%3A0x8d9f0a5f49f4f5b4!2sIslamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            class="grayscale group-hover:grayscale-0 transition-all duration-500"></iframe>
+        </div>
+
+        <!-- Form -->
+        <div class="bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+          <form action="#" method="GET"
+            onsubmit="window.location='mailto:neurofinancelab@gmail.com?subject=Website%20Contact%20-%20MantrixEdge&body=Name:%20'+encodeURIComponent(this.name.value)+'%0APhone:%20'+encodeURIComponent(this.phone.value)+'%0AEmail:%20'+encodeURIComponent(this.email.value)+'%0AMessage:%20'+encodeURIComponent(this.message.value); return false;"
+            class="space-y-6">
+            <div>
+              <label class="block text-gray-400 text-sm font-bold mb-2">Name</label>
+              <input type="text" name="name"
+                class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors"
+                placeholder="Your Name" required>
+            </div>
+            <div>
+              <label class="block text-gray-400 text-sm font-bold mb-2">Phone</label>
+              <input type="tel" name="phone"
+                class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors"
+                placeholder="+92..." required>
+            </div>
+            <div>
+              <label class="block text-gray-400 text-sm font-bold mb-2">Email</label>
+              <input type="email" name="email"
+                class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors"
+                placeholder="your@email.com" required>
+            </div>
+            <div>
+              <label class="block text-gray-400 text-sm font-bold mb-2">Message</label>
+              <textarea name="message" rows="4"
+                class="w-full bg-brand-dark border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-primary transition-colors"
+                placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-brand-primary hover:bg-blue-600 text-white font-bold py-4 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg shadow-blue-500/25">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-24 bg-brand-surface">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Frequently Asked <span class="gradient-text">Questions</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
+            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+            <span class="text-lg font-bold text-white">What services do you offer?</span>
+            <i class="fas fa-chevron-down text-brand-primary transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+            We offer comprehensive data science and machine learning services including predictive modeling, data
+            analysis, deep learning solutions, computer vision, natural language processing, and business intelligence.
+            We also provide end-to-end project development from data collection to model deployment.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
+            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+            <span class="text-lg font-bold text-white">How long does a typical project take?</span>
+            <i class="fas fa-chevron-down text-brand-primary transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+            Project duration varies based on complexity and scope. Simple data analysis projects may take 1-2 weeks,
+            while complex machine learning models with custom algorithms can take 1-3 months. We provide detailed
+            timelines during our initial consultation.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
+            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+            <span class="text-lg font-bold text-white">Do you work with small businesses?</span>
+            <i class="fas fa-chevron-down text-brand-primary transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+            Absolutely! We work with businesses of all sizes, from startups to large enterprises. We offer flexible
+            engagement models including hourly consulting, project-based work, and ongoing support contracts.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
+            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+            <span class="text-lg font-bold text-white">What technologies do you use?</span>
+            <i class="fas fa-chevron-down text-brand-primary transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+            We work with Python, R, TensorFlow, PyTorch, scikit-learn, pandas, NumPy, and various cloud platforms. We're
+            also experienced with SQL, NoSQL databases, and deployment technologies like Docker and AWS.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+          <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
+            onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+            <span class="text-lg font-bold text-white">How do I get started?</span>
+            <i class="fas fa-chevron-down text-brand-primary transition-transform"></i>
+          </button>
+          <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+            Simply contact us through the contact form or email. We'll schedule a free consultation to understand your
+            needs, discuss your project requirements, and provide a detailed proposal with timeline and pricing.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- About -->
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6">About Us</h4>
+          <ul class="space-y-3">
+            <li><a href="#home" class="text-gray-400 hover:text-brand-primary transition-colors">Home</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-brand-primary transition-colors">About us</a></li>
+            <li><a href="#service" class="text-gray-400 hover:text-brand-primary transition-colors">Our services</a>
+            </li>
+            <li><a href="#portfolio" class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a></li>
+            <li><a href="psx-analysis.html" class="text-gray-400 hover:text-brand-primary transition-colors">PSX
+                Analysis</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#testimonials" class="text-gray-400 hover:text-brand-primary transition-colors">Reviews</a>
+            </li>
+            <li><a href="#contact" class="text-gray-400 hover:text-brand-primary transition-colors">Contact</a></li>
+            <li><a href="#faq" class="text-gray-400 hover:text-brand-primary transition-colors">FAQ</a></li>
+            <li><a href="privacy-policy.html" class="text-gray-400 hover:text-brand-primary transition-colors">Privacy
+                Policy</a></li>
+            <li><a href="terms-and-conditions.html"
+                class="text-gray-400 hover:text-brand-primary transition-colors">Terms & Conditions</a></li>
+            <li><a href="disclaimer.html"
+                class="text-gray-400 hover:text-brand-primary transition-colors">Disclaimer</a></li>
+            <li><a href="cookie-policy.html" class="text-gray-400 hover:text-brand-primary transition-colors">Cookie
+                Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6">Contact Us</h4>
+          <p class="text-gray-400 mb-6 leading-relaxed">
+            MantrixEdge<br>
+            Data Science & AI Solutions<br>
+            Islamabad, Pakistan<br>
+            <br>
+            <a href="mailto:neurofinancelab@gmail.com"
+              class="hover:text-brand-primary transition-colors">neurofinancelab@gmail.com</a><br>
+            <a href="tel:+923369939547" class="hover:text-brand-primary transition-colors">+92 336 9939547</a>
+          </p>
+          <div class="flex gap-4">
+            <a href="https://www.linkedin.com/in/muneebtariq07/"
+              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#0077b5] transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Sardarmani"
+              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share"
+              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#14a800] transition-colors">
+              <i class="fab fa-upwork"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="text-white font-bold text-lg mb-6">PSX Analysis Updates</h4>
+          <p class="text-gray-400 mb-4">Subscribe to get notified about our Pakistan Stock Exchange analysis series.</p>
+          <form action="" method="post" class="flex gap-2">
+            <input type="email" name="email" placeholder="Your email"
+              class="bg-brand-surface border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-brand-primary w-full">
+            <button type="submit"
+              class="bg-brand-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-8 text-center">
+        <p class="text-gray-500">
+          Copyright &copy; 2024 MantrixEdge. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="backToTop"
+    class="fixed bottom-8 right-8 bg-brand-primary hover:bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all transform hover:scale-110 z-50 opacity-0 invisible"><i
+      class="ion-ios-arrow-up text-2xl"></i></a>
+  <script src="js/main.js"></script>
+  <div id="cookie-consent"
+    style="position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;padding:12px 16px;display:none;z-index:9999;box-shadow:0 -2px 10px rgba(0,0,0,.2);">
+    <div
+      class="container d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+      <p class="mb-2 mb-md-0" style="margin:0;font-size:14px;">We use cookies for site functionality and analytics. See
+        our <a href="cookie-policy.html" style="color:#00bfff;text-decoration:underline;">Cookie Policy</a>.</p>
       <div>
-        <a href="privacy-policy.html" class="btn btn-link p-0 mr-3" style="color:#00bfff;text-decoration:underline;">Privacy</a>
+        <a href="privacy-policy.html" class="btn btn-link p-0 mr-3"
+          style="color:#00bfff;text-decoration:underline;">Privacy</a>
         <button id="cookie-accept" class="btn btn-sm btn-primary">Accept</button>
       </div>
     </div>
   </div>
   <script>
-    (function(){
-      try{
-        var key='cookie_consent';
-        if(!localStorage.getItem(key)){
-          var bar=document.getElementById('cookie-consent');
-          if(bar) bar.style.display='block';
+    (function () {
+      try {
+        var key = 'cookie_consent';
+        if (!localStorage.getItem(key)) {
+          var bar = document.getElementById('cookie-consent');
+          if (bar) bar.style.display = 'block';
         }
-        var btn=document.getElementById('cookie-accept');
-        if(btn){
-          btn.addEventListener('click',function(){
-            localStorage.setItem(key,'1');
-            var bar=document.getElementById('cookie-consent');
-            if(bar) bar.style.display='none';
+        var btn = document.getElementById('cookie-accept');
+        if (btn) {
+          btn.addEventListener('click', function () {
+            localStorage.setItem(key, '1');
+            var bar = document.getElementById('cookie-consent');
+            if (bar) bar.style.display = 'none';
           });
         }
-      }catch(e){}
+      } catch (e) { }
     })();
   </script>
 </body>
+
 </html>

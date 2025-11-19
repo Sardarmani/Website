@@ -1,134 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Searle Company Ltd. (SEARL) | Investor Infographic</title>
-    <meta name="description" content="SEARL investor infographic: revenue, profit, dividends, P/E comparison, PESTLE, and outlook for The Searle Company Ltd. (PSX: SEARL).">
+    <meta name="description"
+        content="SEARL investor infographic: revenue, profit, dividends, P/E comparison, PESTLE, and outlook for The Searle Company Ltd. (PSX: SEARL).">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="SEARL Investor Infographic | The Searle Company Ltd.">
-    <meta property="og:description" content="Key metrics, financial health, dividends, P/E, and PESTLE analysis for SEARL on PSX.">
+    <meta property="og:description"
+        content="Key metrics, financial health, dividends, P/E, and PESTLE analysis for SEARL on PSX.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://mantrixedge.com/images/image.png">
     <meta property="og:url" content="https://mantrixedge.com/psx-searl.html">
     <meta property="og:locale" content="en_PK">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SEARL Investor Infographic | The Searle Company Ltd.">
-    <meta name="twitter:description" content="Key metrics, financial health, dividends, P/E, and PESTLE analysis for SEARL on PSX.">
+    <meta name="twitter:description"
+        content="Key metrics, financial health, dividends, P/E, and PESTLE analysis for SEARL on PSX.">
     <meta name="twitter:image" content="https://mantrixedge.com/images/image.png">
     <link rel="canonical" href="https://mantrixedge.com/psx-searl.html">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .chart-container { position: relative; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto; height: 300px; max-height: 400px; }
-        @media (min-width: 768px) { .chart-container { height: 350px; } }
-        .stat-card { background-color: #f9fafb; border-left: 5px solid #f3722c; transition: all 0.3s ease; }
-        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
-        .pestle-card { background-color: #ffffff; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); padding: 1.5rem; transition: all 0.3s ease; }
-        .pestle-card:hover { transform: scale(1.03); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05); }
-    </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "SEARL Investor Infographic",
-      "description": "Investor infographic for The Searle Company Ltd. (PSX: SEARL): revenue, profit, dividends, P/E, PESTLE, and outlook.",
-      "about": {
-        "@type": "Organization",
-        "name": "The Searle Company Ltd.",
-        "tickerSymbol": "SEARL"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "MantrixEdge",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "/images/image.png"
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            surface: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
         }
-      }
-    }
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="icon" href="./images/image.png">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        .stat-card {
+            background-color: #1e293b;
+            /* brand-surface */
+            border-left: 5px solid #f3722c;
+            transition: all 0.3s ease;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        .pestle-card {
+            background-color: #1e293b;
+            /* brand-surface */
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pestle-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
 
-    <header class="header">
-        <a href="index.html" class="logo"><img src="./images/image.png" alt="MantrixEdge"></a>
-        <div class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#service">services</a></li>
-                <li><a href="index.html#portfolio">projects</a></li>
-                <li><a href="index.html#testimonials">reviews</a></li>
-                <li><a href="psx-analysis.html" class="active">PSX Analysis</a></li>
-                <li><a href="index.html#contact">contact</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="text-xl bg-brand-dark text-white font-sans antialiased leading-relaxed">
 
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center gap-4">
-                <a href="psx-analysis.html" class="text-sm text-blue-600 hover:underline">← Back to PSX Analysis</a>
-                <h1 class="text-3xl font-bold text-[#f94144]">The Searle Company Ltd. (SEARL:PSX)</h1>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
+        <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/10"></div>
+        <div class="container mx-auto px-6 py-4 relative">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="./images/image.png" alt="MantrixEdge Logo"
+                        class="h-10 w-auto transition-transform group-hover:scale-110">
+                    <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
+                            class="text-brand-accent">Edge</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Home</a>
+                    <a href="index.html#about"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">About</a>
+                    <a href="index.html#service"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Services</a>
+                    <a href="index.html#portfolio"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Projects</a>
+                    <a href="psx-analysis.html"
+                        class="text-brand-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wider border border-brand-accent/30 px-4 py-2 rounded-full hover:bg-brand-accent/10">PSX
+                        Analysis</a>
+                    <a href="index.html#contact"
+                        class="bg-brand-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 text-sm font-bold shadow-lg shadow-blue-500/30">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
-            <div class="mt-4 md:mt-0 text-center md:text-right">
-                <span class="text-lg font-semibold text-gray-600">Recent Price</span>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 py-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="index.html" class="text-gray-300 hover:text-brand-accent block py-2">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-brand-accent block py-2">About</a>
+                <a href="index.html#service" class="text-gray-300 hover:text-brand-accent block py-2">Services</a>
+                <a href="index.html#portfolio" class="text-gray-300 hover:text-brand-accent block py-2">Projects</a>
+                <a href="psx-analysis.html" class="text-brand-accent font-bold block py-2">PSX Analysis</a>
+                <a href="index.html#contact" class="text-brand-primary font-bold block py-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-12 max-w-7xl mx-auto px-6">
+
+        <!-- Header Info -->
+        <div
+            class="bg-brand-surface rounded-2xl p-8 border border-white/10 shadow-2xl mb-12 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col gap-2">
+                <a href="psx-analysis.html"
+                    class="text-sm text-brand-primary hover:text-white transition-colors mb-2"><i
+                        class="fas fa-arrow-left mr-1"></i> Back to PSX Analysis</a>
+                <h1 class="text-3xl md:text-4xl font-bold text-[#f94144]">The Searle Company Ltd. <span
+                        class="text-gray-400 text-2xl">(SEARL:PSX)</span></h1>
+            </div>
+            <div class="mt-6 md:mt-0 text-center md:text-right bg-brand-dark/50 p-4 rounded-xl border border-white/5">
+                <span class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Recent Price</span>
                 <p class="text-4xl font-extrabold text-[#43aa8b]">PKR 112.06</p>
                 <span class="text-sm text-gray-500">(As of Oct 25, 2025)</span>
             </div>
         </div>
-    </header>
 
-    <main class="container mx-auto px-6 py-12">
         <section id="key-metrics" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#577590]">Key Investor Metrics</h2>
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">Key Investor <span
+                    class="gradient-text">Metrics</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="stat-card p-6 rounded-lg shadow-md">
-                    <h3 class="text-sm font-semibold text-gray-500 uppercase">Market Cap</h3>
-                    <p class="text-4xl font-extrabold text-[#f94144]">65.92B</p>
-                    <span class="text-lg text-gray-700">PKR</span>
+                <div class="stat-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Market Cap</h3>
+                    <p class="text-4xl font-extrabold text-[#f94144] my-2">65.92B</p>
+                    <span class="text-lg text-gray-500">PKR</span>
                 </div>
-                <div class="stat-card p-6 rounded-lg shadow-md">
-                    <h3 class="text-sm font-semibold text-gray-500 uppercase">Forward P/E Ratio</h3>
-                    <p class="text-4xl font-extrabold text-[#f3722c]">17.01</p>
-                    <span class="text-lg text-gray-700">vs 21.7 (Peers)</span>
+                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #f3722c;">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Forward P/E Ratio</h3>
+                    <p class="text-4xl font-extrabold text-[#f3722c] my-2">17.01</p>
+                    <span class="text-lg text-gray-500">vs 21.7 (Peers)</span>
                 </div>
-                <div class="stat-card p-6 rounded-lg shadow-md">
-                    <h3 class="text-sm font-semibold text-gray-500 uppercase">EPS (FY 2025)</h3>
-                    <p class="text-4xl font-extrabold text-[#f8961e]">0.85</p>
-                    <span class="text-lg text-gray-700">PKR</span>
+                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #f8961e;">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">EPS (FY 2025)</h3>
+                    <p class="text-4xl font-extrabold text-[#f8961e] my-2">0.85</p>
+                    <span class="text-lg text-gray-500">PKR</span>
                 </div>
-                <div class="stat-card p-6 rounded-lg shadow-md">
-                    <h3 class="text-sm font-semibold text-gray-500 uppercase">Debt/Equity Ratio</h3>
-                    <p class="text-4xl font-extrabold text-[#f9c74f]">0.24</p>
-                    <span class="text-lg text-gray-700">Low Leverage</span>
+                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #f9c74f;">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Debt/Equity Ratio</h3>
+                    <p class="text-4xl font-extrabold text-[#f9c74f] my-2">0.24</p>
+                    <span class="text-lg text-gray-500">Low Leverage</span>
                 </div>
             </div>
         </section>
 
-        <section id="financial-health" class="mb-16 bg-white p-8 rounded-lg shadow-xl">
-            <h2 class="text-3xl font-bold text-center mb-4 text-[#577590]">Financial Health & Performance</h2>
-            <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                Searle's financial performance shows resilience. After a significant loss in 2024, the company returned to profitability in 2025. Revenue has seen a slight dip in 2025 after consistent growth, reflecting a challenging economic environment.
+        <section id="financial-health" class="mb-16 bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+            <h2 class="text-3xl font-bold text-center mb-6 text-white">Financial Health & <span
+                    class="gradient-text">Performance</span></h2>
+            <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Searle's financial performance shows resilience. After a significant loss in 2024, the company returned
+                to profitability in 2025. Revenue has seen a slight dip in 2025 after consistent growth, reflecting a
+                challenging economic environment.
             </p>
             <div class="chart-container">
                 <canvas id="revenueProfitChart"></canvas>
             </div>
         </section>
 
-        <section id="dividends" class="mb-16 bg-white p-8 rounded-lg shadow-xl">
-            <h2 class="text-3xl font-bold text-center mb-4 text-[#577590]">Shareholder Value & Dividends</h2>
-            <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                Historically, Searle has rewarded shareholders with both cash dividends and bonus shares. The chart below shows the cash dividend percentage declared. In recent years (2022-2025), the focus has shifted towards bonus shares and reinvestment for growth.
+        <section id="dividends" class="mb-16 bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+            <h2 class="text-3xl font-bold text-center mb-6 text-white">Shareholder Value & <span
+                    class="gradient-text">Dividends</span></h2>
+            <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Historically, Searle has rewarded shareholders with both cash dividends and bonus shares. The chart
+                below shows the cash dividend percentage declared. In recent years (2022-2025), the focus has shifted
+                towards bonus shares and reinvestment for growth.
             </p>
             <div class="chart-container">
                 <canvas id="dividendChart"></canvas>
@@ -136,22 +242,24 @@
         </section>
 
         <section id="pestle" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-4 text-[#577590]">PESTLE Analysis: Pharma Sector</h2>
-            <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                The company operates within the complex Pakistani pharmaceutical landscape, influenced by several macro-environmental factors.
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">PESTLE Analysis: <span
+                    class="gradient-text">Pharma Sector</span></h2>
+            <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                The company operates within the complex Pakistani pharmaceutical landscape, influenced by several
+                macro-environmental factors.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="pestle-card border-t-4 border-[#f94144]">
-                    <h3 class="text-xl font-bold mb-3 text-[#f94144]">Political</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <h3 class="text-xl font-bold mb-4 text-[#f94144]">Political</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Government drug pricing policies (DRAP).</li>
                         <li>Deregulation of non-essential drugs.</li>
                         <li>General political & economic stability.</li>
                     </ul>
                 </div>
                 <div class="pestle-card border-t-4 border-[#f3722c]">
-                    <h3 class="text-xl font-bold mb-3 text-[#f3722c]">Economic</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <h3 class="text-xl font-bold mb-4 text-[#f3722c]">Economic</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>PKR devaluation impacting import costs.</li>
                         <li>High inflation rates.</li>
                         <li>Reliance on imported raw materials (APIs).</li>
@@ -159,32 +267,32 @@
                     </ul>
                 </div>
                 <div class="pestle-card border-t-4 border-[#f8961e]">
-                    <h3 class="text-xl font-bold mb-3 text-[#f8961e]">Social</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <h3 class="text-xl font-bold mb-4 text-[#f8961e]">Social</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Large and growing population.</li>
                         <li>Increasing health awareness & demand.</li>
                         <li>Preference for generic drugs.</li>
                     </ul>
                 </div>
                 <div class="pestle-card border-t-4 border-[#f9c74f]">
-                    <h3 class="text-xl font-bold mb-3 text-[#f9c74f]">Technological</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <h3 class="text-xl font-bold mb-4 text-[#f9c74f]">Technological</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Investment in R&D and biotech.</li>
                         <li>Adoption of modern manufacturing processes.</li>
                         <li>Need for technology transfer.</li>
                     </ul>
                 </div>
                 <div class="pestle-card border-t-4 border-[#90be6d]">
-                    <h3 class="text-xl font-bold mb-3 text-[#90be6d]">Legal</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <h3 class="text-xl font-bold mb-4 text-[#90be6d]">Legal</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Strict regulatory framework (DRAP).</li>
                         <li>Patent laws and intellectual property rights.</li>
                         <li>Anti-corruption and transparency measures.</li>
                     </ul>
                 </div>
                 <div class="pestle-card border-t-4 border-[#43aa8b]">
-                    <h3 class="text-xl font-bold mb-3 text-[#43aa8b]">Environmental</h3>
-                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <h3 class="text-xl font-bold mb-4 text-[#43aa8b]">Environmental</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Pharmaceutical waste disposal regulations.</li>
                         <li>Environmental manufacturing standards.</li>
                         <li>Focus on sustainable practices.</li>
@@ -193,56 +301,192 @@
             </div>
         </section>
 
-        <section id="future-valuation" class="mb-16 bg-white p-8 rounded-lg shadow-xl">
-            <h2 class="text-3xl font-bold text-center mb-4 text-[#577590]">Future Outlook & Valuation</h2>
-            <p class="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                Analysts project strong future earnings growth. Based on forward P/E, the stock appears undervalued compared to its peers. However, the average analyst price target suggests a potential downside from its current price.
+        <section id="future-valuation" class="mb-16 bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+            <h2 class="text-3xl font-bold text-center mb-6 text-white">Future Outlook & <span
+                    class="gradient-text">Valuation</span></h2>
+            <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Analysts project strong future earnings growth. Based on forward P/E, the stock appears undervalued
+                compared to its peers. However, the average analyst price target suggests a potential downside from its
+                current price.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="chart-container">
                     <canvas id="valuationChart"></canvas>
                 </div>
                 <div class="space-y-6">
-                    <div class="p-6 rounded-lg bg-gray-50 border-l-4 border-[#90be6d]">
-                        <h3 class="text-sm font-semibold text-gray-500 uppercase">Forecast Revenue Growth</h3>
-                        <p class="text-4xl font-extrabold text-[#90be6d]">15.6% <span class="text-2xl">/ annum</span></p>
+                    <div class="p-6 rounded-xl bg-brand-dark border-l-4 border-[#90be6d] shadow-lg">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Forecast Revenue Growth
+                        </h3>
+                        <p class="text-4xl font-extrabold text-[#90be6d] my-2">15.6% <span
+                                class="text-2xl text-gray-500">/ annum</span></p>
                     </div>
-                    <div class="p-6 rounded-lg bg-gray-50 border-l-4 border-[#43aa8b]">
-                        <h3 class="text-sm font-semibold text-gray-500 uppercase">Forecast Earnings Growth</h3>
-                        <p class="text-4xl font-extrabold text-[#43aa8b]">34.4% <span class="text-2xl">/ annum</span></p>
+                    <div class="p-6 rounded-xl bg-brand-dark border-l-4 border-[#43aa8b] shadow-lg">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Forecast Earnings
+                            Growth</h3>
+                        <p class="text-4xl font-extrabold text-[#43aa8b] my-2">34.4% <span
+                                class="text-2xl text-gray-500">/ annum</span></p>
                     </div>
-                    <div class="p-6 rounded-lg bg-gray-50 border-l-4 border-[#f94144]">
-                        <h3 class="text-sm font-semibold text-gray-500 uppercase">Analyst 12-Month Target</h3>
-                        <p class="text-4xl font-extrabold text-[#f94144]">PKR 104.35</p>
+                    <div class="p-6 rounded-xl bg-brand-dark border-l-4 border-[#f94144] shadow-lg">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Analyst 12-Month Target
+                        </h3>
+                        <p class="text-4xl font-extrabold text-[#f94144] my-2">PKR 104.35</p>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 
-    <footer class="bg-gray-800 text-gray-300 py-8 mt-16">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-sm">
-                Disclaimer: This infographic is for informational purposes only and does not constitute financial advice. Data is synthesized from publicly available sources as of October 2025. All investments carry risk.
-            </p>
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">About Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#about"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">About us</a></li>
+                        <li><a href="index.html#service"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Our services</a>
+                        </li>
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a></li>
+                        <li><a href="psx-analysis.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">PSX
+                                Analysis</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a>
+                        </li>
+                        <li><a href="index.html#testimonials"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Reviews</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Contact</a></li>
+                        <li><a href="index.html#faq"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">FAQ</a></li>
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Us</h4>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        MantrixEdge<br>
+                        Data Science & AI Solutions<br>
+                        Islamabad, Pakistan<br>
+                        <br>
+                        <a href="mailto:neurofinancelab@gmail.com"
+                            class="hover:text-brand-primary transition-colors">neurofinancelab@gmail.com</a><br>
+                        <a href="tel:+923369939547" class="hover:text-brand-primary transition-colors">+92 336
+                            9939547</a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/muneebtariq07/"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#0077b5] transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Sardarmani"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#14a800] transition-colors">
+                            <i class="fab fa-upwork"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">PSX Analysis Updates</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get notified about our Pakistan Stock Exchange analysis
+                        series.</p>
+                    <form action="" method="post" class="flex gap-2">
+                        <input type="email" name="email" placeholder="Your email"
+                            class="bg-brand-surface border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-brand-primary w-full">
+                        <button type="submit"
+                            class="bg-brand-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-500">
+                    Copyright &copy; 2024 MantrixEdge. All Rights Reserved.
+                </p>
+            </div>
         </div>
     </footer>
 
+    <a href="#" id="backToTop"
+        class="fixed bottom-8 right-8 bg-brand-primary hover:bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all transform hover:scale-110 z-50 opacity-0 invisible"><i
+            class="ion-ios-arrow-up text-2xl"></i></a>
+    <script src="js/main.js"></script>
     <script>
-        const chartColors = { primary: '#f94144', secondary: '#f3722c', tertiary: '#f8961e', quaternary: '#f9c74f', green: '#90be6d', teal: '#43aa8b', blue: '#577590' };
-        function processLabels(labels) { return labels.map(label => { if (typeof label === 'string' && label.length > 16) { const words = label.split(' '); const lines = []; let currentLine = ''; words.forEach(word => { if ((currentLine + ' ' + word).trim().length > 16) { lines.push(currentLine.trim()); currentLine = word; } else { currentLine = (currentLine + ' ' + word).trim(); } }); lines.push(currentLine.trim()); return lines; } return label; }); }
-        const tooltipTitleCallback = { plugins: { tooltip: { callbacks: { title: function(tooltipItems) { const item = tooltipItems[0]; let label = item.chart.data.labels[item.dataIndex]; if (Array.isArray(label)) { return label.join(' '); } else { return label; } } } } } };
-        (function() {
-            const revenueProfitData = { labels: processLabels(['2022', '2023', '2024 (Loss)', '2025']), datasets: [ { label: 'Revenue (in Millions PKR)', data: [17737, 21641, 25827, 24773], backgroundColor: chartColors.blue, borderColor: chartColors.blue, borderWidth: 1 }, { label: 'Profit After Tax (in Millions PKR)', data: [2091, 302, -3331, 434], backgroundColor: chartColors.green, borderColor: chartColors.green, borderWidth: 1 } ] };
+        // Mobile Menu Toggle (Inline for simplicity on this page)
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        const nav = document.getElementById('mainNav');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+        (function () {
+            // Chart.js defaults for dark theme
+            Chart.defaults.color = '#94a3b8';
+            Chart.defaults.borderColor = 'rgba(255, 255, 255, 0.1)';
+
+            const chartColors = { primary: '#f94144', secondary: '#f3722c', tertiary: '#f8961e', quaternary: '#f9c74f', green: '#90be6d', teal: '#43aa8b', blue: '#577590' };
+            function processLabels(labels) { return labels.map(label => { if (typeof label === 'string' && label.length > 16) { const words = label.split(' '); const lines = []; let currentLine = ''; words.forEach(word => { if ((currentLine + ' ' + word).trim().length > 16) { lines.push(currentLine.trim()); currentLine = word; } else { currentLine = (currentLine + ' ' + word).trim(); } }); lines.push(currentLine.trim()); return lines; } return label; }); }
+            const tooltipTitleCallback = { plugins: { tooltip: { callbacks: { title: function (tooltipItems) { const item = tooltipItems[0]; let label = item.chart.data.labels[item.dataIndex]; if (Array.isArray(label)) { return label.join(' '); } else { return label; } } } } } };
+
+            const revenueProfitData = { labels: processLabels(['2022', '2023', '2024 (Loss)', '2025']), datasets: [{ label: 'Revenue (in Millions PKR)', data: [17737, 21641, 25827, 24773], backgroundColor: chartColors.blue, borderColor: chartColors.blue, borderWidth: 1 }, { label: 'Profit After Tax (in Millions PKR)', data: [2091, 302, -3331, 434], backgroundColor: chartColors.green, borderColor: chartColors.green, borderWidth: 1 }] };
             const revenueProfitCtx = document.getElementById('revenueProfitChart').getContext('2d');
             new Chart(revenueProfitCtx, { type: 'bar', data: revenueProfitData, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, title: { display: true, text: 'Amount (Millions PKR)' } } }, ...tooltipTitleCallback } });
-            const dividendData = { labels: processLabels(['2017', '2018', '2019', '2020', '2021']), datasets: [ { label: 'Cash Dividend (%)', data: [80, 50, 25, 25, 20], backgroundColor: [ chartColors.primary, chartColors.secondary, chartColors.tertiary, chartColors.quaternary, chartColors.green ], borderColor: '#ffffff', borderWidth: 1 } ] };
+
+            const dividendData = { labels: processLabels(['2017', '2018', '2019', '2020', '2021']), datasets: [{ label: 'Cash Dividend (%)', data: [80, 50, 25, 25, 20], backgroundColor: [chartColors.primary, chartColors.secondary, chartColors.tertiary, chartColors.quaternary, chartColors.green], borderColor: '#ffffff', borderWidth: 1 }] };
             const dividendCtx = document.getElementById('dividendChart').getContext('2d');
             new Chart(dividendCtx, { type: 'bar', data: dividendData, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, title: { display: true, text: 'Dividend Percentage (%)' } } }, ...tooltipTitleCallback } });
-            const valuationData = { labels: processLabels(['SEARL (Forward)', 'Peer Average']), datasets: [ { label: 'P/E Ratio', data: [17.01, 21.7], backgroundColor: [ chartColors.teal, chartColors.blue ], borderColor: '#ffffff', borderWidth: 1 } ] };
+
+            const valuationData = { labels: processLabels(['SEARL (Forward)', 'Peer Average']), datasets: [{ label: 'P/E Ratio', data: [17.01, 21.7], backgroundColor: [chartColors.teal, chartColors.blue], borderColor: '#ffffff', borderWidth: 1 }] };
             const valuationCtx = document.getElementById('valuationChart').getContext('2d');
             new Chart(valuationCtx, { type: 'bar', data: valuationData, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, title: { display: true, text: 'P/E Ratio' } } }, ...tooltipTitleCallback } });
         })();
     </script>
 </body>
+
 </html>

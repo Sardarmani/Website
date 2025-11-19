@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSX Analysis - MantrixEdge</title>
-    <meta name="description" content="Pakistan Stock Exchange (PSX) analysis by MantrixEdge: market trends, sector performance, AI-powered insights, and company infographics.">
+    <meta name="description"
+        content="Pakistan Stock Exchange (PSX) analysis by MantrixEdge: market trends, sector performance, AI-powered insights, and company infographics.">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="PSX Analysis - MantrixEdge">
-    <meta property="og:description" content="Market trends, sector performance, and AI-powered insights for the Pakistan Stock Exchange.">
+    <meta property="og:description"
+        content="Market trends, sector performance, and AI-powered insights for the Pakistan Stock Exchange.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://mantrixedge.com/images/image.png">
     <meta property="og:url" content="https://mantrixedge.com/psx-analysis.html">
@@ -18,292 +21,339 @@
     <meta name="twitter:description" content="Market trends, sector performance, and AI-powered insights for the PSX.">
     <meta name="twitter:image" content="https://mantrixedge.com/images/image.png">
     <link rel="canonical" href="https://mantrixedge.com/psx-analysis.html">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" href="./images/image.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <script src="./js/main.js"></script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "PSX Analysis",
-      "description": "Pakistan Stock Exchange analysis with market trends, sector performance, and AI insights",
-      "publisher": {
-        "@type": "Organization",
-        "name": "MantrixEdge",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "/images/image.png"
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            surface: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
         }
-      }
-    }
     </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="icon" href="./images/image.png">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <a href="index.html" class="logo"><img src="./images/image.png" alt="MantrixEdge"></a>
-        <div class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#service">services</a></li>
-                <li><a href="index.html#portfolio">projects</a></li>
-                <li><a href="index.html#testimonials">reviews</a></li>
-                <li><a href="psx-analysis.html" class="active">PSX Analysis</a></li>
-                <li><a href="index.html#contact">contact</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<body class="text-xl bg-brand-dark text-white font-sans antialiased leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
+        <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/10"></div>
+        <div class="container mx-auto px-6 py-4 relative">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="./images/image.png" alt="MantrixEdge Logo"
+                        class="h-10 w-auto transition-transform group-hover:scale-110">
+                    <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
+                            class="text-brand-accent">Edge</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Home</a>
+                    <a href="index.html#about"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">About</a>
+                    <a href="index.html#service"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Services</a>
+                    <a href="index.html#portfolio"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Projects</a>
+                    <a href="psx-analysis.html"
+                        class="text-brand-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wider border border-brand-accent/30 px-4 py-2 rounded-full hover:bg-brand-accent/10">PSX
+                        Analysis</a>
+                    <a href="index.html#contact"
+                        class="bg-brand-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 text-sm font-bold shadow-lg shadow-blue-500/30">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 py-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="index.html" class="text-gray-300 hover:text-brand-accent block py-2">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-brand-accent block py-2">About</a>
+                <a href="index.html#service" class="text-gray-300 hover:text-brand-accent block py-2">Services</a>
+                <a href="index.html#portfolio" class="text-gray-300 hover:text-brand-accent block py-2">Projects</a>
+                <a href="psx-analysis.html" class="text-brand-accent font-bold block py-2">PSX Analysis</a>
+                <a href="index.html#contact" class="text-brand-primary font-bold block py-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="psx-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative;">
-        <div class="container">
-            <h1 style="font-size: 4rem; margin-bottom: 20px; font-weight: 700;">Pakistan Stock Exchange Analysis</h1>
-            <p style="font-size: 1.8rem; margin-bottom: 30px; opacity: 0.9;">Comprehensive market insights and data-driven investment strategies</p>
-            <a href="#analysis-content" class="btn" style="background: #00bfff; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; display: inline-block; font-size: 1.2rem;">
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-brand-dark pt-20">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl animate-pulse">
+            </div>
+            <div class="absolute top-40 -left-20 w-72 h-72 bg-brand-accent/20 rounded-full blur-3xl animate-pulse"
+                style="animation-delay: 1s;"></div>
+            <div
+                class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-brand-dark to-transparent">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Pakistan Stock Exchange <br>
+                <span class="gradient-text">Analysis</span>
+            </h1>
+
+            <p class="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+                Comprehensive market insights and data-driven investment strategies powered by AI.
+            </p>
+
+            <a href="#coverage"
+                class="inline-block px-8 py-4 bg-brand-primary hover:bg-blue-600 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
                 Explore Analysis
             </a>
         </div>
     </section>
 
     <!-- Companies Coverage Section -->
-    <section id="coverage" style="padding: 80px 0; background-color: #ffffff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 style="color: #002e5f; font-size: 3rem; margin-bottom: 20px;">Companies Coverage</h2>
-                    <p style="font-size: 1.6rem; color: #666; max-width: 800px; margin: 0 auto;">
-                        We are rolling out deep-dive company infographics. Click a covered company to view details.
-                    </p>
-                </div>
+    <section id="coverage" class="py-24 bg-brand-surface border-y border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Companies <span class="gradient-text">Coverage</span>
+                </h2>
+                <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+                    We are rolling out deep-dive company infographics. Click a covered company to view details.
+                </p>
             </div>
-            <div class="row">
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- PIA - Available -->
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <a href="pia-psx.html" class="coverage-card" style="display:block; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px; padding:20px; text-decoration:none; height:100%; box-shadow:0 8px 24px rgba(0,0,0,.06);">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#002e5f;">PIAHCL</span>
-                            <span style="background:#00b894; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Available</span>
-                        </div>
-                        <p style="color:#666; margin-bottom:15px; font-size:1.4rem;">Pakistan International Airlines</p>
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
-                            <span style="color:#666; font-size:1.3rem;">Aviation</span>
-                            <span style="color:#00b894; font-weight:600; font-size:1.3rem;">View Analysis →</span>
-                        </div>
-                    </a>
-                </div>
-                
+                <a href="pia-psx.html"
+                    class="group block p-8 rounded-2xl bg-brand-dark border border-white/10 hover:border-brand-primary/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-primary/10">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-white">PIAHCL</span>
+                        <span
+                            class="bg-green-500/20 text-green-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Available</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-lg">Pakistan International Airlines</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500 text-sm">Aviation</span>
+                        <span class="text-brand-primary font-bold group-hover:translate-x-1 transition-transform">View
+                            Analysis <i class="fas fa-arrow-right ml-1"></i></span>
+                    </div>
+                </a>
+
                 <!-- SEARL - Available -->
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <a href="psx-searl.html" class="coverage-card" style="display:block; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px; padding:20px; text-decoration:none; height:100%; box-shadow:0 8px 24px rgba(0,0,0,.06);">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#002e5f;">SEARL</span>
-                            <span style="background:#00bfff; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">New</span>
-                        </div>
-                        <div style="color:#555; font-size:1.4rem;">The Searle Company Ltd.</div>
-                    </a>
-                </div>
-
-               <!-- System Ltd - Available -->
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <a href="system_ltd.html" class="coverage-card" style="display:block; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px; padding:20px; text-decoration:none; height:100%; box-shadow:0 8px 24px rgba(0,0,0,.06);">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#002e5f;">SYSE</span>
-                            <span style="background:#00bfff; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">New</span>
-                        </div>
-                        <div style="color:#555; font-size:1.4rem;">Systems Ltd.</div>
-                    </a>
-                </div>
-
-                <!-- Placeholders - Coming soon -->
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="coverage-card" style="display:block; background:#fff; border:1px dashed rgba(0,0,0,0.2); border-radius:12px; padding:20px; height:100%; opacity:.8;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#666;">HBL</span>
-                            <span style="background:#764ba2; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Planned</span>
-                        </div>
-                        <div style="color:#777; font-size:1.4rem;">Habib Bank Ltd.</div>
+                <a href="psx-searl.html"
+                    class="group block p-8 rounded-2xl bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/10">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-white">SEARL</span>
+                        <span
+                            class="bg-brand-accent/20 text-brand-accent text-xs font-bold px-3 py-1 rounded-full uppercase">New</span>
                     </div>
+                    <p class="text-gray-400 mb-6 text-lg">The Searle Company Ltd.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500 text-sm">Pharma</span>
+                        <span class="text-brand-accent font-bold group-hover:translate-x-1 transition-transform">View
+                            Analysis <i class="fas fa-arrow-right ml-1"></i></span>
+                    </div>
+                </a>
+
+                <!-- System Ltd - Available -->
+                <a href="system_ltd.html"
+                    class="group block p-8 rounded-2xl bg-brand-dark border border-white/10 hover:border-purple-500/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-white">SYSE</span>
+                        <span
+                            class="bg-purple-500/20 text-purple-400 text-xs font-bold px-3 py-1 rounded-full uppercase">New</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-lg">Systems Ltd.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-500 text-sm">Technology</span>
+                        <span class="text-purple-500 font-bold group-hover:translate-x-1 transition-transform">View
+                            Analysis <i class="fas fa-arrow-right ml-1"></i></span>
+                    </div>
+                </a>
+
+                <!-- Placeholders -->
+                <div class="p-8 rounded-2xl bg-brand-dark/50 border border-white/5 opacity-75">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-gray-500">HBL</span>
+                        <span
+                            class="bg-gray-700 text-gray-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Planned</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-lg">Habib Bank Ltd.</p>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="coverage-card" style="display:block; background:#fff; border:1px dashed rgba(0,0,0,0.2); border-radius:12px; padding:20px; height:100%; opacity:.8;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#666;">MCB</span>
-                            <span style="background:#764ba2; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Planned</span>
-                        </div>
-                        <div style="color:#777; font-size:1.4rem;">MCB Bank Ltd.</div>
+                <div class="p-8 rounded-2xl bg-brand-dark/50 border border-white/5 opacity-75">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-gray-500">MCB</span>
+                        <span
+                            class="bg-gray-700 text-gray-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Planned</span>
                     </div>
+                    <p class="text-gray-600 mb-6 text-lg">MCB Bank Ltd.</p>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="coverage-card" style="display:block; background:#fff; border:1px dashed rgba(0,0,0,0.2); border-radius:12px; padding:20px; height:100%; opacity:.8;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#666;">ENGRO</span>
-                            <span style="background:#764ba2; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Planned</span>
-                        </div>
-                        <div style="color:#777; font-size:1.4rem;">Engro Corporation</div>
+                <div class="p-8 rounded-2xl bg-brand-dark/50 border border-white/5 opacity-75">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-gray-500">ENGRO</span>
+                        <span
+                            class="bg-gray-700 text-gray-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Planned</span>
                     </div>
+                    <p class="text-gray-600 mb-6 text-lg">Engro Corporation</p>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="coverage-card" style="display:block; background:#fff; border:1px dashed rgba(0,0,0,0.2); border-radius:12px; padding:20px; height:100%; opacity:.8;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#666;">LUCK</span>
-                            <span style="background:#764ba2; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Planned</span>
-                        </div>
-                        <div style="color:#777; font-size:1.4rem;">Lucky Cement</div>
+                <div class="p-8 rounded-2xl bg-brand-dark/50 border border-white/5 opacity-75">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-gray-500">LUCK</span>
+                        <span
+                            class="bg-gray-700 text-gray-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Planned</span>
                     </div>
+                    <p class="text-gray-600 mb-6 text-lg">Lucky Cement</p>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="coverage-card" style="display:block; background:#fff; border:1px dashed rgba(0,0,0,0.2); border-radius:12px; padding:20px; height:100%; opacity:.8;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#666;">HUBC</span>
-                            <span style="background:#764ba2; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Planned</span>
-                        </div>
-                        <div style="color:#777; font-size:1.4rem;">Hub Power Company</div>
+                <div class="p-8 rounded-2xl bg-brand-dark/50 border border-white/5 opacity-75">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-2xl font-bold text-gray-500">OGDC</span>
+                        <span
+                            class="bg-gray-700 text-gray-400 text-xs font-bold px-3 py-1 rounded-full uppercase">Planned</span>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="coverage-card" style="display:block; background:#fff; border:1px dashed rgba(0,0,0,0.2); border-radius:12px; padding:20px; height:100%; opacity:.8;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#666;">OGDC</span>
-                            <span style="background:#764ba2; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Planned</span>
-                        </div>
-                        <div style="color:#777; font-size:1.4rem;">Oil & Gas Dev. Co.</div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="coverage-card" style="display:block; background:#fff; border:1px dashed rgba(0,0,0,0.2); border-radius:12px; padding:20px; height:100%; opacity:.8;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#666;">SYS</span>
-                            <span style="background:#764ba2; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Planned</span>
-                        </div>
-                        <div style="color:#777; font-size:1.4rem;">Systems Limited</div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="coverage-card" style="display:block; background:#fff; border:1px dashed rgba(0,0,0,0.2); border-radius:12px; padding:20px; height:100%; opacity:.8;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="font-weight:700; font-size:1.8rem; color:#666;">TRG</span>
-                            <span style="background:#764ba2; color:#fff; font-size:1.1rem; padding:4px 8px; border-radius:999px;">Planned</span>
-                        </div>
-                        <div style="color:#777; font-size:1.4rem;">TRG Pakistan</div>
-                    </div>
+                    <p class="text-gray-600 mb-6 text-lg">Oil & Gas Dev. Co.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Analysis Content -->
-    <section id="analysis-content" style="padding: 80px 0; background-color: #f8f9fa;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 style="color: #002e5f; font-size: 3rem; margin-bottom: 20px;">Market Analysis Services</h2>
-                    <p style="font-size: 1.6rem; color: #666; max-width: 800px; margin: 0 auto;">
-                        Our comprehensive analysis of the Pakistan Stock Exchange provides valuable insights for investors, 
-                        traders, and financial institutions.
-                    </p>
-                </div>
+    <section id="analysis-content" class="py-24 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Market Analysis <span
+                        class="gradient-text">Services</span></h2>
+                <p class="text-gray-300 text-xl max-w-3xl mx-auto">
+                    Our comprehensive analysis of the Pakistan Stock Exchange provides valuable insights for investors,
+                    traders, and financial institutions.
+                </p>
             </div>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="analysis-card" style="background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: transform 0.3s ease;">
-                        <div class="icon" style="font-size: 4rem; color: #00bfff; margin-bottom: 25px;">
-                            <i class="fa fa-chart-line"></i>
-                        </div>
-                        <h4 style="color: #002e5f; margin-bottom: 20px; font-size: 1.8rem;">Market Trends Analysis</h4>
-                        <p style="color: #666; line-height: 1.8; font-size: 1.1rem;">
-                            In-depth analysis of PSX market trends, including KSE-100 index movements, 
-                            sector rotations, and market sentiment indicators. We track daily, weekly, 
-                            and monthly patterns to identify opportunities.
-                        </p>
-                        <div class="features" style="margin-top: 20px;">
-                            <ul style="list-style: none; padding: 0; text-align: left;">
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>KSE-100 Index Analysis</li>
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>Volume & Price Patterns</li>
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>Market Sentiment Indicators</li>
-                            </ul>
-                        </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-primary/10">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-3xl text-brand-primary"></i>
                     </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Market Trends Analysis</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        In-depth analysis of PSX market trends, including KSE-100 index movements, sector rotations, and
+                        market sentiment indicators.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-brand-primary mr-3"></i>KSE-100 Index Analysis</li>
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-brand-primary mr-3"></i>Volume & Price Patterns</li>
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-brand-primary mr-3"></i>Market Sentiment Indicators</li>
+                    </ul>
                 </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="analysis-card" style="background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: transform 0.3s ease;">
-                        <div class="icon" style="font-size: 4rem; color: #00bfff; margin-bottom: 25px;">
-                            <i class="fa fa-building"></i>
-                        </div>
-                        <h4 style="color: #002e5f; margin-bottom: 20px; font-size: 1.8rem;">Sector Performance</h4>
-                        <p style="color: #666; line-height: 1.8; font-size: 1.1rem;">
-                            Detailed analysis of different sectors including banking, technology, 
-                            energy, and manufacturing sectors performance. We provide sector-specific 
-                            insights and recommendations.
-                        </p>
-                        <div class="features" style="margin-top: 20px;">
-                            <ul style="list-style: none; padding: 0; text-align: left;">
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>Banking Sector Analysis</li>
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>Technology & Telecom</li>
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>Energy & Power</li>
-                            </ul>
-                        </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-brand-accent/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/10">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-accent/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-3xl text-brand-accent"></i>
                     </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Sector Performance</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Detailed analysis of different sectors including banking, technology, energy, and manufacturing
+                        sectors performance.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-brand-accent mr-3"></i>Banking Sector Analysis</li>
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-brand-accent mr-3"></i>Technology & Telecom</li>
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-brand-accent mr-3"></i>Energy & Power</li>
+                    </ul>
                 </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="analysis-card" style="background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: transform 0.3s ease;">
-                        <div class="icon" style="font-size: 4rem; color: #00bfff; margin-bottom: 25px;">
-                            <i class="fa fa-lightbulb"></i>
-                        </div>
-                        <h4 style="color: #002e5f; margin-bottom: 20px; font-size: 1.8rem;">Investment Insights</h4>
-                        <p style="color: #666; line-height: 1.8; font-size: 1.1rem;">
-                            Data-driven investment recommendations and portfolio optimization 
-                            strategies for PSX market conditions. Our AI-powered models provide 
-                            actionable insights for better investment decisions.
-                        </p>
-                        <div class="features" style="margin-top: 20px;">
-                            <ul style="list-style: none; padding: 0; text-align: left;">
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>Stock Recommendations</li>
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>Portfolio Optimization</li>
-                                <li style="margin-bottom: 8px;"><i class="fa fa-check" style="color: #00bfff; margin-right: 10px;"></i>Risk Assessment</li>
-                            </ul>
-                        </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-purple-500/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
+                    <div class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-3xl text-purple-500"></i>
                     </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Investment Insights</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Data-driven investment recommendations and portfolio optimization strategies for PSX market
+                        conditions.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-purple-500 mr-3"></i>Stock Recommendations</li>
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-purple-500 mr-3"></i>Portfolio Optimization</li>
+                        <li class="flex items-center text-gray-400"><i
+                                class="fas fa-check text-purple-500 mr-3"></i>Risk Assessment</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    
-
-    <!-- Contact Section -->
-    <section style="padding: 80px 0; background-color: #f8f9fa;">
-        <div class="container text-center">
-            <h2 style="color: #002e5f; font-size: 3rem; margin-bottom: 30px;">Ready to Get Started?</h2>
-            <p style="font-size: 1.6rem; color: #666; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Contact us to learn more about our PSX analysis services and how we can help you make better investment decisions.
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden bg-brand-surface">
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p class="text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
+                Contact us to learn more about our PSX analysis services and how we can help you make better investment
+                decisions.
             </p>
-            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                <a href="index.html#contact" class="btn" style="background: #00bfff; color: white; padding: 15px 30px; border-radius: 25px; text-decoration: none; display: inline-block; font-size: 1.2rem;">
+            <div class="flex justify-center gap-4">
+                <a href="index.html#contact"
+                    class="px-8 py-4 bg-brand-primary hover:bg-blue-600 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25">
                     Contact Us
                 </a>
-                <a href="index.html" class="btn" style="background: transparent; color: #00bfff; border: 2px solid #00bfff; padding: 15px 30px; border-radius: 25px; text-decoration: none; display: inline-block; font-size: 1.2rem;">
+                <a href="index.html"
+                    class="px-8 py-4 bg-transparent border border-white/20 hover:bg-white/5 text-white rounded-full font-bold text-lg transition-all backdrop-blur-sm">
                     Back to Home
                 </a>
             </div>
@@ -311,109 +361,134 @@
     </section>
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html">Home</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#about">About us</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service">Our services</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Projects</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="psx-analysis.html">PSX Analysis</a></li>
-                        </ul>
-                    </div>
+    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">About Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#about"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">About us</a></li>
+                        <li><a href="index.html#service"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Our services</a>
+                        </li>
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a></li>
+                        <li><a href="psx-analysis.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">PSX
+                                Analysis</a></li>
+                    </ul>
+                </div>
 
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Projects</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#testimonials">Reviews</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="psx-analysis.html">PSX Analysis</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#contact">Contact</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
-                        </ul>
-                    </div>
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a>
+                        </li>
+                        <li><a href="index.html#testimonials"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Reviews</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Contact</a></li>
+                        <li><a href="index.html#faq"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">FAQ</a></li>
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
 
-                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
-                        <h4>Contact Us</h4>
-                        <p>
-                            MantrixEdge<br>
-                            Data Science & AI Solutions<br>
-                            Remote & On-site Services<br>
-                            <strong>Email:</strong> neurofinancelab@gmail.com<br>
-                            <strong>Phone:</strong> +923369939547<br>
-                        </p>
-
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
-                            <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
-                            <a href="https://www.linkedin.com/in/muneebtariq07"><i class="ion-logo-linkedin"></i></a>
-                            <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
-                            <a href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="ion-logo-googleplus"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <h4>PSX Analysis Updates</h4>
-                        <p>Subscribe to get notified about our Pakistan Stock Exchange analysis series, including market trends, sector performance, and investment insights.</p>
-                        <form action="" method="post">
-                            <input type="email" name="email" placeholder="Your email"><input type="submit" value="Subscribe">
-                        </form>
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Us</h4>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        MantrixEdge<br>
+                        Data Science & AI Solutions<br>
+                        Islamabad, Pakistan<br>
+                        <br>
+                        <a href="mailto:neurofinancelab@gmail.com"
+                            class="hover:text-brand-primary transition-colors">neurofinancelab@gmail.com</a><br>
+                        <a href="tel:+923369939547" class="hover:text-brand-primary transition-colors">+92 336
+                            9939547</a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/muneebtariq07/"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#0077b5] transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Sardarmani"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#14a800] transition-colors">
+                            <i class="fab fa-upwork"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">PSX Analysis Updates</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get notified about our Pakistan Stock Exchange analysis
+                        series.</p>
+                    <form action="" method="post" class="flex gap-2">
+                        <input type="email" name="email" placeholder="Your email"
+                            class="bg-brand-surface border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-brand-primary w-full">
+                        <button type="submit"
+                            class="bg-brand-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-500">
                     Copyright &copy; 2024 MantrixEdge. All Rights Reserved.
-                </div>
+                </p>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+    <a href="#" id="backToTop"
+        class="fixed bottom-8 right-8 bg-brand-primary hover:bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all transform hover:scale-110 z-50 opacity-0 invisible"><i
+            class="ion-ios-arrow-up text-2xl"></i></a>
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile Menu Toggle (Inline for simplicity on this page)
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        const nav = document.getElementById('mainNav');
 
-    <!-- Scripts -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
 
-    <style>
-        .analysis-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .active {
-            color: #00bfff !important;
-            text-decoration: underline;
-        }
-        
-        .psx-hero {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .psx-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('./images/img1.jpg') center/cover;
-            opacity: 0.1;
-            z-index: -1;
-        }
-    </style>
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
 </body>
+
 </html>

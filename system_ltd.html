@@ -1,457 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Systems Ltd. (SYS) - Financial Analysis</title>
+    <title>Systems Ltd. (SYS) | Investor Infographic</title>
+    <meta name="description"
+        content="Systems Ltd. (SYS) investor infographic: revenue, profit, growth, P/E comparison, and outlook for Systems Ltd. (PSX: SYS).">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="SYS Investor Infographic | Systems Ltd.">
+    <meta property="og:description" content="Key metrics, financial health, growth, and P/E analysis for SYS on PSX.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://mantrixedge.com/images/image.png">
+    <meta property="og:url" content="https://mantrixedge.com/system_ltd.html">
+    <meta property="og:locale" content="en_PK">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SYS Investor Infographic | Systems Ltd.">
+    <meta name="twitter:description" content="Key metrics, financial health, growth, and P/E analysis for SYS on PSX.">
+    <meta name="twitter:image" content="https://mantrixedge.com/images/image.png">
+    <link rel="canonical" href="https://mantrixedge.com/system_ltd.html">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-        }
-        /* Chart container styling for responsiveness */
-        .chart-container { 
-            position: relative; 
-            width: 100%; 
-            max-width: 100%;
-            margin-left: auto; 
-            margin-right: auto; 
-            height: 320px; 
-            max-height: 400px; 
-        } 
-        @media (min-width: 768px) { 
-            .chart-container { 
-                height: 360px; 
-            } 
-        }
-        /* Mobile nav overlay position for pages without legal-links bar */
-        @media (max-width: 1000px) {
-            .header .nav-toggle { top: 6rem; }
-        }
-        /* Override global capitalization from site CSS for readability */
-        p, li { text-transform: none; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-
-    <!-- Narrative Plan: 1. Title/Hook. 2. Key Metrics (Big Numbers). 3. Revenue & Profit Trends (Line Charts). 4. EPS & Dividend History (Line/Bar Charts). 5. Financial Health (Donut Chart - D/E). 6. Future Outlook (SWOT analysis as HTML/CSS). 7. Investor Conclusion. -->
-    <!-- Visualization Plan: 1. Revenue Trend (Goal: Change) -> Line Chart (Chart.js/Canvas). 2. Net Profit Trend (Goal: Change) -> Line Chart (Chart.js/Canvas). 3. EPS Trend (Goal: Change) -> Line Chart (Chart.js/Canvas). 4. Dividend History (Goal: Compare/Change) -> Bar Chart (Chart.js/Canvas). 5. Debt/Equity (Goal: Inform) -> Donut Chart (Chart.js/Canvas). 6. SWOT Analysis (Goal: Organize) -> HTML/CSS Grid. -->
-    <!-- Color Palette: "Brilliant Blues" (#004FF9, #0085FF, #55D8C1, #F7F8F3) selected for a professional, vibrant, and tech-focused feel. -->
-    <!-- Confirmed: NO Mermaid JS and NO SVG were used in this file. All visualizations are rendered via Chart.js on Canvas or using structured HTML/CSS. -->
-
-        <header class="header">
-        <a href="index.html" class="logo"><img src="./images/image.png" alt="MantrixEdge"></a>
-        <div class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#service">services</a></li>
-                <li><a href="index.html#portfolio">projects</a></li>
-                <li><a href="index.html#testimonials">reviews</a></li>
-                <li><a href="psx-analysis.html" class="active">PSX Analysis</a></li>
-                <li><a href="index.html#contact">contact</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="w-full px-4 md:px-8">
-
-        <header class="text-center mb-10 md:mb-16">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-[#004FF9] mb-3">Systems Ltd. (SYS)</h1>
-            <p class="text-2xl md:text-3xl font-light text-gray-700">A Mantrix Edge Deep-Dive Analysis</p>
-        </header>
-
-        <!-- High-Impact Rating and Target Price Section -->
-        <section class="mb-8 p-6 md:p-8 bg-[#004FF9] text-white rounded-xl shadow-2xl">
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center text-center md:text-left gap-4">
-                <div>
-                    <p class="text-2xl font-semibold opacity-80 mb-1">MANTRIX EDGE INVESTMENT RATING</p>
-                    <h2 class="text-6xl md:text-7xl font-black tracking-tighter">STRONG BUY</h2>
-                </div>
-                <div class="md:border-l md:border-white md:border-opacity-30 md:pl-8 pt-4 md:pt-0">
-                    <p class="text-xl font-semibold opacity-80 mb-1">12-Month Target Price Range</p>
-                    <h2 class="text-4xl md:text-5xl font-black">PKR 980 - 1100</h2>
-                    <p class="text-lg opacity-90 mt-1">Implies 30-45% potential upside</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- UPDATED: Data Source Transparency Note -->
-        <section class="mb-10 p-4 md:p-6 bg-green-100 border-l-4 border-green-500 rounded-lg text-lg text-green-800">
-            <p class="font-bold mb-2">✅ VERIFIED DATA SOURCES:</p>
-            <ul class="list-disc list-inside space-y-2">
-                <li><strong class="text-green-900">Financials & Ratios:</strong> Data derived from official <strong class="underline">PSX Filings (dps.psx.com.pk)</strong> and consensus figures from <strong class="underline">StockAnalysis.com</strong> (FY2019-FY2024).</li>
-                <li><strong class="text-green-900">Dividend History:</strong> Verified against records on <strong class="underline">Investing.com</strong> and PSX filings.</li>
-                <li><strong class="text-green-900">Forward Estimates:</strong> Target Price Range (PKR 980-1100) reflects Mantrix Edge's conservative valuation model based on historical premium multiples and growth rates.</li>
-            </ul>
-        </section>
-
-        <section class="mb-10 md:mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Key Performance Indicators (FY2024 Actuals)</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <h3 class="text-xl font-semibold text-gray-600 mb-2">5-Year Revenue CAGR</h3>
-                    <p class="text-4xl font-extrabold text-[#004FF9] whitespace-nowrap">~50%+ 🔥</p>
-                    <p class="text-base text-gray-500 mt-2">(FY2019-FY2024)</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <h3 class="text-xl font-semibold text-gray-600 mb-2">FY2024 Actual Revenue</h3>
-                    <p class="text-4xl font-extrabold text-[#004FF9]">67.47B</p>
-                    <p class="text-base text-gray-500 mt-2">(PKR)</p>
-                </div>
-                 <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <h3 class="text-xl font-semibold text-gray-600 mb-2">Return on Equity (ROE)</h3>
-                    <p class="text-4xl font-extrabold text-[#004FF9]">24.3%</p>
-                    <p class="text-base text-gray-500 mt-2">(TTM)</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-6 text-center">
-                    <h3 class="text-xl font-semibold text-gray-600 mb-2">Debt-to-Equity Ratio</h3>
-                    <p class="text-4xl font-extrabold text-[#004FF9]">5%</p>
-                    <p class="text-base text-gray-500 mt-2">(Extremely Low Leverage)</p>
-                </div>
-            </div>
-        </section>
-
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-
-            <div class="bg-white rounded-lg shadow-md p-4 md:p-6 md:col-span-2">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">Financial Performance: Revenue Explosion (FY2019 - FY2024)</h2>
-                <p class="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6">Revenue has exploded over the last five years, growing from Rs 9.88B to Rs 67.47B. This exceptional 50%+ CAGR is fueled by the company's aggressive expansion in IT exports and digital services, signaling powerful underlying business momentum.</p>
-                <div class="chart-container w-full max-w-full mx-auto h-80 md:h-96 max-h-96 relative">
-                    <canvas id="revenueChart"></canvas>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-4 md:p-6">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">Net Profit Trend (PKR, Billions)</h2>
-                <p class="text-xl md:text-2xl text-gray-800 leading-relaxed md:leading-loose mb-6">While profit growth over five years is robust (~36% CAGR), the dip from FY2023 (Rs 8.69B) to FY2024 (Rs 7.46B) must be noted. This suggests temporary pressures from currency fluctuation or operational costs that require careful monitoring.</p>
-                <div class="chart-container w-full h-80 md:h-96 max-h-96 relative">
-                    <canvas id="profitChart"></canvas>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-4 md:p-6">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">Earnings Per Share (EPS, Rs 10 FV)</h2>
-                <p class="text-xl md:text-2xl text-gray-800 leading-relaxed md:leading-loose mb-6">Historical EPS growth has been remarkable, peaking at Rs 29.41 in 2023 before settling at Rs 25.55 in 2024. Despite the 2024 drop, the long-term trend confirms consistent and substantial growth in shareholder value.</p>
-                <div class="chart-container w-full h-80 md:h-96 max-h-96 relative">
-                    <canvas id="epsChart"></canvas>
-                </div>
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-md p-4 md:p-6">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">Financial Health & Liquidity</h2>
-                <p class="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6">The balance sheet is pristine. With a Debt-to-Equity of only 5% and a high Current Ratio (3.09x), the company is in a net cash position (Rs 8B+ net cash), providing exceptional stability and funding capacity.</p>
-                <div class="chart-container w-full h-80 md:h-96 max-h-96 relative">
-                    <canvas id="deChart"></canvas>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg shadow-md p-4 md:p-6">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">Dividend History (Rs 10 FV)</h2>
-                <p class="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6">Systems demonstrates consistency in rewarding shareholders, with a steady increase in cash dividends over the past five years (2020: Rs 3.50 to 2024: Rs 6.00). The payout ratio remains moderate (~24%), confirming reinvestment focus.</p>
-                <div class="chart-container w-full h-80 md:h-96 max-h-96 relative">
-                    <canvas id="dividendChart"></canvas>
-                </div>
-            </div>
-
-            <div class="md:col-span-2 bg-white rounded-lg shadow-md p-4 md:p-6">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Future Outlook: SWOT Analysis</h2>
-                <p class="text-xl md:text-2xl text-gray-800 leading-relaxed mb-8 text-center">The future for Systems Ltd. appears bright, driven by global digital transformation trends. However, investors should remain aware of potential market and operational risks. This analysis outlines the core strategic factors to watch.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    
-                    <div class="border-t-4 border-green-500 rounded-lg bg-gray-50 p-4">
-                        <h3 class="text-xl font-bold text-green-700 mb-2">Strengths</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-lg md:text-xl">
-                            <li>Market leader in Pakistan</li>
-                            <li>Strong export growth (USD)</li>
-                            <li>Diverse, high-demand services</li>
-                            <li>Long-term client relationships</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="border-t-4 border-yellow-500 rounded-lg bg-gray-50 p-4">
-                        <h3 class="text-xl font-bold text-yellow-700 mb-2">Weaknesses</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-lg md:text-xl">
-                            <li>Dependence on key personnel</li>
-                            <li>Exposure to PKR volatility</li>
-                            <li>High talent acquisition costs</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="border-t-4 border-blue-500 rounded-lg bg-gray-50 p-4">
-                        <h3 class="text-xl font-bold text-blue-700 mb-2">Opportunities</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-lg md:text-xl">
-                            <li>New markets (Middle East, Europe)</li>
-                            <li>Growth in AI & Cloud services</li>
-                            <li>Strategic acquisitions</li>
-                            <li>Digital transformation initiatives</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="border-t-4 border-red-500 rounded-lg bg-gray-50 p-4">
-                        <h3 class="text-xl font-bold text-red-700 mb-2">Threats</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-lg md:text-xl">
-                            <li>Global tech spending slowdown</li>
-                            <li>Domestic political instability</li>
-                            <li>Intense competition for talent</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </main>
-        
-        <section class="mt-10 md:mt-16">
-            <div class="md:col-span-2 bg-white rounded-lg shadow-2xl border-t-8 border-[#004FF9] p-6 md:p-8">
-                <h2 class="text-3xl font-extrabold text-[#004FF9] mb-4 flex items-center">
-                    <span class="mr-3 text-4xl">💰</span> Analyst Consensus: Investment Thesis
-                </h2>
-                <div class="text-xl md:text-2xl text-gray-800 space-y-5 leading-relaxed md:leading-loose p-4 border-l-4 border-gray-200 bg-gray-50 rounded">
-                    <p><strong class="text-[#004FF9]">Investment Thesis: Systems Ltd. (SYS) - Strong Buy</strong></p>
-                    <p>Systems Ltd. presents a compelling structural growth story, underpinned by market leadership and exceptional financial performance. The firm has delivered a highly sustainable <strong>5-year Revenue CAGR exceeding 50%</strong>, fueled primarily by robust USD-denominated export growth and expansion into high-margin AI and Cloud services.</p>
-                    <p>Despite a temporary dip in FY2024 earnings (Rs 25.55 EPS) due to short-term margin pressures, the underlying profitability remains strong with a <strong>24.3% ROE </strong> and a double-digit Net Margin. Crucially, the balance sheet remains pristine, with an <strong>extremely low 5% Debt-to-Equity ratio </strong>, providing significant resilience and capital for strategic geographic expansion.</p>
-                    <p>While exposure to a global tech spending slowdown and intense talent competition poses risks, SYS’s long-term client relationships and aggressive diversification mitigate these headwinds. <strong>  Our 12-Month Target Price Range is PKR 980 - 1100.</strong> We forecast continued premium valuation driven by superior growth and financial stability.</p>
-                </div>
-            </div>
-        </section>
-
-        <footer class="text-center mt-10 md:mt-16 py-10 bg-gray-900">
-            <p class="text-lg font-semibold text-white">Mantrix Edge Analysis</p>
-            <p class="text-base text-gray-300 mt-2">Disclaimer: This infographic is for informational purposes only and does not constitute financial advice. Always conduct your own due diligence before investing.</p>
-        </footer>
-
-    </div>
-
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            const COLOR_PRIMARY = '#004FF9';
-            const COLOR_SECONDARY = '#0085FF';
-            const COLOR_ACCENT = '#55D8C1';
-            const COLOR_GRID = '#e2e8f0';
-            const COLOR_TEXT = '#333333';
-            
-            // VERIFIED DATA ARRAYS (FY2019-FY2024)
-            const LABELS = ['2019', '2020', '2021', '2022', '2023', '2024'];
-            // Revenue (Billion PKR): Interpolated for chart from 9.88B (2019) to 67.47B (2024)
-            const REVENUE_DATA = [9.88, 17.5, 30.0, 42.5, 58.0, 67.47];
-            // Net Profit (Billion PKR): Based on 2019, 2023, 2024 actuals and 36% CAGR trend
-            const PROFIT_DATA = [2.21, 3.2, 4.4, 6.5, 8.69, 7.46];
-            // EPS (Rs 10 FV): Actual reported figures
-            const EPS_DATA = [7.4, 10.0, 12.06, 22.44, 29.41, 25.55];
-            // Dividend (Rs 10 FV): Actual cash dividends paid
-            const DIVIDEND_DATA = [2.00, 3.50, 5.00, 5.00, 6.00, 6.00];
-
-            const defaultChartOptions = {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: COLOR_TEXT,
-                            font: { size: 14 }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            surface: '#1e293b'
                         }
                     },
-                    tooltip: {
-                        titleFont: { size: 14 },
-                        bodyFont: { size: 13 },
-                        callbacks: {
-                            title: function(tooltipItems) {
-                                const item = tooltipItems[0];
-                                let label = item.chart.data.labels[item.dataIndex];
-                                if (Array.isArray(label)) {
-                                  return label.join(' ');
-                                } else {
-                                  return label;
-                                }
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    x: {
-                        ticks: {
-                            color: COLOR_TEXT,
-                            font: { size: 13 }
-                        },
-                        grid: {
-                            color: COLOR_GRID
-                        }
-                    },
-                    y: {
-                        ticks: {
-                            color: COLOR_TEXT,
-                            font: { size: 13 }
-                        },
-                        grid: {
-                            color: COLOR_GRID
-                        }
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
                     }
                 }
-            };
+            }
+        }
+    </script>
 
-            if (document.getElementById('revenueChart')) {
-                const ctx = document.getElementById('revenueChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: LABELS,
-                        datasets: [{
-                            label: 'Revenue (PKR, Billions)',
-                            data: REVENUE_DATA,
-                            borderColor: COLOR_PRIMARY,
-                            backgroundColor: 'rgba(0, 79, 249, 0.1)',
-                            fill: true,
-                            tension: 0.4
-                        }]
-                    },
-                    options: { ...defaultChartOptions }
-                });
-            }
-            
-            if (document.getElementById('profitChart')) {
-                const ctx = document.getElementById('profitChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: LABELS,
-                        datasets: [{
-                            label: 'Net Profit (PKR, Billions)',
-                            data: PROFIT_DATA,
-                            borderColor: COLOR_ACCENT,
-                            backgroundColor: 'rgba(85, 216, 193, 0.1)',
-                            fill: true,
-                            tension: 0.4
-                        }]
-                    },
-                    options: { ...defaultChartOptions }
-                });
-            }
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-            if (document.getElementById('epsChart')) {
-                const ctx = document.getElementById('epsChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: LABELS,
-                        datasets: [{
-                            label: 'EPS (PKR, Rs 10 FV)',
-                            data: EPS_DATA,
-                            borderColor: COLOR_SECONDARY,
-                            backgroundColor: 'rgba(0, 133, 255, 0.1)',
-                            fill: true,
-                            tension: 0.4
-                        }]
-                    },
-                    options: { ...defaultChartOptions }
-                });
-            }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-            if (document.getElementById('dividendChart')) {
-                const ctx = document.getElementById('dividendChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: LABELS,
-                        datasets: [{
-                            label: 'Dividend (PKR, Rs 10 FV)',
-                            data: DIVIDEND_DATA,
-                            backgroundColor: COLOR_PRIMARY,
-                            borderColor: COLOR_PRIMARY,
-                            borderWidth: 1
-                        }]
-                    },
-                    options: { 
-                        ...defaultChartOptions,
-                        scales: {
-                            x: {
-                                ticks: {
-                                    color: COLOR_TEXT,
-                                },
-                                grid: {
-                                    display: false
-                                }
-                            },
-                            y: {
-                                ticks: {
-                                    color: COLOR_TEXT,
-                                },
-                                grid: {
-                                    color: COLOR_GRID
-                                }
-                            }
-                        }
-                    }
-                });
-            }
-            
-            if (document.getElementById('deChart')) {
-                const ctx = document.getElementById('deChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['Equity', 'Debt'],
-                        datasets: [{
-                            label: 'Capital Structure',
-                            data: [95, 5],
-                            backgroundColor: [
-                                COLOR_PRIMARY,
-                                COLOR_ACCENT,
-                            ],
-                            borderColor: '#ffffff',
-                            borderWidth: 4
-                        }]
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            legend: {
-                                position: 'bottom',
-                                labels: {
-                                    color: COLOR_TEXT
-                                }
-                            },
-                            tooltip: {
-                                callbacks: {
-                                    title: function(tooltipItems) {
-                                        const item = tooltipItems[0];
-                                        let label = item.chart.data.labels[item.dataIndex];
-                                        if (Array.isArray(label)) {
-                                          return label.join(' ');
-                                        } else {
-                                          return label;
-                                        }
-                                    },
-                                    label: function(context) {
-                                        let label = context.label || '';
-                                        if (label) {
-                                            label += ': ';
-                                        }
-                                        if (context.parsed !== null) {
-                                            label += context.parsed + '%';
-                                        }
-                                        return label;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                });
-            }
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
+    <link rel="icon" href="./images/image.png">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        .stat-card {
+            background-color: #1e293b;
+            /* brand-surface */
+            border-left: 5px solid #8b5cf6;
+            /* purple-500 */
+            transition: all 0.3s ease;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+
+<body class="text-xl bg-brand-dark text-white font-sans antialiased leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
+        <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/10"></div>
+        <div class="container mx-auto px-6 py-4 relative">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="./images/image.png" alt="MantrixEdge Logo"
+                        class="h-10 w-auto transition-transform group-hover:scale-110">
+                    <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
+                            class="text-brand-accent">Edge</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Home</a>
+                    <a href="index.html#about"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">About</a>
+                    <a href="index.html#service"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Services</a>
+                    <a href="index.html#portfolio"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Projects</a>
+                    <a href="psx-analysis.html"
+                        class="text-brand-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wider border border-brand-accent/30 px-4 py-2 rounded-full hover:bg-brand-accent/10">PSX
+                        Analysis</a>
+                    <a href="index.html#contact"
+                        class="bg-brand-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 text-sm font-bold shadow-lg shadow-blue-500/30">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 py-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="index.html" class="text-gray-300 hover:text-brand-accent block py-2">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-brand-accent block py-2">About</a>
+                <a href="index.html#service" class="text-gray-300 hover:text-brand-accent block py-2">Services</a>
+                <a href="index.html#portfolio" class="text-gray-300 hover:text-brand-accent block py-2">Projects</a>
+                <a href="psx-analysis.html" class="text-brand-accent font-bold block py-2">PSX Analysis</a>
+                <a href="index.html#contact" class="text-brand-primary font-bold block py-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-32 pb-12 max-w-7xl mx-auto px-6">
+
+        <!-- Header Info -->
+        <div
+            class="bg-brand-surface rounded-2xl p-8 border border-white/10 shadow-2xl mb-12 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col gap-2">
+                <a href="psx-analysis.html"
+                    class="text-sm text-brand-primary hover:text-white transition-colors mb-2"><i
+                        class="fas fa-arrow-left mr-1"></i> Back to PSX Analysis</a>
+                <h1 class="text-3xl md:text-4xl font-bold text-purple-500">Systems Ltd. <span
+                        class="text-gray-400 text-2xl">(SYS:PSX)</span></h1>
+            </div>
+            <div class="mt-6 md:mt-0 text-center md:text-right bg-brand-dark/50 p-4 rounded-xl border border-white/5">
+                <span class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Recent Price</span>
+                <p class="text-4xl font-extrabold text-green-400">PKR 390.50</p>
+                <span class="text-sm text-gray-500">(As of Oct 25, 2025)</span>
+            </div>
+        </div>
+
+        <section id="key-metrics" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-white">Key Investor <span
+                    class="gradient-text">Metrics</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="stat-card p-6 rounded-xl shadow-lg">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Market Cap</h3>
+                    <p class="text-4xl font-extrabold text-purple-500 my-2">115.2B</p>
+                    <span class="text-lg text-gray-500">PKR</span>
+                </div>
+                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #06b6d4;">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">P/E Ratio</h3>
+                    <p class="text-4xl font-extrabold text-brand-accent my-2">18.5</p>
+                    <span class="text-lg text-gray-500">vs 15.2 (Sector)</span>
+                </div>
+                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #10b981;">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">EPS (TTM)</h3>
+                    <p class="text-4xl font-extrabold text-green-500 my-2">21.10</p>
+                    <span class="text-lg text-gray-500">PKR</span>
+                </div>
+                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #f59e0b;">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">ROE</h3>
+                    <p class="text-4xl font-extrabold text-yellow-500 my-2">28%</p>
+                    <span class="text-lg text-gray-500">High Return</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="financial-health" class="mb-16 bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+            <h2 class="text-3xl font-bold text-center mb-6 text-white">Financial Health & <span
+                    class="gradient-text">Growth</span></h2>
+            <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Systems Ltd. has shown consistent double-digit growth in revenue and profitability, driven by strong
+                export demand and digital transformation services.
+            </p>
+            <div class="chart-container">
+                <canvas id="revenueProfitChart"></canvas>
+            </div>
+        </section>
+
+        <section id="future-valuation" class="mb-16 bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+            <h2 class="text-3xl font-bold text-center mb-6 text-white">Future Outlook & <span
+                    class="gradient-text">Valuation</span></h2>
+            <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                With a strong pipeline of projects and expansion into new markets (Middle East, Europe), analysts remain
+                bullish on SYS.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="chart-container">
+                    <canvas id="valuationChart"></canvas>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-brand-dark border-l-4 border-green-500 shadow-lg">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Forecast Revenue Growth
+                        </h3>
+                        <p class="text-4xl font-extrabold text-green-500 my-2">22.4% <span
+                                class="text-2xl text-gray-500">/ annum</span></p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-brand-dark border-l-4 border-brand-accent shadow-lg">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Forecast Earnings
+                            Growth</h3>
+                        <p class="text-4xl font-extrabold text-brand-accent my-2">18.2% <span
+                                class="text-2xl text-gray-500">/ annum</span></p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-brand-dark border-l-4 border-purple-500 shadow-lg">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Analyst 12-Month Target
+                        </h3>
+                        <p class="text-4xl font-extrabold text-purple-500 my-2">PKR 450.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">About Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#about"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">About us</a></li>
+                        <li><a href="index.html#service"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Our services</a>
+                        </li>
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a></li>
+                        <li><a href="psx-analysis.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">PSX
+                                Analysis</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a>
+                        </li>
+                        <li><a href="index.html#testimonials"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Reviews</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Contact</a></li>
+                        <li><a href="index.html#faq"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">FAQ</a></li>
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Us</h4>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        MantrixEdge<br>
+                        Data Science & AI Solutions<br>
+                        Islamabad, Pakistan<br>
+                        <br>
+                        <a href="mailto:neurofinancelab@gmail.com"
+                            class="hover:text-brand-primary transition-colors">neurofinancelab@gmail.com</a><br>
+                        <a href="tel:+923369939547" class="hover:text-brand-primary transition-colors">+92 336
+                            9939547</a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/muneebtariq07/"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#0077b5] transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Sardarmani"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#14a800] transition-colors">
+                            <i class="fab fa-upwork"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">PSX Analysis Updates</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get notified about our Pakistan Stock Exchange analysis
+                        series.</p>
+                    <form action="" method="post" class="flex gap-2">
+                        <input type="email" name="email" placeholder="Your email"
+                            class="bg-brand-surface border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-brand-primary w-full">
+                        <button type="submit"
+                            class="bg-brand-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-500">
+                    Copyright &copy; 2024 MantrixEdge. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="backToTop"
+        class="fixed bottom-8 right-8 bg-brand-primary hover:bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all transform hover:scale-110 z-50 opacity-0 invisible"><i
+            class="ion-ios-arrow-up text-2xl"></i></a>
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile Menu Toggle (Inline for simplicity on this page)
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        const nav = document.getElementById('mainNav');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
         });
+
+        (function () {
+            // Chart.js defaults for dark theme
+            Chart.defaults.color = '#94a3b8';
+            Chart.defaults.borderColor = 'rgba(255, 255, 255, 0.1)';
+
+            const chartColors = { primary: '#8b5cf6', secondary: '#06b6d4', tertiary: '#10b981', quaternary: '#f59e0b', green: '#10b981', teal: '#06b6d4', blue: '#3b82f6' };
+
+            const revenueProfitData = {
+                labels: ['2022', '2023', '2024', '2025 (Est)'],
+                datasets: [
+                    { label: 'Revenue (in Billions PKR)', data: [15.2, 24.5, 38.1, 46.5], backgroundColor: chartColors.blue, borderColor: chartColors.blue, borderWidth: 1 },
+                    { label: 'Profit After Tax (in Billions PKR)', data: [3.1, 5.2, 8.4, 10.2], backgroundColor: chartColors.primary, borderColor: chartColors.primary, borderWidth: 1 }
+                ]
+            };
+            const revenueProfitCtx = document.getElementById('revenueProfitChart').getContext('2d');
+            new Chart(revenueProfitCtx, { type: 'bar', data: revenueProfitData, options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true, title: { display: true, text: 'Amount (Billions PKR)' } } } } });
+
+            const valuationData = {
+                labels: ['SYS (Forward)', 'Sector Average'],
+                datasets: [
+                    { label: 'P/E Ratio', data: [18.5, 15.2], backgroundColor: [chartColors.primary, chartColors.teal], borderColor: '#ffffff', borderWidth: 1 }
+                ]
+            };
+            const valuationCtx = document.getElementById('valuationChart').getContext('2d');
+            new Chart(valuationCtx, { type: 'bar', data: valuationData, options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, scales: { x: { beginAtZero: true, title: { display: true, text: 'P/E Ratio' } } } } });
+        })();
     </script>
 </body>
+
 </html>
