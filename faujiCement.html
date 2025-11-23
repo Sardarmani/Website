@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fauji Cement (FCCL) - Investment Analysis | MantrixEdge</title>
+    <meta name="description"
+        content="Deep dive investment analysis of Fauji Cement Company Limited (FCCL). Financial performance, market position, and investment recommendation.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Fauji Cement (FCCL) - Investment Analysis">
+    <meta property="og:description"
+        content="Deep dive investment analysis of Fauji Cement (FCCL). Strong Buy recommendation with 17-37% upside potential.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://mantrixedge.com/images/image.png">
+    <meta property="og:url" content="https://mantrixedge.com/faujiCement.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            surface: '#1e293b',
+                            success: '#10b981', // Green for Buy/Positive
+                            warning: '#f59e0b', // Amber for Warning
+                            danger: '#ef4444'   // Red for Risk
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="./images/image.png">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="text-lg bg-brand-dark text-white font-sans antialiased leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 shadow-lg" id="mainNav">
+        <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-md border-b border-white/10"></div>
+        <div class="container mx-auto px-6 py-4 relative">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="./images/image.png" alt="MantrixEdge Logo"
+                        class="h-10 w-auto transition-transform group-hover:scale-110">
+                    <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
+                            class="text-brand-accent">Edge</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Home</a>
+                    <a href="psx-analysis.html"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">PSX
+                        Analysis</a>
+                    <a href="index.html#contact"
+                        class="bg-brand-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 text-sm font-bold shadow-lg shadow-blue-500/30">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 py-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="index.html" class="text-gray-300 hover:text-brand-accent block py-2">Home</a>
+                <a href="psx-analysis.html" class="text-gray-300 hover:text-brand-accent block py-2">PSX Analysis</a>
+                <a href="index.html#contact" class="text-brand-primary font-bold block py-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Header Section -->
+    <section class="pt-32 pb-12 relative overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-primary/20 rounded-full blur-[100px]"></div>
+            <div class="absolute top-40 right-1/4 w-80 h-80 bg-brand-accent/20 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-brand-success animate-pulse"></span>
+                        <span>PSX: FCCL</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-2">Fauji Cement</h1>
+                    <p class="text-xl text-gray-400">Deep Dive Investment Analysis | Nov 2025</p>
+                </div>
+
+                <div class="flex flex-col items-end text-right">
+                    <div class="text-5xl font-bold text-white mb-1">PKR 52.37</div>
+                    <div class="text-brand-success font-semibold text-lg mb-3">+149% (1 Year)</div>
+                    <div
+                        class="inline-block bg-brand-success text-white px-6 py-2 rounded-lg font-bold text-lg shadow-lg shadow-green-500/20 uppercase tracking-wide">
+                        <i class="fas fa-bullhorn mr-2"></i> Strong Buy
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metrics Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl text-center hover:bg-white/5 transition-colors">
+                    <div
+                        class="w-12 h-12 mx-auto bg-brand-primary/20 rounded-full flex items-center justify-center mb-4 text-brand-primary">
+                        <i class="fas fa-chart-pie text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-white mb-1">9.6x</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">P/E Ratio</div>
+                    <div class="text-xs text-brand-accent mt-1">vs Industry 14.6x</div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center hover:bg-white/5 transition-colors">
+                    <div
+                        class="w-12 h-12 mx-auto bg-brand-success/20 rounded-full flex items-center justify-center mb-4 text-brand-success">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-white mb-1">+62%</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Net Profit Growth</div>
+                    <div class="text-xs text-brand-success mt-1">Record FY25 Earnings</div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center hover:bg-white/5 transition-colors">
+                    <div
+                        class="w-12 h-12 mx-auto bg-brand-accent/20 rounded-full flex items-center justify-center mb-4 text-brand-accent">
+                        <i class="fas fa-coins text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-white mb-1">0.44</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">PEG Ratio</div>
+                    <div class="text-xs text-brand-success mt-1">Significantly Undervalued</div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-center hover:bg-white/5 transition-colors">
+                    <div
+                        class="w-12 h-12 mx-auto bg-yellow-500/20 rounded-full flex items-center justify-center mb-4 text-yellow-500">
+                        <i class="fas fa-hand-holding-dollar text-xl"></i>
+                    </div>
+                    <div class="text-3xl font-bold text-white mb-1">2.39%</div>
+                    <div class="text-sm text-gray-400 uppercase tracking-wider">Dividend Yield</div>
+                    <div class="text-xs text-gray-400 mt-1">23% Payout Ratio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Analysis Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+
+                <!-- Financial Strength Card -->
+                <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                        <i class="fas fa-wallet text-brand-primary"></i> Financial Strength (FY25)
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- Metric 1 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Gross Margin</span>
+                                <span class="text-brand-accent font-bold">35% (Sector Leading)</span>
+                            </div>
+                            <div class="h-3 bg-brand-dark rounded-full overflow-hidden">
+                                <div class="h-full bg-brand-accent w-[75%] rounded-full relative overflow-hidden">
+                                    <div class="absolute inset-0 bg-white/20 animate-[shimmer_2s_infinite]"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metric 2 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Revenue Growth</span>
+                                <span class="text-white font-bold">+11% YoY</span>
+                            </div>
+                            <div class="h-3 bg-brand-dark rounded-full overflow-hidden">
+                                <div class="h-full bg-brand-primary w-[40%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- Metric 3 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Net Income Growth</span>
+                                <span class="text-brand-success font-bold">+62% YoY</span>
+                            </div>
+                            <div class="h-3 bg-brand-dark rounded-full overflow-hidden">
+                                <div class="h-full bg-brand-success w-[95%] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 bg-brand-dark/50 rounded-xl border border-white/5">
+                        <p class="text-gray-400 text-sm italic">
+                            <i class="fas fa-info-circle mr-2 text-brand-primary"></i>
+                            Record profits of PKR 13.33Bn driven by cost optimization, high retention prices, and
+                            effective fuel mix strategies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Valuation & Target Card -->
+                <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                        <i class="fas fa-balance-scale text-brand-accent"></i> Valuation & Target
+                    </h3>
+
+                    <div class="bg-brand-dark rounded-2xl p-6 border border-white/5 mb-8">
+                        <h4 class="text-center text-gray-400 mb-2 uppercase tracking-wide text-sm">Upside Potential</h4>
+                        <div class="text-center text-4xl font-bold text-brand-success mb-6">17% - 37%</div>
+
+                        <!-- Gauge Visualization -->
+                        <div class="relative h-12 mt-8 mb-4">
+                            <div class="absolute top-1/2 left-0 w-full h-2 bg-gray-700 rounded-full -translate-y-1/2">
+                            </div>
+
+                            <!-- Current -->
+                            <div class="absolute top-1/2 left-[20%] -translate-y-1/2 flex flex-col items-center group">
+                                <div class="w-4 h-4 bg-white rounded-full border-4 border-brand-dark shadow-lg z-10">
+                                </div>
+                                <div
+                                    class="absolute top-6 text-xs font-bold text-white bg-brand-dark px-2 py-1 rounded border border-white/10 whitespace-nowrap">
+                                    Current<br>52.37</div>
+                            </div>
+
+                            <!-- Target -->
+                            <div class="absolute top-1/2 left-[60%] -translate-y-1/2 flex flex-col items-center">
+                                <div
+                                    class="w-4 h-4 bg-brand-success rounded-full border-4 border-brand-dark shadow-lg z-10 animate-pulse">
+                                </div>
+                                <div
+                                    class="absolute -top-10 text-xs font-bold text-brand-success bg-brand-success/10 px-2 py-1 rounded border border-brand-success/20 whitespace-nowrap">
+                                    Target<br>65.00</div>
+                            </div>
+
+                            <!-- High -->
+                            <div class="absolute top-1/2 left-[85%] -translate-y-1/2 flex flex-col items-center">
+                                <div
+                                    class="w-4 h-4 bg-brand-accent rounded-full border-4 border-brand-dark shadow-lg z-10">
+                                </div>
+                                <div
+                                    class="absolute -top-10 text-xs font-bold text-brand-accent bg-brand-accent/10 px-2 py-1 rounded border border-brand-accent/20 whitespace-nowrap">
+                                    High<br>72.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center text-sm text-gray-400 border-t border-white/10 pt-4">
+                        <div>
+                            <span class="block text-xs uppercase tracking-wider mb-1">52 Week Low</span>
+                            <span class="text-white font-bold text-lg">PKR 30.12</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xs uppercase tracking-wider mb-1">52 Week High</span>
+                            <span class="text-white font-bold text-lg">PKR 62.84</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bull vs Bear Case -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <!-- Bull Case -->
+                <div class="bg-brand-surface rounded-3xl p-8 border-t-4 border-brand-success shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-check-circle text-brand-success"></i> Bull Case (Why Buy?)
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1 text-brand-success"></i>
+                            <span class="text-gray-300"><strong class="text-white">Cost Leadership:</strong> 35% Gross
+                                Margins via 75% local coal mix & 59% in-house power generation.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1 text-brand-success"></i>
+                            <span class="text-gray-300"><strong class="text-white">Export Dominance:</strong> #1
+                                Exporter to Afghanistan (33% Market Share).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1 text-brand-success"></i>
+                            <span class="text-gray-300"><strong class="text-white">Cash Flow:</strong> Massive operating
+                                cash flow of PKR 30.15Bn.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1 text-brand-success"></i>
+                            <span class="text-gray-300"><strong class="text-white">Valuation Gap:</strong> Trading at
+                                9.6x P/E vs Peer average of 10-11x.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check mt-1 text-brand-success"></i>
+                            <span class="text-gray-300"><strong class="text-white">Macro Tailwinds:</strong> Interest
+                                rate cuts and post-flood reconstruction.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bear Case -->
+                <div class="bg-brand-surface rounded-3xl p-8 border-t-4 border-brand-warning shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-exclamation-triangle text-brand-warning"></i> Risk Factors
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-exclamation mt-1 text-brand-warning"></i>
+                            <span class="text-gray-300"><strong class="text-white">Capacity Utilization:</strong>
+                                Currently low at ~58% (vs installed capacity).</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-exclamation mt-1 text-brand-warning"></i>
+                            <span class="text-gray-300"><strong class="text-white">Liquidity:</strong> Quick ratio of
+                                0.81 indicates reliance on inventory turnover.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-exclamation mt-1 text-brand-warning"></i>
+                            <span class="text-gray-300"><strong class="text-white">Royalty Litigation:</strong> Ongoing
+                                court case regarding Punjab royalty charges.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-exclamation mt-1 text-brand-warning"></i>
+                            <span class="text-gray-300"><strong class="text-white">Cyclical Nature:</strong> Highly
+                                sensitive to Pakistan's construction slowdowns.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Peer Comparison Table -->
+            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl mb-8 overflow-hidden">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <i class="fas fa-users text-purple-500"></i> Peer Comparison
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="p-4 text-gray-400 font-medium uppercase text-sm">Company</th>
+                                <th class="p-4 text-gray-400 font-medium uppercase text-sm">P/E Ratio</th>
+                                <th class="p-4 text-gray-400 font-medium uppercase text-sm">Market Cap</th>
+                                <th class="p-4 text-gray-400 font-medium uppercase text-sm">Gross Margin</th>
+                                <th class="p-4 text-gray-400 font-medium uppercase text-sm">EPS Growth</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="bg-brand-primary/10 border-l-4 border-brand-primary">
+                                <td class="p-4 font-bold text-white">Fauji Cement (FCCL)</td>
+                                <td class="p-4 font-bold text-brand-accent">9.6x</td>
+                                <td class="p-4">PKR 128B</td>
+                                <td class="p-4 text-brand-success">35%</td>
+                                <td class="p-4 text-brand-success">+62%</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                <td class="p-4">Lucky Cement (LUCK)</td>
+                                <td class="p-4">10.5x</td>
+                                <td class="p-4">PKR 626B</td>
+                                <td class="p-4">~30%</td>
+                                <td class="p-4">Moderate</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                <td class="p-4">Bestway Cement (BWCL)</td>
+                                <td class="p-4">10.0x</td>
+                                <td class="p-4">PKR 343B</td>
+                                <td class="p-4">~28%</td>
+                                <td class="p-4">Moderate</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-4">DG Khan Cement (DGKC)</td>
+                                <td class="p-4">9.1x</td>
+                                <td class="p-4">PKR 96B</td>
+                                <td class="p-4">Variable</td>
+                                <td class="p-4">Recovering</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Action Plan -->
+            <div
+                class="bg-gradient-to-r from-brand-surface to-brand-dark rounded-3xl p-8 border border-white/10 shadow-xl">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <i class="fas fa-clipboard-list text-brand-accent"></i> Investor Action Plan
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/5">
+                        <div class="text-brand-primary mb-2 text-xl"><i class="fas fa-arrow-right"></i></div>
+                        <h4 class="text-white font-bold mb-2">Entry Strategy</h4>
+                        <p class="text-gray-400 text-sm">Accumulate on dips between <span
+                                class="text-white font-bold">PKR 50-53</span>. The recent pullback from PKR 62 offers a
+                            solid entry point.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/5">
+                        <div class="text-brand-accent mb-2 text-xl"><i class="fas fa-clock"></i></div>
+                        <h4 class="text-white font-bold mb-2">Time Horizon</h4>
+                        <p class="text-gray-400 text-sm"><span class="text-white font-bold">12-24 Months</span>. Allow
+                            time for interest rate cuts to stimulate construction demand.</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/5">
+                        <div class="text-brand-danger mb-2 text-xl"><i class="fas fa-stop-circle"></i></div>
+                        <h4 class="text-white font-bold mb-2">Stop Loss</h4>
+                        <p class="text-gray-400 text-sm"><span class="text-white font-bold">PKR 45.00</span>
+                            (Psychological support level).</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <p class="text-gray-500 text-sm max-w-2xl mx-auto">
+                    Disclaimer: This infographic is for informational purposes only and does not constitute financial
+                    advice. Data sources: PSX filings, Company Reports (Nov 2025). Past performance is not indicative of
+                    future results.
+                </p>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-500">
+                    Copyright &copy; 2024 MantrixEdge. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
