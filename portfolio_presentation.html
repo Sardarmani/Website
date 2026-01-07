@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MantrixEdge | Business Automation Solutions</title>
+    <meta name="description"
+        content="MantrixEdge - Automate your sales, streamline operations, and scale your business with custom AI solutions.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            surface: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="icon" href="./images/mantrix_edge_logo.png">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glossy-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .glossy-card:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 12px 40px 0 rgba(59, 130, 246, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .hero-glow {
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-dark text-white antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 py-6 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div
+                    class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20">
+                    <i class="fas fa-robot text-white text-lg"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tight">Mantrix<span
+                        class="text-brand-accent">Edge</span></span>
+            </div>
+            <a href="mailto:neurofinancelab@gmail.com"
+                class="px-6 py-2 bg-brand-primary hover:bg-blue-600 text-white rounded-full font-medium transition-all shadow-lg shadow-blue-500/20">
+                Book Strategy Call
+            </a>
+        </div>
+    </nav>
+
+    <!-- Slide 1: Sales / Hero -->
+    <section class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="absolute inset-0 hero-glow"></div>
+
+        <div class="container mx-auto px-6 text-center z-10">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-surface border border-brand-primary/30 text-brand-primary mb-8 animate-fade-in-up">
+                <span class="w-2 h-2 rounded-full bg-brand-primary"></span>
+                <span class="text-sm font-bold tracking-wider uppercase">Strategic Business Partner</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Enterprise Automation. <br>
+                <span class="gradient-text">Strategic Scaling.</span>
+            </h1>
+
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+                We deploy <strong>business-owned AI systems</strong> that autonomously handle your sales, support, and
+                operations
+                <strong>24/7</strong>—enabling you to focus on high-level strategy while technology handles the
+                execution.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="glossy-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                    <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-comments-dollar text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Private AI Agents</h3>
+                    <p class="text-gray-400 text-sm">Your own AI staff that knows your business perfectly.</p>
+                </div>
+                <div class="glossy-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                    <div class="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-pie text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Executive Clarity</h3>
+                    <p class="text-gray-400 text-sm">Real-time dashboards showing true profitability.</p>
+                </div>
+                <div class="glossy-card p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform">
+                    <div class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lock text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Secure & Private</h3>
+                    <p class="text-gray-400 text-sm">No public AI leakage. Your data stays yours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide: Private AI Capabilities -->
+    <section class="py-20 bg-brand-surface relative overflow-hidden text-center">
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-bold mb-12">Private AI Capabilities</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 border border-white/5 rounded-2xl bg-brand-dark/50">
+                    <i class="fas fa-robot text-4xl text-brand-primary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">AI Sales Assistants</h3>
+                    <p class="text-gray-400 text-sm">Engage and qualify leads instantly, 24/7.</p>
+                </div>
+                <div class="p-6 border border-white/5 rounded-2xl bg-brand-dark/50">
+                    <i class="fas fa-headset text-4xl text-brand-accent mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Customer Support</h3>
+                    <p class="text-gray-400 text-sm">Resolve 80% of queries without human staff.</p>
+                </div>
+                <div class="p-6 border border-white/5 rounded-2xl bg-brand-dark/50">
+                    <i class="fas fa-cogs text-4xl text-purple-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Ops Automation</h3>
+                    <p class="text-gray-400 text-sm">Streamline workflows and reduce overhead.</p>
+                </div>
+                <div class="p-6 border border-white/5 rounded-2xl bg-brand-dark/50">
+                    <i class="fas fa-chart-line text-4xl text-green-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Executive Dashboards</h3>
+                    <p class="text-gray-400 text-sm">One view for all your critical metrics.</p>
+                </div>
+            </div>
+            <div
+                class="mt-12 inline-block px-8 py-3 rounded-full bg-brand-dark border border-brand-primary/30 text-brand-primary font-semibold">
+                Already done. Already proven.
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Case Study - Travel Agency -->
+    <section class="py-24 bg-brand-surface relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Case Study: <span class="text-white">John Burton Travel
+                        Agency</span>
+                </h2>
+                <div class="h-1 w-24 bg-brand-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <!-- Visual Representation -->
+                <div class="lg:w-1/2">
+                    <div
+                        class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-brand-dark p-8">
+                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                            <i class="fas fa-plane-departure text-9xl text-white"></i>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Step 1 -->
+                            <div class="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center text-white font-bold">
+                                    1</div>
+                                <div>
+                                    <p class="text-sm text-gray-400">User Action</p>
+                                    <p class="font-bold">Customer comments "Info" on Instagram</p>
+                                </div>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex justify-center"><i class="fas fa-arrow-down text-gray-500"></i></div>
+
+                            <!-- Step 2 -->
+                            <div
+                                class="flex items-center gap-4 p-4 rounded-xl bg-brand-primary/20 border border-brand-primary/30">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center text-white font-bold">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-brand-primary">Private AI Assistant</p>
+                                    <p class="font-bold">Instantly DMs booking details & FAQ</p>
+                                </div>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="flex justify-center"><i class="fas fa-arrow-down text-gray-500"></i></div>
+
+                            <!-- Step 3 -->
+                            <div
+                                class="flex items-center gap-4 p-4 rounded-xl bg-green-500/20 border border-green-500/30">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-green-400">Result</p>
+                                    <p class="font-bold">Lead Qualified & Booked Automatically</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="lg:w-1/2">
+                    <h3 class="text-3xl font-bold mb-6 text-brand-accent">Consulting Case Study</h3>
+
+                    <div class="space-y-8">
+                        <div class="border-l-4 border-red-500 pl-6">
+                            <h4 class="text-xl font-bold text-white mb-2">Strategic Challenge</h4>
+                            <p class="text-gray-400">The client faced significant revenue leakage due to delayed
+                                response times. High-intent leads were being lost to competitors because simple queries
+                                ("Price?", "Dates?") weren't addressed instantly.</p>
+                        </div>
+
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h4 class="text-xl font-bold text-white mb-2">The Solution</h4>
+                            <p class="text-gray-400">We deployed a bespoke <strong>Private AI Assistant</strong>.
+                                This system engages customers 24/7, instantly qualifying leads and answering FAQs
+                                to drive bookings without human intervention.</p>
+                        </div>
+
+                        <div class="bg-brand-dark p-6 rounded-xl border border-white/10">
+                            <p class="text-lg font-medium text-white mb-2"><i
+                                    class="fas fa-quote-left text-brand-accent mr-2"></i> Result: Zero Missed Leads</p>
+                            <p class="text-gray-400 text-sm">"It's like having a full-time sales agent working for free,
+                                24 hours a day."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Executive Dashboards -->
+    <section class="py-24 bg-brand-dark relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col-reverse lg:flex-row gap-12 items-center">
+                <!-- Text Content -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-6">Executive <span class="gradient-text">Decision
+                            Intelligence</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Eliminate the guesswork. We unify disparate data sources (CRM, Sales, Spreadsheets) into a
+                        single, authoritative
+                        command center for high-level decision making.
+                    </p>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-brand-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-eye text-brand-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">Total Visibility</h4>
+                                <p class="text-gray-400">See daily revenue, active leads, and customer churn in one
+                                    glance.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
+                                <i class="fas fa-chart-bar text-brand-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">Data-Driven Decisions</h4>
+                                <p class="text-gray-400">Stop guessing. Know exactly which marketing channel is bringing
+                                    the highest ROI.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Visual Mockup -->
+                <div class="lg:w-1/2 w-full">
+                    <div class="relative rounded-2xl bg-[#0f172a] border border-gray-700 shadow-2xl p-2 md:p-4">
+                        <!-- Dashboard Header Mockup -->
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-700">
+                            <div class="font-bold text-gray-300">CEO Overview</div>
+                            <div class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded">Live Data ●</div>
+                        </div>
+
+                        <!-- Grid Mockup -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-800/50 p-4 rounded-lg">
+                                <div class="text-xs text-gray-500 mb-1">Total Revenue</div>
+                                <div class="text-2xl font-bold text-white">$124,500</div>
+                                <div class="text-xs text-green-400 mt-1">▲ 12% vs last month</div>
+                            </div>
+                            <div class="bg-gray-800/50 p-4 rounded-lg">
+                                <div class="text-xs text-gray-500 mb-1">Active Leads</div>
+                                <div class="text-2xl font-bold text-white">843</div>
+                                <div class="text-xs text-green-400 mt-1">▲ 45 new today</div>
+                            </div>
+                        </div>
+
+                        <!-- Chart Mockup -->
+                        <div
+                            class="bg-gray-800/50 p-4 rounded-lg h-32 flex items-center justify-center relative overflow-hidden">
+                            <div class="absolute inset-0 flex items-end px-4 pb-2 gap-2">
+                                <div class="w-full bg-blue-500/30 h-[40%] rounded-t"></div>
+                                <div class="w-full bg-blue-500/50 h-[60%] rounded-t"></div>
+                                <div class="w-full bg-blue-500/70 h-[30%] rounded-t"></div>
+                                <div class="w-full bg-blue-500/90 h-[80%] rounded-t"></div>
+                                <div class="w-full bg-brand-accent h-[95%] rounded-t"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing / CTA -->
+    <section class="py-24 bg-brand-surface border-t border-white/5">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8">Ready to modernize your <span
+                    class="text-brand-primary">Operations?</span></h2>
+            <p class="text-xl text-gray-400 mb-12">
+                We design the strategy. We build the systems. You scale the results.
+            </p>
+
+            <a href="mailto:neurofinancelab@gmail.com"
+                class="inline-block px-12 py-5 bg-brand-primary hover:bg-blue-600 text-white rounded-full font-bold text-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all transform">
+                Let's Discuss Your Strategy
+            </a>
+
+            <p class="mt-8 text-gray-500 text-sm">
+                MantrixEdge • Islamabad, Pakistan
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f172a] border-t border-white/5 py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-gray-500 text-sm">
+                &copy; 2024 MantrixEdge. All rights reserved.
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                        class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors"><i
+                        class="fab fa-twitter text-xl"></i></a>
+                <a href="mailto:neurofinancelab@gmail.com" class="text-gray-400 hover:text-white transition-colors"><i
+                        class="fas fa-envelope text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

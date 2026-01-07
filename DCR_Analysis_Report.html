@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolmen City REIT (DCR) - Investment Analysis | MantrixEdge</title>
+    <meta name="description"
+        content="Deep dive investment analysis of Dolmen City REIT (DCR). Financial performance, market position, and investment recommendation.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Dolmen City REIT (DCR) - Investment Analysis">
+    <meta property="og:description"
+        content="Deep dive investment analysis of Dolmen City REIT (DCR). Accumulate recommendation with 3-18% upside potential.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://mantrixedge.com/images/mantrix_edge_logo.png">
+    <link rel="canonical" href="https://mantrixedge.com/DCR_Analysis_Report.html">
+    <meta property="og:url" content="https://mantrixedge.com/DCR_Analysis_Report.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            surface: '#1e293b',
+                            success: '#10b981',
+                            warning: '#f59e0b',
+                            danger: '#ef4444'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+
+    <link rel="icon" href="./images/mantrix_edge_logo.png">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+    </style>
+</head>
+
+<body class="text-lg bg-brand-dark text-white font-sans antialiased leading-relaxed">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 shadow-lg" id="mainNav">
+        <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-md border-b border-white/10"></div>
+        <div class="container mx-auto px-6 py-4 relative">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-chart-line text-white text-lg"></i>
+                        <div
+                            class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
+                            class="text-brand-accent">Edge</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Home</a>
+                    <a href="psx-analysis.html"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">PSX
+                        Analysis</a>
+                    <a href="index.html#contact"
+                        class="bg-brand-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 text-sm font-bold shadow-lg shadow-blue-500/30">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 py-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="index.html" class="text-gray-300 hover:text-brand-accent block py-2">Home</a>
+                <a href="psx-analysis.html" class="text-gray-300 hover:text-brand-accent block py-2">PSX Analysis</a>
+                <a href="index.html#contact" class="text-brand-primary font-bold block py-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Header Section -->
+    <section class="pt-32 pb-12 relative overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-primary/20 rounded-full blur-[100px]"></div>
+            <div class="absolute top-40 right-1/4 w-80 h-80 bg-brand-accent/20 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+                <div>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-sm text-gray-300 mb-4">
+                        <span class="w-2 h-2 rounded-full bg-brand-success animate-pulse"></span>
+                        <span>PSX: DCR</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-2">Dolmen City REIT</h1>
+                    <p class="text-xl text-gray-400">Comprehensive Investment Analysis Report</p>
+                    <p class="text-sm text-brand-accent mt-2">Pakistan's Premier Commercial REIT | Karachi, Sindh</p>
+                </div>
+
+                <div class="flex flex-col items-end text-right">
+                    <div class="text-5xl font-bold text-white mb-1">PKR 38.90</div>
+                    <div class="text-gray-300 text-lg mb-1">Target: <span class="text-brand-success font-bold">PKR 40 -
+                            46</span></div>
+                    <div class="text-brand-success font-semibold text-sm mb-3">+92.33% (1 Year)</div>
+                    <div
+                        class="inline-block bg-brand-success text-white px-6 py-2 rounded-lg font-bold text-lg shadow-lg shadow-green-500/20 uppercase tracking-wide">
+                        <i class="fas fa-bullhorn mr-2"></i> Accumulate
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ticker Info Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+                <div class="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
+                    <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Ticker</div>
+                    <div class="text-xl font-bold text-white">DCR</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
+                    <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">NAV per Unit</div>
+                    <div class="text-xl font-bold text-white">PKR 34.40</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
+                    <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Market Cap</div>
+                    <div class="text-xl font-bold text-white">PKR 85.88B</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
+                    <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Yield</div>
+                    <div class="text-xl font-bold text-brand-success">6.3-7.98%</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded-xl border border-white/5 text-center">
+                    <div class="text-xs text-gray-400 uppercase tracking-wider mb-1">Rating</div>
+                    <div class="text-xl font-bold text-brand-success">AAA(rr)</div>
+                </div>
+            </div>
+
+            <!-- Recommendation Box -->
+            <div
+                class="bg-gradient-to-r from-green-900/40 to-green-800/40 border border-green-500/30 rounded-2xl p-6 mb-12">
+                <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2"><i
+                        class="fas fa-bullseye text-brand-success"></i> Recommendation: ACCUMULATE</h2>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div>
+                        <span class="block text-gray-400 text-sm mb-1">Rating</span>
+                        <span class="text-white font-semibold">Core Holdings / Moderate Accumulation</span>
+                    </div>
+                    <div>
+                        <span class="block text-gray-400 text-sm mb-1">Target Price Range</span>
+                        <span class="text-white font-semibold">PKR 40-46 (12-month)</span>
+                    </div>
+                    <div>
+                        <span class="block text-gray-400 text-sm mb-1">Upside Potential</span>
+                        <span class="text-brand-success font-semibold">15-20% from current</span>
+                    </div>
+                    <div>
+                        <span class="block text-gray-400 text-sm mb-1">Risk Profile</span>
+                        <span class="text-white font-semibold">Conservative / Moderate Income</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summary Grid -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Valuation Metrics -->
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brand-primary">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2"><i
+                            class="fas fa-chart-pie text-brand-primary"></i> Valuation Metrics</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">P/E Ratio</span>
+                            <span class="text-white font-bold">10.4x <span
+                                    class="text-brand-success text-xs">(Cheap)</span></span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Price-to-Book</span>
+                            <span class="text-white font-bold">0.80x</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">EV/Revenue</span>
+                            <span class="text-white font-bold">13.8x</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Premium to NAV</span>
+                            <span class="text-white font-bold">12.4%</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-gray-400">Assessment</span>
+                            <span class="text-brand-success font-bold">ATTRACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Health -->
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brand-success">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2"><i
+                            class="fas fa-wallet text-brand-success"></i> Financial Health</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Debt-to-Equity</span>
+                            <span class="text-brand-success font-bold">0.00x (Debt-Free)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Credit Rating</span>
+                            <span class="text-brand-success font-bold">AAA(rr)</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Quick Ratio</span>
+                            <span class="text-white font-bold">2.34x</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Current Ratio</span>
+                            <span class="text-white font-bold">2.99x</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-gray-400">Strength</span>
+                            <span class="text-brand-success font-bold">EXCELLENT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dividend Profile -->
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-brand-accent">
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2"><i
+                            class="fas fa-hand-holding-dollar text-brand-accent"></i> Dividend Profile</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Annual Dividend</span>
+                            <span class="text-white font-bold">PKR 2.52</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Yield</span>
+                            <span class="text-brand-success font-bold">6.5-7.98%</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">Payout Ratio</span>
+                            <span class="text-white font-bold">96-97%</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                            <span class="text-gray-400">3-Year Growth</span>
+                            <span class="text-brand-success font-bold">21.7% p.a.</span>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-gray-400">Next Ex-Div</span>
+                            <span class="text-white font-bold">Dec 26, 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Sections -->
+    <section class="py-12">
+        <div class="container mx-auto px-6 space-y-16">
+
+            <!-- 1. Company Overview -->
+            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">1. Company Overview &
+                    Market Position</h2>
+
+                <div class="mb-8">
+                    <h3 class="text-xl text-brand-primary font-bold mb-4">Company Profile</h3>
+                    <p class="text-gray-300 leading-relaxed">Dolmen City REIT (DCR) is <strong>Pakistan's first and only
+                            listed commercial REIT</strong>, launched in June 2015 by Arif Habib Dolmen REIT Management
+                        Limited (AHDRML). As a perpetual, closed-end, Shariah-compliant rental REIT, DCR was established
+                        under SECP regulations to generate stable rental income from premium commercial real estate
+                        assets. The REIT is managed by a professionally qualified team with extensive real estate
+                        experience within the Arif Habib Group.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
+                        <h4 class="text-lg font-bold text-white mb-4">Dolmen Mall Clifton (68% of portfolio)</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Leasable Area: 542,847 sq.ft.</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Total Built-up: 1 million sq.ft.</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Occupancy: 97.8%</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Tenants: 130+ retail outlets</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Daily Footfall: 25,000-29,000</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brand-dark p-6 rounded-xl border border-white/5">
+                        <h4 class="text-lg font-bold text-white mb-4">The Harbour Front (32% of portfolio)</h4>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Leasable Area: 257,162 sq.ft.</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Floors: 19 premium office floors</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Occupancy: 100%</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Key Tenants: Engro, P&G, Mitsubishi</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success text-sm"></i>
+                                Waterfront Location: Defence/Clifton</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-xl text-brand-primary font-bold mb-4">Competitive Positioning</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-brand-success/10 border border-brand-success/20 p-4 rounded-lg text-center">
+                        <div class="text-xs text-brand-success uppercase mb-1">Prime Location</div>
+                        <div class="font-bold text-white">Clifton, Karachi</div>
+                    </div>
+                    <div class="bg-brand-success/10 border border-brand-success/20 p-4 rounded-lg text-center">
+                        <div class="text-xs text-brand-success uppercase mb-1">Portfolio Scale</div>
+                        <div class="font-bold text-white">800,009 sq.ft.</div>
+                    </div>
+                    <div class="bg-brand-success/10 border border-brand-success/20 p-4 rounded-lg text-center">
+                        <div class="text-xs text-brand-success uppercase mb-1">Occupancy Rate</div>
+                        <div class="font-bold text-white">98.5% Average</div>
+                    </div>
+                    <div class="bg-brand-success/10 border border-brand-success/20 p-4 rounded-lg text-center">
+                        <div class="text-xs text-brand-success uppercase mb-1">Lease Maturity</div>
+                        <div class="font-bold text-white">3+ Years WALE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Valuation Analysis -->
+            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">2. Valuation Analysis</h2>
+
+                <h3 class="text-xl text-brand-primary font-bold mb-4">Valuation Assessment</h3>
+                <p class="text-gray-300 mb-6"><strong class="text-brand-success">DCR is trading at an ATTRACTIVE
+                        VALUATION</strong> compared to regional and global REIT benchmarks:</p>
+
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-white/10 bg-brand-dark/50">
+                                <th class="p-4 text-gray-400 font-medium">Metric</th>
+                                <th class="p-4 text-gray-400 font-medium">DCR (Current)</th>
+                                <th class="p-4 text-gray-400 font-medium">Asian REITs Avg</th>
+                                <th class="p-4 text-gray-400 font-medium">Assessment</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 font-bold">P/E Ratio</td>
+                                <td class="p-4 text-brand-accent font-bold">10.4x</td>
+                                <td class="p-4">17.8x</td>
+                                <td class="p-4 text-brand-success">Significantly Undervalued</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 font-bold">Price-to-Book</td>
+                                <td class="p-4 text-brand-accent font-bold">0.80x</td>
+                                <td class="p-4">0.90x</td>
+                                <td class="p-4 text-brand-success">Trading Below Book Value</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 font-bold">EV/Revenue</td>
+                                <td class="p-4">13.8x</td>
+                                <td class="p-4">15-20x (typical)</td>
+                                <td class="p-4 text-brand-success">Reasonable Valuation</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">NAV Premium</td>
+                                <td class="p-4">12.4%</td>
+                                <td class="p-4">20-40% (global REITs)</td>
+                                <td class="p-4 text-brand-success">Conservative Premium</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-brand-dark p-6 rounded-xl border border-white/5 mb-8">
+                    <h3 class="text-xl text-white font-bold mb-4">Fair Value Estimation</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start gap-3"><i class="fas fa-calculator mt-1 text-brand-accent"></i>
+                            <span><strong>Dividend Discount Model (DDM):</strong> Fair value PKR 42-45 (based on 6.5%
+                                yield assumption)</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-calculator mt-1 text-brand-accent"></i>
+                            <span><strong>NAV-based Valuation:</strong> Fair value PKR 39-42 (10-20% premium to current
+                                NAV)</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-calculator mt-1 text-brand-accent"></i>
+                            <span><strong>P/E Multiple Valuation:</strong> Fair value PKR 40-46 (12-14x earnings
+                                multiple)</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-brand-success"></i>
+                            <span><strong>Consensus Fair Range:</strong> <strong class="text-white">PKR 40-46</strong>
+                                representing 3-18% upside</span></li>
+                    </ul>
+                </div>
+
+                <h3 class="text-xl text-brand-primary font-bold mb-4">Valuation Comparison with Peers</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-white/10 bg-brand-dark/50">
+                                <th class="p-4 text-gray-400 font-medium">REIT / Company</th>
+                                <th class="p-4 text-gray-400 font-medium">Market Cap (PKR B)</th>
+                                <th class="p-4 text-gray-400 font-medium">P/E Ratio</th>
+                                <th class="p-4 text-gray-400 font-medium">Dividend Yield</th>
+                                <th class="p-4 text-gray-400 font-medium">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="bg-brand-primary/10 border-l-4 border-brand-success">
+                                <td class="p-4 font-bold text-white">Dolmen City REIT</td>
+                                <td class="p-4">85.88</td>
+                                <td class="p-4 font-bold text-brand-accent">10.4x</td>
+                                <td class="p-4 text-brand-success">6.5-8.0%</td>
+                                <td class="p-4">Commercial</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5">
+                                <td class="p-4">Globe Residency REIT</td>
+                                <td class="p-4">3.14</td>
+                                <td class="p-4">11.28x</td>
+                                <td class="p-4">8.62%</td>
+                                <td class="p-4">Residential</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5">
+                                <td class="p-4">MCB Bank Limited</td>
+                                <td class="p-4">436.8</td>
+                                <td class="p-4">8.0x</td>
+                                <td class="p-4">3.5%</td>
+                                <td class="p-4">Financial</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="p-4">HBL Bank Limited</td>
+                                <td class="p-4">470.1</td>
+                                <td class="p-4">7.2x</td>
+                                <td class="p-4">4.2%</td>
+                                <td class="p-4">Financial</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 3. Financial Health -->
+            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">3. Financial Health &
+                    Performance</h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-brand-dark p-4 rounded-xl border border-white/5 text-center">
+                        <div class="text-xs text-gray-400 uppercase mb-1">Total Assets</div>
+                        <div class="text-lg font-bold text-white">PKR 77.5B</div>
+                    </div>
+                    <div class="bg-brand-dark p-4 rounded-xl border border-white/5 text-center">
+                        <div class="text-xs text-gray-400 uppercase mb-1">Inv. Property</div>
+                        <div class="text-lg font-bold text-white">PKR 74.8B</div>
+                    </div>
+                    <div class="bg-brand-dark p-4 rounded-xl border border-white/5 text-center">
+                        <div class="text-xs text-gray-400 uppercase mb-1">Unit Holders' Fund</div>
+                        <div class="text-lg font-bold text-white">PKR 76.5B</div>
+                    </div>
+                    <div class="bg-brand-dark p-4 rounded-xl border border-white/5 text-center">
+                        <div class="text-xs text-gray-400 uppercase mb-1">Cash & Deposits</div>
+                        <div class="text-lg font-bold text-white">PKR 2.3B</div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl text-brand-primary font-bold mb-4">Income Statement Analysis</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-white/10 bg-brand-dark/50">
+                                        <th class="p-3 text-gray-400 text-sm">Period</th>
+                                        <th class="p-3 text-gray-400 text-sm">Q1 FY26</th>
+                                        <th class="p-3 text-gray-400 text-sm">Q1 FY25</th>
+                                        <th class="p-3 text-gray-400 text-sm">YoY</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-300 text-sm">
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">Rental Income</td>
+                                        <td class="p-3">1,532.7m</td>
+                                        <td class="p-3">1,286.3m</td>
+                                        <td class="p-3 text-brand-success">+19.0%</td>
+                                    </tr>
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">Total Revenue</td>
+                                        <td class="p-3">1,564.5m</td>
+                                        <td class="p-3">1,369.8m</td>
+                                        <td class="p-3 text-brand-success">+14.2%</td>
+                                    </tr>
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">Op. Expenses</td>
+                                        <td class="p-3">172.3m</td>
+                                        <td class="p-3">304.9m</td>
+                                        <td class="p-3 text-brand-success">-43.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-bold">Profit</td>
+                                        <td class="p-3">1,385.2m</td>
+                                        <td class="p-3">1,112.9m</td>
+                                        <td class="p-3 text-brand-success">+24.5%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-brand-primary font-bold mb-4">Liquidity Profile</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <tbody class="text-gray-300 text-sm">
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">Current Ratio</td>
+                                        <td class="p-3">2.99x (vs 1.5-2.0x acceptable)</td>
+                                        <td class="p-3 text-brand-success font-bold">EXCELLENT</td>
+                                    </tr>
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">Quick Ratio</td>
+                                        <td class="p-3">2.34x (vs 1.0x minimum)</td>
+                                        <td class="p-3 text-brand-success font-bold">EXCELLENT</td>
+                                    </tr>
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">Cash Position</td>
+                                        <td class="p-3">PKR 2,286 million</td>
+                                        <td class="p-3 text-brand-success font-bold">STRONG</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-bold">Op. Cash Flow</td>
+                                        <td class="p-3">PKR 1,294 million (Q1)</td>
+                                        <td class="p-3 text-brand-success font-bold">ROBUST</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-success/10 border border-brand-success/20 p-6 rounded-xl">
+                    <h3 class="text-xl text-brand-success font-bold mb-2"><i class="fas fa-shield-alt"></i> Debt
+                        Profile: ZERO DEBT</h3>
+                    <p class="text-gray-300 mb-4">DCR operates with ZERO DEBT - a major strength that distinguishes it
+                        from many property companies.</p>
+                    <ul class="grid md:grid-cols-2 gap-2 text-sm text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success"></i> Total
+                            Debt-to-Equity: 0.00x</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success"></i> Unleveraged
+                            capital structure</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success"></i> Capacity for
+                            expansion</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-brand-success"></i> AAA(rr)
+                            credit rating</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Dividend & Distributions -->
+            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">4. Dividend & Distributions
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl text-brand-primary font-bold mb-4">Dividend History</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="border-b border-white/10 bg-brand-dark/50">
+                                        <th class="p-3 text-gray-400 text-sm">Period</th>
+                                        <th class="p-3 text-gray-400 text-sm">Dividend/Unit</th>
+                                        <th class="p-3 text-gray-400 text-sm">YoY Growth</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-300 text-sm">
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">Q1 FY2026</td>
+                                        <td class="p-3">PKR 0.63</td>
+                                        <td class="p-3 text-brand-success">+26.0%</td>
+                                    </tr>
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">Q1 FY2025</td>
+                                        <td class="p-3">PKR 0.50</td>
+                                        <td class="p-3 text-brand-success">+11.6%</td>
+                                    </tr>
+                                    <tr class="border-b border-white/5">
+                                        <td class="p-3 font-bold">FY 2024</td>
+                                        <td class="p-3">PKR 2.27</td>
+                                        <td class="p-3 text-brand-success">+5.6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-bold">FY 2023</td>
+                                        <td class="p-3">PKR 2.15</td>
+                                        <td class="p-3">-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl text-brand-primary font-bold mb-4">Growth Profile</h3>
+                        <ul class="space-y-4">
+                            <li class="bg-brand-dark p-4 rounded-lg border border-white/5">
+                                <div class="text-gray-400 text-xs uppercase">3-Year Dividend CAGR</div>
+                                <div class="text-brand-success font-bold text-lg">21.7% p.a.</div>
+                                <div class="text-gray-500 text-xs">Exceptional growth</div>
+                            </li>
+                            <li class="bg-brand-dark p-4 rounded-lg border border-white/5">
+                                <div class="text-gray-400 text-xs uppercase">5-Year Dividend CAGR</div>
+                                <div class="text-brand-success font-bold text-lg">9.3% p.a.</div>
+                                <div class="text-gray-500 text-xs">Strong compound growth</div>
+                            </li>
+                            <li class="bg-brand-dark p-4 rounded-lg border border-white/5">
+                                <div class="text-gray-400 text-xs uppercase">Sustainability</div>
+                                <div class="text-white font-bold text-sm">Highly Sustainable (96% Payout)</div>
+                                <div class="text-gray-500 text-xs">Mandatory 90% distribution</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-xl text-brand-primary font-bold mb-4">Comparative Dividend Analysis</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-white/10 bg-brand-dark/50">
+                                <th class="p-4 text-gray-400 font-medium">Investment Option</th>
+                                <th class="p-4 text-gray-400 font-medium">Current Yield</th>
+                                <th class="p-4 text-gray-400 font-medium">Stability</th>
+                                <th class="p-4 text-gray-400 font-medium">Growth Potential</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="bg-brand-primary/10 border-l-4 border-brand-success">
+                                <td class="p-4 font-bold text-white">DCR REIT</td>
+                                <td class="p-4 text-brand-success">6.5-8.0%</td>
+                                <td class="p-4 text-brand-success">High (AAA)</td>
+                                <td class="p-4 text-brand-success">High (21.7% CAGR)</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4">Govt Bonds (PIBs)</td>
+                                <td class="p-4">16-20%</td>
+                                <td class="p-4 text-brand-success">Highest</td>
+                                <td class="p-4 text-brand-danger">None (Fixed)</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4">Bank Deposits</td>
+                                <td class="p-4">10.5-12.5%</td>
+                                <td class="p-4 text-brand-success">High</td>
+                                <td class="p-4 text-brand-warning">Limited</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 5. Stock Performance -->
+            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">5. Stock Performance</h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-brand-dark p-4 rounded-xl border border-white/5 text-center">
+                        <div class="text-xs text-gray-400 uppercase mb-1">1-Year Return</div>
+                        <div class="text-lg font-bold text-brand-success">+92.33%</div>
+                    </div>
+                    <div class="bg-brand-dark p-4 rounded-xl border border-white/5 text-center">
+                        <div class="text-xs text-gray-400 uppercase mb-1">6-Month Return</div>
+                        <div class="text-lg font-bold text-brand-success">+42.98%</div>
+                    </div>
+                    <div class="bg-brand-dark p-4 rounded-xl border border-white/5 text-center">
+                        <div class="text-xs text-gray-400 uppercase mb-1">3-Month Return</div>
+                        <div class="text-lg font-bold text-brand-success">+20.65%</div>
+                    </div>
+                    <div class="bg-brand-dark p-4 rounded-xl border border-white/5 text-center">
+                        <div class="text-xs text-gray-400 uppercase mb-1">52W Range</div>
+                        <div class="text-sm font-bold text-white">18.26 - 34.00</div>
+                    </div>
+                </div>
+
+                <div class="h-80 w-full mb-8 bg-brand-dark p-4 rounded-xl border border-white/5">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+
+                <h3 class="text-xl text-brand-primary font-bold mb-4">Performance vs Benchmarks</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="border-b border-white/10 bg-brand-dark/50">
+                                <th class="p-4 text-gray-400 font-medium">Index/Asset</th>
+                                <th class="p-4 text-gray-400 font-medium">1-Year Return</th>
+                                <th class="p-4 text-gray-400 font-medium">Volatility (Beta)</th>
+                                <th class="p-4 text-gray-400 font-medium">Risk-Adjusted</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr class="bg-brand-primary/10 border-l-4 border-brand-success">
+                                <td class="p-4 font-bold text-white">DCR REIT</td>
+                                <td class="p-4 text-brand-success">+92.3%</td>
+                                <td class="p-4">-0.05 to 0.29 (LOW)</td>
+                                <td class="p-4 text-brand-success">EXCELLENT</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4">KSE-100 Index</td>
+                                <td class="p-4">~45%</td>
+                                <td class="p-4">1.0 (Benchmark)</td>
+                                <td class="p-4 text-brand-success">Good</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 6. Future Outlook & Risks -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Catalysts -->
+                <div class="bg-brand-surface rounded-3xl p-8 border-t-4 border-brand-success shadow-xl">
+                    <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-rocket text-brand-success"></i> Growth Catalysts
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-brand-success font-bold mb-1">1. Rental Income Growth</h4>
+                            <p class="text-gray-400 text-sm">19% YoY growth driven by hybrid rental models, escalations,
+                                and successful tenant onboarding.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-brand-success font-bold mb-1">2. Property Appreciation</h4>
+                            <p class="text-gray-400 text-sm">Premium Clifton real estate demand drives fair value gains.
+                                12.4% premium to NAV suggests further upside.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-brand-success font-bold mb-1">3. Dividend Yield Compression</h4>
+                            <p class="text-gray-400 text-sm">Falling interest rates make DCR's 6.5-8% yield more
+                                attractive, driving price multiple expansion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Risks -->
+                <div class="bg-brand-surface rounded-3xl p-8 border-t-4 border-brand-warning shadow-xl">
+                    <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fas fa-exclamation-triangle text-brand-warning"></i> Key Risks
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-brand-warning font-bold mb-1">Macroeconomic Risk (Moderate)</h4>
+                            <p class="text-gray-400 text-sm">Economic volatility could impact tenant demand. Mitigated
+                                by 98.5% occupancy and strong tenant profile.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-brand-warning font-bold mb-1">Interest Rate Risk (Moderate)</h4>
+                            <p class="text-gray-400 text-sm">Rising rates could compress valuations. Mitigated by zero
+                                debt structure.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-brand-warning font-bold mb-1">Lease Renewal Risk (Moderate)</h4>
+                            <p class="text-gray-400 text-sm">2.4 year WALE on mall portion. Mitigated by active
+                                management and >95% renewal rate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Investment Summary -->
+            <div
+                class="bg-gradient-to-r from-brand-surface to-brand-dark rounded-3xl p-8 border border-white/10 shadow-xl">
+                <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">7. Investment Summary</h2>
+
+                <p class="text-gray-300 mb-8 text-lg"><strong>Dolmen City REIT represents a compelling investment
+                        opportunity</strong>, offering an attractive combination of stable income, capital growth, and
+                    downside protection.</p>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-4 flex items-center gap-2"><i
+                                class="fas fa-check-circle text-brand-success"></i> Quantitative Strengths</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>• <strong>Valuation:</strong> 10.4x P/E (Cheap)</li>
+                            <li>• <strong>Dividend:</strong> 21.7% 3-Year CAGR</li>
+                            <li>• <strong>Health:</strong> Zero Debt, AAA(rr) Rating</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/5">
+                        <h4 class="text-white font-bold mb-4 flex items-center gap-2"><i
+                                class="fas fa-check-circle text-brand-success"></i> Qualitative Strengths</h4>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li>• <strong>Position:</strong> Only pure commercial REIT</li>
+                            <li>• <strong>Tenants:</strong> Top-tier multinationals</li>
+                            <li>• <strong>Management:</strong> Arif Habib Group</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full text-left border-collapse bg-brand-dark/30 rounded-xl overflow-hidden">
+                        <tbody class="text-gray-300">
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 font-bold">Rating</td>
+                                <td class="p-4 text-brand-success font-bold text-xl">ACCUMULATE</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 font-bold">Target Price</td>
+                                <td class="p-4 text-brand-success font-bold text-xl">PKR 40-46</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="p-4 font-bold">Upside</td>
+                                <td class="p-4 text-brand-success font-bold">3-18%</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Time Horizon</td>
+                                <td class="p-4">3-5+ Years</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-brand-primary/10 border border-brand-primary/20 p-6 rounded-xl">
+                    <h4 class="text-brand-primary font-bold mb-2">Position Sizing Guidelines</h4>
+                    <ul class="text-gray-300 text-sm space-y-1">
+                        <li>• <strong>Conservative:</strong> 5-10% (Core income)</li>
+                        <li>• <strong>Moderate:</strong> 10-15% (Growth + Income)</li>
+                        <li>• <strong>Growth:</strong> 15-20% (Long-term appreciation)</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8 mt-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white font-bold mb-4">Sources & Data Accuracy</h3>
+                    <p class="text-gray-500 text-sm mb-4">This analysis is based on authentic, verifiable sources from
+                        official filings and established financial platforms. All data current as of December 28, 2025.
+                    </p>
+                    <ul class="text-gray-500 text-xs space-y-1">
+                        <li>• PSX Data Portal</li>
+                        <li>• Arif Habib REIT Management</li>
+                        <li>• VIS Credit Rating Company</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Disclaimer</h3>
+                    <p class="text-gray-500 text-sm">This report is intended for informational purposes only. It is not
+                        investment advice. Past performance does not guarantee future results. Investors should conduct
+                        their own due diligence.</p>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-500">
+                    Copyright &copy; 2024 MantrixEdge. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+
+        // Chart
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['1 Month', '3 Months', '6 Months', '1 Year'],
+                datasets: [
+                    {
+                        label: 'DCR Stock Return',
+                        data: [19.2, 20.65, 42.98, 92.33],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#3b82f6',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6
+                    },
+                    {
+                        label: 'KSE-100 Index (Est)',
+                        data: [8, 12, 25, 45],
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#f59e0b',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 5
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: '#9ca3af', font: { family: 'Outfit' } }
+                    },
+                    title: {
+                        display: true,
+                        text: 'DCR Stock Performance vs Market Index',
+                        color: '#fff',
+                        font: { size: 16, family: 'Outfit', weight: 'bold' }
+                    }
+                },
+                scales: {
+                    y: {
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        ticks: { color: '#9ca3af', callback: function (value) { return value + '%'; } }
+                    },
+                    x: {
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        ticks: { color: '#9ca3af' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
