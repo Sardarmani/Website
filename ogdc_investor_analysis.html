@@ -65,28 +65,33 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
-        .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
     </style>
+    <!-- Glass Theme -->
+    <link rel="stylesheet" href="./css/glass-theme.css">
 </head>
 
-<body class="text-lg bg-brand-dark text-white font-sans antialiased leading-relaxed">
+<body
+    class="text-lg text-white font-sans antialiased leading-relaxed relative selection:bg-pink-500 selection:text-white">
+
+    <!-- Floating Background Blobs -->
+    <div class="blob blob-blue top-0 left-0"></div>
+    <div class="blob blob-purple bottom-0 right-0"></div>
+    <div class="blob blob-cyan top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 shadow-lg" id="mainNav">
-        <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-md border-b border-white/10"></div>
+    <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
+        <div class="absolute inset-0 glass-panel"></div>
         <div class="container mx-auto px-6 py-4 relative">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
+                    <div
+                        class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
 
-                    <i class="fas fa-chart-line text-white text-lg"></i>
+                        <i class="fas fa-chart-line text-white text-lg"></i>
 
-                    <div class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div
+                            class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
 
                     </div>
                     <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
@@ -148,7 +153,7 @@
                             320</span></div>
                     <div class="text-brand-success font-semibold text-sm mb-3">+20-30% (Total Return)</div>
                     <div
-                        class="inline-block bg-brand-success text-white px-6 py-2 rounded-lg font-bold text-lg shadow-lg shadow-green-500/20 uppercase tracking-wide">
+                        class="inline-block btn-glow px-6 py-2 rounded-lg font-bold text-lg shadow-lg shadow-green-500/20 uppercase tracking-wide">
                         <i class="fas fa-bullhorn mr-2"></i> Strong Buy
                     </div>
                 </div>
@@ -205,7 +210,7 @@
             <div class="grid lg:grid-cols-2 gap-8 mb-8">
 
                 <!-- Financial Strength Card -->
-                <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                <div class="glass-card rounded-3xl p-8">
                     <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
                         <i class="fas fa-wallet text-brand-primary"></i> Financial Strength (FY25)
                     </h2>
@@ -257,7 +262,7 @@
                 </div>
 
                 <!-- Valuation & Target Card -->
-                <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+                <div class="glass-card rounded-3xl p-8">
                     <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
                         <i class="fas fa-balance-scale text-brand-accent"></i> Valuation & Target
                     </h2>
@@ -318,7 +323,7 @@
             <!-- Bull vs Bear Case -->
             <div class="grid lg:grid-cols-2 gap-8 mb-8">
                 <!-- Bull Case -->
-                <div class="bg-brand-surface rounded-3xl p-8 border-t-4 border-brand-success shadow-xl">
+                <div class="glass-card rounded-3xl p-8 border-t-4 border-brand-success">
                     <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                         <i class="fas fa-check-circle text-brand-success"></i> Bull Case (Why Buy?)
                     </h2>
@@ -347,7 +352,7 @@
                 </div>
 
                 <!-- Bear Case -->
-                <div class="bg-brand-surface rounded-3xl p-8 border-t-4 border-brand-warning shadow-xl">
+                <div class="glass-card rounded-3xl p-8 border-t-4 border-brand-warning">
                     <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                         <i class="fas fa-exclamation-triangle text-brand-warning"></i> Risk Factors
                     </h2>
@@ -377,7 +382,7 @@
             </div>
 
             <!-- Peer Comparison Table -->
-            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl mb-8 overflow-hidden">
+            <div class="glass-card rounded-3xl p-8 mb-8 overflow-hidden">
                 <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                     <i class="fas fa-users text-purple-500"></i> Peer Comparison
                 </h2>
@@ -451,7 +456,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8 mt-12">
+    <footer class="glass border-t border-white/10 pt-16 pb-8 mt-12">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <p class="text-gray-500 text-sm max-w-2xl mx-auto">

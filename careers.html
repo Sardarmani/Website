@@ -1,201 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers at MantrixEdge | Data Science & AI Jobs</title>
-    <meta name="description" content="Join MantrixEdge in Islamabad, Pakistan. Careers in data science, machine learning, AI, analytics, computer vision, NLP, and PSX market analysis.">
+    <meta name="description"
+        content="Join MantrixEdge in Islamabad, Pakistan. Careers in data science, machine learning, AI, analytics, computer vision, NLP, and PSX market analysis.">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Careers at MantrixEdge | Data Science & AI Jobs">
-    <meta property="og:description" content="We’re hiring data scientists, ML engineers, analysts, and AI specialists. Apply now.">
+    <meta property="og:description"
+        content="We’re hiring data scientists, ML engineers, analysts, and AI specialists. Apply now.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://mantrixedge.com/images/mantrix_edge_logo.png">
     <meta property="og:url" content="https://mantrixedge.com/careers.html">
-    <meta property="og:locale" content="en_PK">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Careers at MantrixEdge | Data Science & AI Jobs">
-    <meta name="twitter:description" content="We’re hiring data scientists, ML engineers, analysts, and AI specialists. Apply now.">
-    <meta name="twitter:image" content="https://mantrixedge.com/images/mantrix_edge_logo.png">
     <link rel="canonical" href="https://mantrixedge.com/careers.html">
-    <link rel="stylesheet" href="./css/careers.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="icon" href="./images/mantrix_edge_logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <script src="./js/main.js"></script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Careers at MantrixEdge",
-      "description": "Careers in data science, machine learning, AI, analytics, computer vision, NLP, and PSX market analysis",
-      "publisher": {
-        "@type": "Organization",
-        "name": "MantrixEdge",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "/images/mantrix_edge_logo.png"
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            surface: '#1e293b',
+                            success: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
         }
-      }
-    }
     </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" href="./images/mantrix_edge_logo.png">
+
+    <!-- Glass Theme -->
+    <link rel="stylesheet" href="./css/glass-theme.css">
 </head>
-<body>
-    <header class="header">
-        <a href="#" class="logo"><img src="./images/mantrix_edge_logo.png" alt="MantrixEdge logo"></a>
-        <div class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html#home">home</a></li>
-                <li><a href="index.html#about">about</a></li>
-                <li><a href="index.html#service">services</a></li>
-                <li><a href="index.html#portfolio">portfolio</a></li>
-                <li><a href="index.html#team">team</a></li>
-                <li><a href="careers.html">career</a></li>
-                <li><a href="index.html#contact">contact</a></li>
-                <li><a href="index.html#faq">FAQ</a></li>
-            </ul>
-        </nav>
+
+<body
+    class="text-lg text-white font-sans antialiased leading-relaxed relative selection:bg-pink-500 selection:text-white">
+
+    <!-- Floating Background Blobs -->
+    <div class="blob blob-blue top-0 left-0"></div>
+    <div class="blob blob-purple bottom-0 right-0"></div>
+    <div class="blob blob-cyan top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
+        <div class="absolute inset-0 glass-panel"></div>
+        <div class="container mx-auto px-6 py-4 relative">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-chart-line text-white text-lg"></i>
+                        <div
+                            class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
+                            class="text-brand-accent">Edge</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Home</a>
+                    <a href="index.html#about"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">About</a>
+                    <a href="index.html#service"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Services</a>
+                    <a href="index.html#portfolio"
+                        class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Projects</a>
+                    <a href="careers.html" class="text-brand-accent font-bold uppercase tracking-wider">Career</a>
+                    <a href="index.html#contact"
+                        class="bg-brand-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 text-sm font-bold shadow-lg shadow-blue-500/30">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 py-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="index.html" class="text-gray-300 hover:text-brand-accent block py-2">Home</a>
+                <a href="index.html#about" class="text-gray-300 hover:text-brand-accent block py-2">About</a>
+                <a href="index.html#service" class="text-gray-300 hover:text-brand-accent block py-2">Services</a>
+                <a href="careers.html" class="text-brand-accent font-bold block py-2">Career</a>
+                <a href="index.html#contact" class="text-brand-primary font-bold block py-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-32 pb-20 relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1
+                class="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white mb-6">
+                Join Our Team
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+                Build the future of AI and Data Science with MantrixEdge. We're looking for passionate individuals to
+                solve complex problems.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#openings" class="btn-glow px-8 py-3 rounded-full font-bold">View Openings</a>
+            </div>
+        </div>
     </header>
 
-    <section id="home" class="home">
-        <h2>Home / Careers</h2>
-    </section>
+    <!-- Application Form Section -->
+    <section id="openings" class="py-20 relative">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/10 rounded-full blur-3xl -z-10"></div>
 
-    <section id="career-heading" class="career-heading">
-        <h1 class="heading">Career</h1>
-        <p>Job Opening in IT Company. Apply Now!</p>
-    </section>
-    <div class="career">
-        <div class="career-form">
-            <form action="./careers.php" method="POST" enctype="multipart/form-data">
-                <input type="text" name="name" placeholder="Name" class="career-form-txt" required>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="career-form-phone">
-                <input type="email" name="email" placeholder="Email" class="career-form-email" required>
-                <div class="radio-class">
-                    <h2 class="name">Apply For Which Post?</h2>
-                <label class="radio">
-                  <input class="radio-one" type="radio" checked="checked" name="status" value="Web Designer">
-                  <span class="checkmark"></span>
-                  Web Designer
-                </label>
-                <label class="radio">
-                  <input class="radio-two" type="radio" name="status" value="Web Developer">
-                  <span class="checkmark"></span>
-                  Web Developer
-                </label>
-                <label class="radio">
-                  <input class="radio-three" type="radio" name="status" value="Mobile App Designer">
-                  <span class="checkmark"></span>
-                  Mobile App Designer
-                </label>
-                <label class="radio">
-                    <input class="radio-four" type="radio" name="status" value="Mobile App Developer">
-                    <span class="checkmark"></span>
-                    Mobile App Developer
-                  </label>
-                <label class="radio">
-                  <input class="radio-five" type="radio"  name="status" value="Digital Marketer">
-                  <span class="checkmark"></span>
-                  Digital Marketer
-                </label>
-                </div>
-                <input type="number" id="experience" name="experience" required placeholder="Years of Experience" class="career-form-experience">
-                <textarea placeholder="Other Details" name="details" class="career-form-txtarea" required></textarea>
-                <div class="file">
-                    <h2 class="name">Upload Your Resume</h2>
-                    <input class="upload" type="file" name="fileToUpload" accept=".doc,.docx,.pdf"><br><br><br>
-                </div>
-                <input type="submit" value="Submit" name="submit" class="career-form-btn">
-            </form>
-        </div>
-    </div>
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Apply Now</h2>
 
-      <div class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Home</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#about">About us</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service">Our services</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Terms & condition</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Privacy policy</a></li>
-                        </ul>
-                    </div>
-  
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Portfolio</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#team">Team</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Career</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#contact">Contact</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
-                        </ul>
-                    </div>
-  
-                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
-                        <h4>Contact Us</h4>
-                        <p>
-                            1300  Center Avenue<br>
-                            Fresno, California<br>
-                            United States <br>
-                            <strong>Phone:</strong> +123-456-7890<br>
-                            <strong>Email:</strong> info@example.com<br>
-                        </p>
-  
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/"><i class="ion-logo-facebook"></i></a>
-                            <a href="https://twitter.com/login?lang=en"><i class="ion-logo-twitter"></i></a>
-                            <a href="https://www.linkedin.com/"><i class="ion-logo-linkedin"></i></a>
-                            <a href="https://www.instagram.com/"><i class="ion-logo-instagram"></i></a>
-                            <a href="https://accounts.google.com/servicelogin/signinchooser?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="ion-logo-googleplus"></i></a>
+                <form action="./careers.php" method="POST" enctype="multipart/form-data" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-400 text-sm mb-2">Full Name</label>
+                            <input type="text" name="name"
+                                class="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all"
+                                placeholder="John Doe" required>
                         </div>
-  
+                        <div>
+                            <label class="block text-gray-400 text-sm mb-2">Phone Number</label>
+                            <input type="tel" name="phone" pattern="[0-9]{10,15}"
+                                class="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all"
+                                placeholder="+92 300 1234567" required>
+                        </div>
                     </div>
-  
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <h4>Subscription</h4>
-                        <p>With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit"  value="Subscribe">
-                        </form>
+
+                    <div>
+                        <label class="block text-gray-400 text-sm mb-2">Email Address</label>
+                        <input type="email" name="email"
+                            class="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all"
+                            placeholder="john@example.com" required>
                     </div>
-  
-                </div>
+
+                    <div>
+                        <label class="block text-gray-400 text-sm mb-4">Position Applied For</label>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <label
+                                class="glass-card p-4 rounded-xl cursor-pointer hover:border-brand-primary transition-colors flex items-center gap-3">
+                                <input type="radio" name="status" value="Web Designer"
+                                    class="text-brand-primary focus:ring-brand-primary" checked>
+                                <span class="font-medium">Web Designer</span>
+                            </label>
+                            <label
+                                class="glass-card p-4 rounded-xl cursor-pointer hover:border-brand-primary transition-colors flex items-center gap-3">
+                                <input type="radio" name="status" value="Web Developer"
+                                    class="text-brand-primary focus:ring-brand-primary">
+                                <span class="font-medium">Web Developer</span>
+                            </label>
+                            <label
+                                class="glass-card p-4 rounded-xl cursor-pointer hover:border-brand-primary transition-colors flex items-center gap-3">
+                                <input type="radio" name="status" value="Mobile App Designer"
+                                    class="text-brand-primary focus:ring-brand-primary">
+                                <span class="font-medium">Mobile App Designer</span>
+                            </label>
+                            <label
+                                class="glass-card p-4 rounded-xl cursor-pointer hover:border-brand-primary transition-colors flex items-center gap-3">
+                                <input type="radio" name="status" value="Mobile App Developer"
+                                    class="text-brand-primary focus:ring-brand-primary">
+                                <span class="font-medium">Mobile App Developer</span>
+                            </label>
+                            <label
+                                class="glass-card p-4 rounded-xl cursor-pointer hover:border-brand-primary transition-colors flex items-center gap-3">
+                                <input type="radio" name="status" value="Digital Marketer"
+                                    class="text-brand-primary focus:ring-brand-primary">
+                                <span class="font-medium">Digital Marketer</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-400 text-sm mb-2">Years of Experience</label>
+                        <input type="number" name="experience"
+                            class="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all"
+                            placeholder="e.g. 3" required>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-400 text-sm mb-2">Cover Letter / Additional Details</label>
+                        <textarea name="details" rows="4"
+                            class="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all"
+                            placeholder="Tell us about yourself..." required></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-400 text-sm mb-2">Resume (PDF/Doc/Docx)</label>
+                        <div class="relative">
+                            <input type="file" name="fileToUpload" accept=".doc,.docx,.pdf"
+                                class="w-full bg-brand-dark/50 border border-white/10 rounded-xl px-4 py-3 text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-primary/10 file:text-brand-primary hover:file:bg-brand-primary/20 transition-all">
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit"
+                            class="w-full btn-glow py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-brand-primary/90 transition-all">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-  
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass border-t border-white/10 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">About Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#about"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">About us</a>
+                        </li>
+                        <li><a href="index.html#service"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Our
+                                services</a>
+                        </li>
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a></li>
+                        <li><a href="psx-analysis.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">PSX
+                                Analysis</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a>
+                        </li>
+                        <li><a href="index.html#testimonials"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Reviews</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Contact</a></li>
+                        <li><a href="index.html#faq"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">FAQ</a></li>
+                        <li><a href="privacy-policy.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Us</h4>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        1300 Center Avenue<br>
+                        Fresno, California<br>
+                        United States<br>
+                        <br>
+                        <a href="mailto:info@example.com"
+                            class="hover:text-brand-primary transition-colors">info@example.com</a><br>
+                        <a href="tel:+1234567890" class="hover:text-brand-primary transition-colors">+123-456-7890</a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/muneebtariq07/"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#0077b5] transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Sardarmani"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#14a800] transition-colors">
+                            <i class="fab fa-upwork"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Subscriptions</h4>
+                    <p class="text-gray-400 mb-4">With Our Skills Put Together, You Get An Ensemble Capable Of Doing
+                        Anything And Everything Your Brand Needs.</p>
+                    <form action="" method="post" class="flex gap-2">
+                        <input type="email" name="email" placeholder="Your email"
+                            class="bg-brand-surface border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-brand-primary w-full">
+                        <button type="submit"
+                            class="bg-brand-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-500">
                     Copyright &copy; 2021 IT Company Website. All Rights Reserved.
-                </div>
+                </p>
             </div>
         </div>
-    </div>
+    </footer>
 
-    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        const nav = document.getElementById('mainNav');
 
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
 
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
 </body>
+
 </html>

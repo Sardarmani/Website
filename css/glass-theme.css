@@ -1,0 +1,377 @@
+:root {
+    /* Brand Colors - Neon & Glass Palette */
+    --color-bg-dark: #0a0a0f;
+    /* Deep space black */
+    --color-bg-surface: #12121a;
+    /* Slightly lighter for depth */
+
+    --color-primary: #3b82f6;
+    /* Electric Blue */
+    --color-primary-glow: rgba(59, 130, 246, 0.5);
+
+    --color-accent: #06b6d4;
+    /* Cyan */
+    --color-accent-glow: rgba(6, 182, 212, 0.5);
+
+    --color-purple: #8b5cf6;
+    /* Violet */
+    --color-purple-glow: rgba(139, 92, 246, 0.5);
+
+    --color-pink: #ec4899;
+    /* Hot Pink */
+    --color-pink-glow: rgba(236, 72, 153, 0.5);
+
+    /* Glass Effect Variables */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --glass-bg-card: rgba(255, 255, 255, 0.03);
+    --glass-bg-hover: rgba(255, 255, 255, 0.07);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+body {
+    background-color: var(--color-bg-dark);
+    color: #ffffff;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from glowing blobs */
+}
+
+/* --- Utilities --- */
+
+/* Base Glass Class */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Glass Card - Use for content sections */
+.glass-card {
+    background: var(--glass-bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: var(--glass-shadow);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* Glass Panel - Heavier blur for Nav/Modals */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient Text */
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 50%, var(--color-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-alt {
+    background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Floating Blobs Animation */
+.blob {
+    position: absolute;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: 50%;
+    animation: float 10s infinite ease-in-out;
+}
+
+.blob-blue {
+    background: var(--color-primary);
+    width: 400px;
+    height: 400px;
+}
+
+.blob-purple {
+    background: var(--color-purple);
+    width: 300px;
+    height: 300px;
+    animation-delay: -2s;
+}
+
+.blob-cyan {
+    background: var(--color-accent);
+    width: 350px;
+    height: 350px;
+    animation-delay: -5s;
+}
+
+/* Buttons */
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.btn-glow {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    box-shadow: 0 4px 15px var(--color-primary-glow);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 6px 25px var(--color-accent-glow);
+    transform: translateY(-2px);
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(6, 182, 212, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Investor Enhancements --- */
+
+/* Sticky Table of Contents */
+.glass-toc {
+    position: sticky;
+    top: 100px;
+    background: var(--glass-bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.glass-toc a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: #94a3b8;
+    /* text-gray-400 */
+    transition: all 0.2s;
+    border-left: 2px solid transparent;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.glass-toc a:hover,
+.glass-toc a.active {
+    color: var(--color-primary);
+    background: rgba(59, 130, 246, 0.1);
+    border-left-color: var(--color-primary);
+}
+
+.glass-toc h3 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Metric Badges */
+.metric-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.metric-badge:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.metric-badge .value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.metric-badge .label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    /* text-gray-400 */
+}
+
+.metric-badge .icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+}
+
+/* Glass Tables */
+.glass-table-container {
+    overflow-x: auto;
+    border-radius: 1rem;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg-card);
+    backdrop-filter: blur(12px);
+    margin-bottom: 2rem;
+}
+
+.glass-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    text-align: left;
+}
+
+.glass-table th {
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--glass-border);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    white-space: nowrap;
+}
+
+.glass-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.glass-table tr:last-child td {
+    border-bottom: none;
+}
+
+.glass-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Buy/Sell Recommendation Cards */
+.rec-card {
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid transparent;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.rec-card.buy {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.rec-card.sell {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.rec-card.hold {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.rec-card .status {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.rec-card.buy .status {
+    color: #10b981;
+}
+
+.rec-card.sell .status {
+    color: #ef4444;
+}
+
+.rec-card.hold .status {
+    color: #f59e0b;
+}
+
+.rec-card .target {
+    font-size: 1.1rem;
+    color: white;
+}

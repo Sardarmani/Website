@@ -56,6 +56,7 @@
 
   <!-- Legacy Styles (kept for compatibility, but will be overridden) -->
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/glass-theme.css">
   <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
   <link rel="icon" href="./images/mantrix_edge_logo.png">
@@ -110,10 +111,17 @@
   </style>
 </head>
 
-<body class="text-lg bg-brand-dark text-white font-sans antialiased leading-relaxed">
+<body
+  class="text-lg text-white font-sans antialiased leading-relaxed relative selection:bg-pink-500 selection:text-white">
+
+  <!-- Floating Background Blobs -->
+  <div class="blob blob-blue top-0 left-0"></div>
+  <div class="blob blob-purple bottom-0 right-0"></div>
+  <div class="blob blob-cyan top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+
   <!-- Navigation -->
   <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
-    <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/10"></div>
+    <div class="absolute inset-0 glass-panel"></div>
     <div class="container mx-auto px-6 py-6 relative">
       <div class="flex items-center justify-between">
         <a href="#" class="flex items-center gap-4 group">
@@ -169,7 +177,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark pt-20">
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
     <!-- Background Effects -->
     <div class="absolute inset-0 overflow-hidden">
       <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl animate-pulse"></div>
@@ -248,7 +256,7 @@
   </script>
 
   <!-- About Section -->
-  <section id="about" class="py-24 bg-brand-surface relative overflow-hidden">
+  <section id="about" class="py-24 relative overflow-hidden">
     <div class="container mx-auto px-6 relative z-10">
       <div class="flex flex-col lg:flex-row items-center gap-16">
         <div class="lg:w-1/2">
@@ -269,9 +277,9 @@
         </div>
         <div class="lg:w-1/2 relative">
           <div
-            class="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-accent/20 rounded-2xl blur-2xl transform rotate-3">
+            class="absolute inset-0 bg-gradient-to-r from-brand-primary/20 to-brand-accent/20 rounded-2xl blur-3xl transform rotate-3">
           </div>
-          <div class="relative bg-brand-dark border border-white/10 rounded-2xl p-8 shadow-2xl">
+          <div class="relative glass-card rounded-2xl p-8">
             <div class="flex items-center gap-4 mb-6">
               <div class="w-12 h-12 rounded-full bg-brand-primary/20 flex items-center justify-center">
                 <i class="fas fa-code text-brand-primary text-xl"></i>
@@ -306,7 +314,7 @@
   </section>
 
   <!-- Services Section -->
-  <section id="service" class="py-24 bg-brand-dark relative">
+  <section id="service" class="py-24 relative">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-white mb-6">Our <span class="gradient-text">Services</span></h2>
@@ -318,8 +326,7 @@
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Service 1 -->
-        <div
-          class="group p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-brand-primary/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-primary/10">
+        <div class="group p-8 rounded-2xl glass-card transition-all hover:-translate-y-2">
           <div
             class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors">
             <i class="fas fa-brain text-3xl text-brand-primary"></i>
@@ -332,8 +339,7 @@
         </div>
 
         <!-- Service 2 -->
-        <div
-          class="group p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-brand-accent/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-accent/10">
+        <div class="group p-8 rounded-2xl glass-card transition-all hover:-translate-y-2">
           <div
             class="w-16 h-16 rounded-2xl bg-brand-accent/10 flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
             <i class="fas fa-chart-line text-3xl text-brand-accent"></i>
@@ -346,8 +352,7 @@
         </div>
 
         <!-- Service 3 -->
-        <div
-          class="group p-8 rounded-2xl bg-brand-surface border border-white/5 hover:border-purple-500/50 transition-all hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/10">
+        <div class="group p-8 rounded-2xl glass-card transition-all hover:-translate-y-2">
           <div
             class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
             <i class="fas fa-database text-3xl text-purple-500"></i>
@@ -366,7 +371,7 @@
   <!-- Bootstrap script removed -->
 
   <!-- Stats Section -->
-  <section class="py-12 bg-brand-dark border-y border-white/5">
+  <section class="py-12 glass border-y border-white/5">
     <div class="container mx-auto px-6">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div class="p-6">
@@ -394,7 +399,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="portfolio" class="py-24 bg-brand-surface">
+  <section id="portfolio" class="py-24">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-white mb-6">Our <span class="gradient-text">Projects</span></h2>
@@ -406,8 +411,7 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project OGDC -->
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-green-500/50 transition-all">
+        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
           <div class="p-8">
             <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
               <i class="fas fa-gas-pump text-green-500"></i>
@@ -427,8 +431,7 @@
           </div>
         </div>
         <!-- Project 1 -->
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-brand-primary/50 transition-all">
+        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
           <div class="p-8">
             <div class="w-12 h-12 rounded-full bg-brand-primary/20 flex items-center justify-center mb-6">
               <i class="fas fa-brain text-brand-primary"></i>
@@ -449,8 +452,7 @@
         </div>
 
         <!-- Project 2 -->
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-brand-accent/50 transition-all">
+        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
           <div class="p-8">
             <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center mb-6">
               <i class="fas fa-chart-line text-brand-accent"></i>
@@ -471,8 +473,7 @@
         </div>
 
         <!-- Project 3 -->
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-yellow-500/50 transition-all">
+        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
           <div class="p-8">
             <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center mb-6">
               <i class="fas fa-coins text-yellow-500"></i>
@@ -493,8 +494,7 @@
         </div>
 
         <!-- Project 4 -->
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-green-500/50 transition-all">
+        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
           <div class="p-8">
             <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
               <i class="fas fa-chart-bar text-green-500"></i>
@@ -515,8 +515,7 @@
         </div>
 
         <!-- Project 5 -->
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-blue-500/50 transition-all">
+        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
           <div class="p-8">
             <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-6">
               <i class="fas fa-plane text-blue-500"></i>
@@ -537,8 +536,7 @@
         </div>
 
         <!-- Project 6 -->
-        <div
-          class="group relative overflow-hidden rounded-2xl bg-brand-dark border border-white/10 hover:border-pink-500/50 transition-all">
+        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
           <div class="p-8">
             <div class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center mb-6">
               <i class="fas fa-dna text-pink-500"></i>
@@ -578,10 +576,9 @@
   </section>
 
   <!-- Upwork CTA -->
-  <section id="hire" class="py-16 bg-brand-surface border-y border-white/5">
+  <section id="hire" class="py-16 glass border-y border-white/5">
     <div class="container mx-auto px-6">
-      <div
-        class="bg-brand-dark rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-white/10 shadow-2xl">
+      <div class="glass-card rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
         <div class="text-center md:text-left">
           <h2 class="text-2xl font-bold text-white mb-4">Hire Us on <span class="text-[#14a800]">Upwork</span></h2>
           <p class="text-gray-400 max-w-xl">
@@ -598,7 +595,7 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="py-24 bg-brand-dark">
+  <section id="testimonials" class="py-24">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-white mb-4">Client <span class="gradient-text">Reviews</span></h2>
@@ -607,7 +604,7 @@
 
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Review 1 -->
-        <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 relative">
+        <div class="glass-card p-8 rounded-2xl relative">
           <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-brand-primary/10"></i>
           <div class="flex items-center gap-4 mb-6">
             <img src="./images/testimonial-1.jpg" alt="John Burrotn"
@@ -624,7 +621,7 @@
         </div>
 
         <!-- Review 2 -->
-        <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 relative">
+        <div class="glass-card p-8 rounded-2xl relative">
           <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-brand-accent/10"></i>
           <div class="flex items-center gap-4 mb-6">
             <img src="./images/testimonial-2.jpg" alt="Liam"
@@ -640,7 +637,7 @@
         </div>
 
         <!-- Review 3 -->
-        <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 relative">
+        <div class="glass-card p-8 rounded-2xl relative">
           <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-purple-500/10"></i>
           <div class="flex items-center gap-4 mb-6">
             <img src="./images/testimonial-3.jpg" alt="Stephen Flynn"
@@ -657,7 +654,7 @@
         </div>
 
         <!-- Review 4 -->
-        <div class="bg-brand-surface p-8 rounded-2xl border border-white/5 relative">
+        <div class="glass-card p-8 rounded-2xl relative">
           <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-pink-500/10"></i>
           <div class="flex items-center gap-4 mb-6">
             <img src="./images/testimonial-4.jpg" alt="Fritjof Schmidt"
@@ -677,14 +674,13 @@
   </section>
 
   <!-- Team Section -->
-  <section id="team" class="py-24 bg-brand-surface relative overflow-hidden">
+  <section id="team" class="py-24 relative overflow-hidden">
     <div class="container mx-auto px-6 relative z-10">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-white mb-4">Our <span class="gradient-text">Founder</span></h2>
       </div>
 
-      <div
-        class="max-w-4xl mx-auto bg-brand-dark rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col md:flex-row">
+      <div class="max-w-4xl mx-auto glass-card rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
         <div class="md:w-2/5 relative">
           <img src="./images/pexels-andrea-piacquadio-845434.jpg" alt="Muneeb Tariq" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent md:bg-gradient-to-r"></div>
@@ -716,7 +712,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-24 bg-brand-dark relative">
+  <section id="contact" class="py-24 relative">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-white mb-4">Get in <span class="gradient-text">Touch</span></h2>
@@ -733,7 +729,7 @@
         </div>
 
         <!-- Form -->
-        <div class="bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+        <div class="glass-card p-8 rounded-2xl shadow-2xl">
           <form action="#" method="GET"
             onsubmit="window.location='mailto:neurofinancelab@gmail.com?subject=Website%20Contact%20-%20MantrixEdge&body=Name:%20'+encodeURIComponent(this.name.value)+'%0APhone:%20'+encodeURIComponent(this.phone.value)+'%0AEmail:%20'+encodeURIComponent(this.email.value)+'%0AMessage:%20'+encodeURIComponent(this.message.value); return false;"
             class="space-y-6">
@@ -772,7 +768,7 @@
   </section>
 
   <!-- FAQ Section -->
-  <section id="faq" class="py-24 bg-brand-surface">
+  <section id="faq" class="py-24">
     <div class="container mx-auto px-6 max-w-4xl">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-white mb-4">Frequently Asked <span class="gradient-text">Questions</span>
@@ -781,7 +777,7 @@
 
       <div class="space-y-4">
         <!-- FAQ 1 -->
-        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+        <div class="glass-card rounded-xl overflow-hidden">
           <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
             onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
             <span class="text-lg font-bold text-white">What services do you offer?</span>
@@ -795,7 +791,7 @@
         </div>
 
         <!-- FAQ 2 -->
-        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+        <div class="glass-card rounded-xl overflow-hidden">
           <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
             onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
             <span class="text-lg font-bold text-white">How long does a typical project take?</span>
@@ -809,7 +805,7 @@
         </div>
 
         <!-- FAQ 3 -->
-        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+        <div class="glass-card rounded-xl overflow-hidden">
           <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
             onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
             <span class="text-lg font-bold text-white">Do you work with small businesses?</span>
@@ -822,7 +818,7 @@
         </div>
 
         <!-- FAQ 4 -->
-        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+        <div class="glass-card rounded-xl overflow-hidden">
           <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
             onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
             <span class="text-lg font-bold text-white">What technologies do you use?</span>
@@ -835,7 +831,7 @@
         </div>
 
         <!-- FAQ 5 -->
-        <div class="bg-brand-dark rounded-xl border border-white/5 overflow-hidden">
+        <div class="glass-card rounded-xl overflow-hidden">
           <button class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none"
             onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
             <span class="text-lg font-bold text-white">How do I get started?</span>
@@ -851,7 +847,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8">
+  <footer class="glass border-t border-white/10 pt-16 pb-8">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <!-- About -->

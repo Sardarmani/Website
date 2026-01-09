@@ -91,13 +91,21 @@
             background: #06b6d4;
         }
     </style>
+    <!-- Glass Theme -->
+    <link rel="stylesheet" href="./css/glass-theme.css">
 </head>
 
-<body class="text-lg bg-brand-dark text-white font-sans antialiased leading-relaxed">
+<body
+    class="text-lg text-white font-sans antialiased leading-relaxed relative selection:bg-pink-500 selection:text-white">
+
+    <!-- Floating Background Blobs -->
+    <div class="blob blob-blue top-0 left-0"></div>
+    <div class="blob blob-purple bottom-0 right-0"></div>
+    <div class="blob blob-cyan top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 transition-all duration-300 shadow-lg" id="mainNav">
-        <div class="absolute inset-0 bg-brand-dark/90 backdrop-blur-md border-b border-white/10"></div>
+    <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
+        <div class="absolute inset-0 glass-panel"></div>
         <div class="container mx-auto px-6 py-4 relative">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-3 group">
@@ -318,7 +326,7 @@
         <div class="container mx-auto px-6 space-y-16">
 
             <!-- 1. Company Overview -->
-            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+            <div class="glass-card rounded-3xl p-8">
                 <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">1. Company Overview &
                     Market Position</h2>
 
@@ -387,7 +395,7 @@
             </div>
 
             <!-- 2. Valuation Analysis -->
-            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+            <div class="glass-card rounded-3xl p-8">
                 <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">2. Valuation Analysis</h2>
 
                 <h3 class="text-xl text-brand-primary font-bold mb-4">Valuation Assessment</h3>
@@ -438,16 +446,20 @@
                     <ul class="space-y-3 text-gray-300">
                         <li class="flex items-start gap-3"><i class="fas fa-calculator mt-1 text-brand-accent"></i>
                             <span><strong>Dividend Discount Model (DDM):</strong> Fair value PKR 42-45 (based on 6.5%
-                                yield assumption)</span></li>
+                                yield assumption)</span>
+                        </li>
                         <li class="flex items-start gap-3"><i class="fas fa-calculator mt-1 text-brand-accent"></i>
                             <span><strong>NAV-based Valuation:</strong> Fair value PKR 39-42 (10-20% premium to current
-                                NAV)</span></li>
+                                NAV)</span>
+                        </li>
                         <li class="flex items-start gap-3"><i class="fas fa-calculator mt-1 text-brand-accent"></i>
                             <span><strong>P/E Multiple Valuation:</strong> Fair value PKR 40-46 (12-14x earnings
-                                multiple)</span></li>
+                                multiple)</span>
+                        </li>
                         <li class="flex items-start gap-3"><i class="fas fa-check-circle mt-1 text-brand-success"></i>
                             <span><strong>Consensus Fair Range:</strong> <strong class="text-white">PKR 40-46</strong>
-                                representing 3-18% upside</span></li>
+                                representing 3-18% upside</span>
+                        </li>
                     </ul>
                 </div>
 
@@ -498,7 +510,7 @@
             </div>
 
             <!-- 3. Financial Health -->
-            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+            <div class="glass-card rounded-3xl p-8">
                 <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">3. Financial Health &
                     Performance</h2>
 
@@ -613,7 +625,7 @@
             </div>
 
             <!-- 4. Dividend & Distributions -->
-            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+            <div class="glass-card rounded-3xl p-8">
                 <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">4. Dividend & Distributions
                 </h2>
 
@@ -712,7 +724,7 @@
             </div>
 
             <!-- 5. Stock Performance -->
-            <div class="bg-brand-surface rounded-3xl p-8 border border-white/5 shadow-xl">
+            <div class="glass-card rounded-3xl p-8">
                 <h2 class="text-3xl font-bold text-white mb-8 border-b border-white/10 pb-4">5. Stock Performance</h2>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -770,7 +782,7 @@
             <!-- 6. Future Outlook & Risks -->
             <div class="grid lg:grid-cols-2 gap-8">
                 <!-- Catalysts -->
-                <div class="bg-brand-surface rounded-3xl p-8 border-t-4 border-brand-success shadow-xl">
+                <div class="glass-card rounded-3xl p-8 border-t-4 border-brand-success">
                     <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                         <i class="fas fa-rocket text-brand-success"></i> Growth Catalysts
                     </h2>
@@ -794,7 +806,7 @@
                 </div>
 
                 <!-- Risks -->
-                <div class="bg-brand-surface rounded-3xl p-8 border-t-4 border-brand-warning shadow-xl">
+                <div class="glass-card rounded-3xl p-8 border-t-4 border-brand-warning">
                     <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                         <i class="fas fa-exclamation-triangle text-brand-warning"></i> Key Risks
                     </h2>
@@ -885,7 +897,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8 mt-12">
+    <footer class="glass border-t border-white/10 pt-16 pb-8 mt-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-8 mb-12">
                 <div>

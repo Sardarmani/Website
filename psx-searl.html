@@ -77,59 +77,33 @@
                 height: 350px;
             }
         }
-
-        .stat-card {
-            background-color: #1e293b;
-            /* brand-surface */
-            border-left: 5px solid #f3722c;
-            transition: all 0.3s ease;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            border-right: 1px solid rgba(255, 255, 255, 0.05);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-        }
-
-        .pestle-card {
-            background-color: #1e293b;
-            /* brand-surface */
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding: 1.5rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .pestle-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
     </style>
+    <!-- Glass Theme -->
+    <link rel="stylesheet" href="./css/glass-theme.css">
 </head>
 
-<body class="text-xl bg-brand-dark text-white font-sans antialiased leading-relaxed">
+<body
+    class="text-xl text-white font-sans antialiased leading-relaxed relative selection:bg-pink-500 selection:text-white">
+
+    <!-- Floating Background Blobs -->
+    <div class="blob blob-blue top-0 left-0"></div>
+    <div class="blob blob-purple bottom-0 right-0"></div>
+    <div class="blob blob-cyan top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
-        <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/10"></div>
+        <div class="absolute inset-0 glass-panel"></div>
         <div class="container mx-auto px-6 py-4 relative">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
+                    <div
+                        class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
 
-                    <i class="fas fa-chart-line text-white text-lg"></i>
+                        <i class="fas fa-chart-line text-white text-lg"></i>
 
-                    <div class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div
+                            class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
 
                     </div>
                     <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
@@ -177,8 +151,7 @@
     <div class="pt-32 pb-12 max-w-7xl mx-auto px-6">
 
         <!-- Header Info -->
-        <div
-            class="bg-brand-surface rounded-2xl p-8 border border-white/10 shadow-2xl mb-12 flex flex-col md:flex-row justify-between items-center">
+        <div class="glass-card rounded-2xl p-8 mb-12 flex flex-col md:flex-row justify-between items-center">
             <div class="flex flex-col gap-2">
                 <a href="psx-analysis.html"
                     class="text-sm text-brand-primary hover:text-white transition-colors mb-2"><i
@@ -197,22 +170,22 @@
             <h2 class="text-3xl font-bold text-center mb-8 text-white">Key Investor <span
                     class="gradient-text">Metrics</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="stat-card p-6 rounded-xl shadow-lg">
+                <div class="glass-card p-6 rounded-xl border-l-[5px] border-l-[#f94144]">
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Market Cap</h3>
                     <p class="text-4xl font-extrabold text-[#f94144] my-2">65.92B</p>
                     <span class="text-lg text-gray-500">PKR</span>
                 </div>
-                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #f3722c;">
+                <div class="glass-card p-6 rounded-xl border-l-[5px] border-l-[#f3722c]">
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Forward P/E Ratio</h3>
                     <p class="text-4xl font-extrabold text-[#f3722c] my-2">17.01</p>
                     <span class="text-lg text-gray-500">vs 21.7 (Peers)</span>
                 </div>
-                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #f8961e;">
+                <div class="glass-card p-6 rounded-xl border-l-[5px] border-l-[#f8961e]">
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">EPS (FY 2025)</h3>
                     <p class="text-4xl font-extrabold text-[#f8961e] my-2">0.85</p>
                     <span class="text-lg text-gray-500">PKR</span>
                 </div>
-                <div class="stat-card p-6 rounded-xl shadow-lg" style="border-left-color: #f9c74f;">
+                <div class="glass-card p-6 rounded-xl border-l-[5px] border-l-[#f9c74f]">
                     <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Debt/Equity Ratio</h3>
                     <p class="text-4xl font-extrabold text-[#f9c74f] my-2">0.24</p>
                     <span class="text-lg text-gray-500">Low Leverage</span>
@@ -220,7 +193,7 @@
             </div>
         </section>
 
-        <section id="financial-health" class="mb-16 bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+        <section id="financial-health" class="mb-16 glass-card p-8 rounded-2xl">
             <h2 class="text-3xl font-bold text-center mb-6 text-white">Financial Health & <span
                     class="gradient-text">Performance</span></h2>
             <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
@@ -233,7 +206,7 @@
             </div>
         </section>
 
-        <section id="dividends" class="mb-16 bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+        <section id="dividends" class="mb-16 glass-card p-8 rounded-2xl">
             <h2 class="text-3xl font-bold text-center mb-6 text-white">Shareholder Value & <span
                     class="gradient-text">Dividends</span></h2>
             <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
@@ -254,7 +227,7 @@
                 macro-environmental factors.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="pestle-card border-t-4 border-[#f94144]">
+                <div class="glass-card p-6 rounded-xl border-t-4 border-[#f94144] hover:scale-105 transition-transform">
                     <h3 class="text-xl font-bold mb-4 text-[#f94144]">Political</h3>
                     <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Government drug pricing policies (DRAP).</li>
@@ -262,7 +235,7 @@
                         <li>General political & economic stability.</li>
                     </ul>
                 </div>
-                <div class="pestle-card border-t-4 border-[#f3722c]">
+                <div class="glass-card p-6 rounded-xl border-t-4 border-[#f3722c] hover:scale-105 transition-transform">
                     <h3 class="text-xl font-bold mb-4 text-[#f3722c]">Economic</h3>
                     <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>PKR devaluation impacting import costs.</li>
@@ -271,7 +244,7 @@
                         <li>Rising healthcare spending.</li>
                     </ul>
                 </div>
-                <div class="pestle-card border-t-4 border-[#f8961e]">
+                <div class="glass-card p-6 rounded-xl border-t-4 border-[#f8961e] hover:scale-105 transition-transform">
                     <h3 class="text-xl font-bold mb-4 text-[#f8961e]">Social</h3>
                     <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Large and growing population.</li>
@@ -279,7 +252,7 @@
                         <li>Preference for generic drugs.</li>
                     </ul>
                 </div>
-                <div class="pestle-card border-t-4 border-[#f9c74f]">
+                <div class="glass-card p-6 rounded-xl border-t-4 border-[#f9c74f] hover:scale-105 transition-transform">
                     <h3 class="text-xl font-bold mb-4 text-[#f9c74f]">Technological</h3>
                     <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Investment in R&D and biotech.</li>
@@ -287,7 +260,7 @@
                         <li>Need for technology transfer.</li>
                     </ul>
                 </div>
-                <div class="pestle-card border-t-4 border-[#90be6d]">
+                <div class="glass-card p-6 rounded-xl border-t-4 border-[#90be6d] hover:scale-105 transition-transform">
                     <h3 class="text-xl font-bold mb-4 text-[#90be6d]">Legal</h3>
                     <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Strict regulatory framework (DRAP).</li>
@@ -295,7 +268,7 @@
                         <li>Anti-corruption and transparency measures.</li>
                     </ul>
                 </div>
-                <div class="pestle-card border-t-4 border-[#43aa8b]">
+                <div class="glass-card p-6 rounded-xl border-t-4 border-[#43aa8b] hover:scale-105 transition-transform">
                     <h3 class="text-xl font-bold mb-4 text-[#43aa8b]">Environmental</h3>
                     <ul class="list-disc list-inside text-gray-300 space-y-2">
                         <li>Pharmaceutical waste disposal regulations.</li>
@@ -306,7 +279,7 @@
             </div>
         </section>
 
-        <section id="future-valuation" class="mb-16 bg-brand-surface p-8 rounded-2xl border border-white/10 shadow-2xl">
+        <section id="future-valuation" class="mb-16 glass-card p-8 rounded-2xl">
             <h2 class="text-3xl font-bold text-center mb-6 text-white">Future Outlook & <span
                     class="gradient-text">Valuation</span></h2>
             <p class="text-center text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
@@ -342,7 +315,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8">
+    <footer class="glass border-t border-white/10 pt-16 pb-8">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- About -->

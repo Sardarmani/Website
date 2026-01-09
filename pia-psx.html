@@ -88,53 +88,33 @@
       font-size: .88rem;
       color: #94a3b8;
     }
-
-    .card {
-      background: #1e293b;
-      /* brand-surface */
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-left: 4px solid #3b82f6;
-      /* brand-primary */
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-
-    .badge {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: .25rem .5rem;
-      border-radius: .5rem;
-      font-weight: 600;
-      font-size: .8rem;
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .verdict-badge {
-      padding: .35rem .6rem;
-      border-radius: .5rem;
-      font-weight: 700;
-    }
-
-    .gradient-text {
-      background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
   </style>
+  <!-- Glass Theme -->
+  <link rel="stylesheet" href="./css/glass-theme.css">
 </head>
 
-<body class="text-xl bg-brand-dark text-white font-sans antialiased leading-relaxed">
+<body
+  class="text-xl text-white font-sans antialiased leading-relaxed relative selection:bg-pink-500 selection:text-white">
+
+  <!-- Floating Background Blobs -->
+  <div class="blob blob-blue top-0 left-0"></div>
+  <div class="blob blob-purple bottom-0 right-0"></div>
+  <div class="blob blob-cyan top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
   <!-- Navigation -->
   <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
-    <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/10"></div>
+    <div class="absolute inset-0 glass-panel"></div>
     <div class="container mx-auto px-6 py-4 relative">
       <div class="flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3 group">
-          <div class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
+          <div
+            class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
 
-          <i class="fas fa-chart-line text-white text-lg"></i>
+            <i class="fas fa-chart-line text-white text-lg"></i>
 
-          <div class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div
+              class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            </div>
 
           </div>
           <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
@@ -198,7 +178,7 @@
     </header>
 
     <!-- Investor warning - More Assertive -->
-    <section class="rounded-xl p-6 border border-yellow-500/30 bg-yellow-500/10">
+    <section class="glass-card rounded-xl p-6 border-l-4 border-l-yellow-500">
       <h2 class="text-xl md:text-2xl font-bold text-yellow-500 mb-4"><i class="fas fa-exclamation-triangle mr-2"></i>
         CRITICAL Investor Alert: You are NOT buying the operating airline</h2>
       <p class="mt-2 leading-relaxed text-gray-300">PIAHCL (the listed security) is the holding / legacy company that
@@ -213,7 +193,7 @@
     </section>
 
     <!-- Structure -->
-    <section class="card rounded-xl p-8 space-y-6">
+    <section class="glass-card rounded-xl p-8 space-y-6">
       <h2 class="text-2xl font-bold text-white">Structure at a Glance: GoodCo vs. BadCo</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-brand-dark rounded-xl p-6 shadow-sm border border-white/10">
@@ -240,19 +220,19 @@
     <!-- Charts -->
     <section class="space-y-8">
       <h2 class="text-3xl font-bold text-white text-center">Key Charts</h2>
-      <div class="bg-brand-surface rounded-xl p-8 shadow-sm border border-white/10 space-y-6">
+      <div class="glass-card rounded-xl p-8 space-y-6">
         <h3 class="text-xl font-semibold text-white">PIAHCL (PSX) Price Trend (Illustrative, 2024–2025)</h3>
         <p class="note">Quarterly points approximated to public trading ranges. This chart illustrates the speculative
           run-up based on privatization news.</p>
         <div class="chart-container"><canvas id="priceChart"></canvas></div>
       </div>
-      <div class="bg-brand-surface rounded-xl p-8 shadow-sm border border-white/10 space-y-6">
+      <div class="glass-card rounded-xl p-8 space-y-6">
         <h3 class="text-xl font-semibold text-white">Legacy Debt Transfer (Rounded, bn PKR)</h3>
         <p class="note">Total Legacy Obligations reported: ~825bn PKR. This shows the split of debt transferred to the
           holding company (PIAHCL).</p>
         <div class="chart-container"><canvas id="debtChart"></canvas></div>
       </div>
-      <div class="bg-brand-surface rounded-xl p-8 shadow-sm border border-white/10 space-y-6">
+      <div class="glass-card rounded-xl p-8 space-y-6">
         <h3 class="text-xl font-semibold text-white">PIA: 2023 Loss vs. 2024 Profit</h3>
         <p class="note">FY2024 net profit reported publicly after ~21 years of losses; the Rs 2.26bn net profit for 2024
           is a critical headline figure but does not benefit PIAHCL directly.</p>
@@ -261,7 +241,7 @@
     </section>
 
     <!-- Should you buy -->
-    <section class="card rounded-xl p-8 space-y-6" id="should-you-buy">
+    <section class="glass-card rounded-xl p-8 space-y-6" id="should-you-buy">
       <h2 class="text-2xl font-bold text-white">Should Investors Buy PIAHCL? The Speculative Trade</h2>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="bg-green-900/20 rounded-lg p-6 border-l-4 border-green-500">
@@ -303,7 +283,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="bg-brand-surface rounded-xl p-8 shadow-sm border border-white/10 space-y-4">
+    <section class="glass-card rounded-xl p-8 space-y-4">
       <h2 class="text-2xl font-bold text-white">FAQs</h2>
       <details class="p-4 border border-white/10 rounded-lg bg-brand-dark group">
         <summary class="font-semibold text-white cursor-pointer flex justify-between items-center">
@@ -334,7 +314,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8">
+  <footer class="glass border-t border-white/10 pt-16 pb-8">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <!-- About -->

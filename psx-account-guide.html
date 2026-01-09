@@ -82,13 +82,20 @@
             background-clip: text;
         }
     </style>
+    <link rel="stylesheet" href="./css/glass-theme.css">
 </head>
 
-<body class="text-lg bg-brand-dark text-white font-sans antialiased leading-relaxed">
+<body
+    class="text-lg text-white font-sans antialiased leading-relaxed relative selection:bg-pink-500 selection:text-white">
+
+    <!-- Floating Background Blobs -->
+    <div class="blob blob-blue top-0 left-0"></div>
+    <div class="blob blob-purple bottom-0 right-0"></div>
+    <div class="blob blob-cyan top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300" id="mainNav">
-        <div class="absolute inset-0 bg-brand-dark/80 backdrop-blur-md border-b border-white/10"></div>
+        <div class="absolute inset-0 glass-panel"></div>
         <div class="container mx-auto px-6 py-4 relative">
             <div class="flex items-center justify-between">
                 <a href="index.html" class="flex items-center gap-3 group">
@@ -161,7 +168,7 @@
         </header>
 
         <!-- Why Invest -->
-        <section class="bg-brand-surface rounded-2xl p-8 md:p-10 border border-white/10 shadow-lg">
+        <section class="glass-card rounded-2xl p-8 md:p-10">
             <h2 class="text-3xl font-bold text-white mb-4">Why Invest in the Pakistan Stock Exchange?</h2>
             <p class="text-gray-300 leading-relaxed">
                 The PSX offers Pakistani investors an opportunity to participate in the country's economic growth by
@@ -175,7 +182,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-white text-center">Step-by-Step Process</h2>
 
             <!-- Step 1 -->
-            <div class="step-card p-8 relative overflow-hidden">
+            <div class="glass-card p-8 relative overflow-hidden rounded-xl">
                 <div class="absolute top-0 right-0 p-4 opacity-10">
                     <i class="fas fa-building text-9xl text-brand-primary"></i>
                 </div>
@@ -203,7 +210,7 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="step-card p-8">
+            <div class="glass-card p-8 rounded-xl">
                 <div class="flex items-center gap-4 mb-6">
                     <span
                         class="bg-brand-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">2</span>
@@ -237,7 +244,7 @@
 
             <!-- Step 3 & 4 -->
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="step-card p-8">
+                <div class="glass-card p-8 rounded-xl">
                     <div class="flex items-center gap-4 mb-4">
                         <span
                             class="bg-brand-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">3</span>
@@ -251,7 +258,7 @@
                         <li>3. Digital signature</li>
                     </ul>
                 </div>
-                <div class="step-card p-8">
+                <div class="glass-card p-8 rounded-xl">
                     <div class="flex items-center gap-4 mb-4">
                         <span
                             class="bg-brand-primary text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-xl">4</span>
@@ -264,7 +271,7 @@
             </div>
 
             <!-- Step 5 & 6 -->
-            <div class="step-card p-8 border-l-4 border-green-500">
+            <div class="glass-card p-8 border-l-4 border-green-500 rounded-xl">
                 <div class="flex flex-col md:flex-row gap-8">
                     <div class="flex-1">
                         <div class="flex items-center gap-4 mb-4">
@@ -298,7 +305,7 @@
         <section class="space-y-6">
             <h2 class="text-3xl font-bold text-white">Account Types Comparison</h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="card rounded-xl p-6">
+                <div class="glass-card rounded-xl p-6">
                     <h3 class="text-xl font-bold text-white mb-2">Regular Trading Account</h3>
                     <p class="text-gray-400 text-sm mb-4">For investors with verifiable income.</p>
                     <ul class="space-y-2 text-gray-300">
@@ -310,7 +317,7 @@
                             trading available</li>
                     </ul>
                 </div>
-                <div class="card rounded-xl p-6 border-l-4 border-brand-accent">
+                <div class="glass-card rounded-xl p-6 border-l-4 border-brand-accent">
                     <h3 class="text-xl font-bold text-white mb-2">Sahulat Account</h3>
                     <p class="text-gray-400 text-sm mb-4">For students, housewives, freelancers.</p>
                     <ul class="space-y-2 text-gray-300">
@@ -326,22 +333,22 @@
         </section>
 
         <!-- Costs & Fees -->
-        <section class="bg-brand-surface rounded-xl p-8 border border-white/10">
+        <section class="glass-card rounded-xl p-8">
             <h2 class="text-2xl font-bold text-white mb-6">Understanding Costs & Fees</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-4 bg-brand-dark rounded-lg border border-white/5">
+                <div class="p-4 glass rounded-lg">
                     <h4 class="text-brand-primary font-bold mb-1">Brokerage Commission</h4>
                     <p class="text-gray-400 text-sm">0.15% - 2.5% per transaction (Negotiable)</p>
                 </div>
-                <div class="p-4 bg-brand-dark rounded-lg border border-white/5">
+                <div class="p-4 glass rounded-lg">
                     <h4 class="text-brand-primary font-bold mb-1">PSX Trading Fee</h4>
                     <p class="text-gray-400 text-sm">Charged per PKR 100,000 trade value</p>
                 </div>
-                <div class="p-4 bg-brand-dark rounded-lg border border-white/5">
+                <div class="p-4 glass rounded-lg">
                     <h4 class="text-brand-primary font-bold mb-1">Government Taxes</h4>
                     <p class="text-gray-400 text-sm">CVT, Advance Tax (Filer/Non-Filer rates differ)</p>
                 </div>
-                <div class="p-4 bg-brand-dark rounded-lg border border-white/5">
+                <div class="p-4 glass rounded-lg">
                     <h4 class="text-brand-primary font-bold mb-1">CDC Charges</h4>
                     <p class="text-gray-400 text-sm">For custody and settlement of shares</p>
                 </div>
@@ -352,28 +359,28 @@
         <section class="space-y-6">
             <h2 class="text-3xl font-bold text-white">Tips for New Investors</h2>
             <div class="grid md:grid-cols-2 gap-4">
-                <div class="flex gap-4 p-4 rounded-lg bg-brand-surface border border-white/5">
+                <div class="flex gap-4 p-4 rounded-lg glass-card">
                     <div class="text-2xl text-green-400"><i class="fas fa-seedling"></i></div>
                     <div>
                         <h4 class="font-bold text-white">Start Small</h4>
                         <p class="text-sm text-gray-400">Begin with PKR 10k-25k to learn without high risk.</p>
                     </div>
                 </div>
-                <div class="flex gap-4 p-4 rounded-lg bg-brand-surface border border-white/5">
+                <div class="flex gap-4 p-4 rounded-lg glass-card">
                     <div class="text-2xl text-blue-400"><i class="fas fa-layer-group"></i></div>
                     <div>
                         <h4 class="font-bold text-white">Diversify</h4>
                         <p class="text-sm text-gray-400">Spread investments across sectors (Banks, Cement, Tech).</p>
                     </div>
                 </div>
-                <div class="flex gap-4 p-4 rounded-lg bg-brand-surface border border-white/5">
+                <div class="flex gap-4 p-4 rounded-lg glass-card">
                     <div class="text-2xl text-yellow-400"><i class="fas fa-shield-alt"></i></div>
                     <div>
                         <h4 class="font-bold text-white">Focus on Blue Chips</h4>
                         <p class="text-sm text-gray-400">Stick to established companies with track records.</p>
                     </div>
                 </div>
-                <div class="flex gap-4 p-4 rounded-lg bg-brand-surface border border-white/5">
+                <div class="flex gap-4 p-4 rounded-lg glass-card">
                     <div class="text-2xl text-purple-400"><i class="fas fa-hourglass-half"></i></div>
                     <div>
                         <h4 class="font-bold text-white">Think Long Term</h4>
@@ -386,7 +393,7 @@
         <!-- Special Sections -->
         <div class="grid md:grid-cols-2 gap-8">
             <!-- NRPs -->
-            <section class="card rounded-xl p-8">
+            <section class="glass-card rounded-xl p-8">
                 <h3 class="text-xl font-bold text-white mb-4"><i class="fas fa-globe-asia mr-2 text-brand-accent"></i>
                     Overseas Pakistanis</h3>
                 <p class="text-gray-300 text-sm mb-4">Invest through the <strong>Roshan Digital Account (RDA)</strong>.
@@ -399,7 +406,7 @@
             </section>
 
             <!-- Islamic -->
-            <section class="card rounded-xl p-8 border-l-4 border-green-600">
+            <section class="glass-card rounded-xl p-8 border-l-4 border-green-600">
                 <h3 class="text-xl font-bold text-white mb-4"><i class="fas fa-moon mr-2 text-green-500"></i> Islamic
                     Investing</h3>
                 <p class="text-gray-300 text-sm mb-4">Trade Shariah-compliant stocks (KMI-30/KMI-All).</p>
@@ -422,7 +429,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8">
+    <footer class="glass border-t border-white/10 pt-16 pb-8">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- About -->
