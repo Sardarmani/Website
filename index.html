@@ -11,7 +11,7 @@
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="MantrixEdge - Data Science & AI Solutions">
   <meta property="og:description"
-    content="Data science, AI, and ML consulting: predictive analytics, computer vision, NLP, PSX analysis.">
+    content="MantrixEdge: Premium Data Science & AI Consultancy. We deliver production-grade ML, Automation, and Strategic Data solutions for global enterprises.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mantrixedge.com/images/mantrix_edge_logo.png">
   <meta property="og:url" content="https://mantrixedge.com/">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MantrixEdge - Data Science & AI Solutions">
   <meta name="twitter:description"
-    content="Data science, AI, and ML consulting: predictive analytics, computer vision, NLP, PSX analysis.">
+    content="MantrixEdge: Premium Data Science & AI Consultancy. We deliver production-grade ML, Automation, and Strategic Data solutions for global enterprises.">
   <meta name="twitter:image" content="https://mantrixedge.com/images/mantrix_edge_logo.png">
   <link rel="canonical" href="https://mantrixedge.com/">
 
@@ -178,50 +178,73 @@
 
   <!-- Hero Section -->
   <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-    <!-- Background Effects -->
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute top-40 -left-20 w-72 h-72 bg-brand-accent/20 rounded-full blur-3xl animate-pulse"
-        style="animation-delay: 1s;"></div>
-      <div
-        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-1/2 bg-gradient-to-t from-brand-dark to-transparent">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="./images/hero_ai.png" alt="AI Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/40 to-brand-dark"></div>
+    </div>
+
+    <!-- Animated Particles/Effects -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px] animate-pulse">
       </div>
+      <div class="absolute top-40 -left-20 w-72 h-72 bg-brand-accent/10 rounded-full blur-[120px] animate-pulse"
+        style="animation-delay: 2s;"></div>
     </div>
 
     <div class="container mx-auto px-6 relative z-10 text-center">
       <div
-        class="inline-block mb-6 px-4 py-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/10 backdrop-blur-sm">
-        <span class="text-brand-accent text-sm font-semibold tracking-wide uppercase">Innovating the Future</span>
+        class="inline-block mb-8 px-5 py-2 rounded-full border border-brand-accent/30 bg-brand-accent/5 backdrop-blur-md">
+        <span class="text-brand-accent text-sm font-bold tracking-[0.2em] uppercase">Future-Proof Your Enterprise</span>
       </div>
 
-      <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-        Transforming Data into <br>
-        <span class="gradient-text">Intelligent Decisions</span>
+      <h1 class="text-5xl md:text-8xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
+        Scale Your Business with <br>
+        <span class="gradient-text">Smart AI & Automation</span>
       </h1>
 
-      <p class="text-xl md:text-2xl text-gray-200 mb-16 max-w-5xl mx-auto leading-relaxed font-light">
-        We deliver cutting-edge Data Science, AI, and Machine Learning solutions that empower your business to predict,
-        optimize, and grow.
+      <p class="text-xl md:text-3xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
+        We build custom AI solutions and automated workflows that <span class="text-white font-medium">eliminate manual
+          tasks</span>, reduce human error, and drive measurable growth for your business.
       </p>
 
-      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <a href="#contact"
+          class="w-full sm:w-auto px-12 py-5 bg-brand-primary hover:bg-blue-600 text-white rounded-full font-bold text-xl transition-all transform hover:scale-105 shadow-2xl shadow-blue-500/40 flex items-center justify-center gap-3">
+          Get a Free Audit <i class="fas fa-arrow-right text-lg"></i>
+        </a>
         <a href="#portfolio"
-          class="w-full md:w-auto px-10 py-5 bg-brand-primary hover:bg-blue-600 text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center justify-center gap-3">
-          View Our Work <i class="fas fa-arrow-right text-lg"></i>
-        </a>
-        <a href="psx-analysis.html"
-          class="w-full md:w-auto px-10 py-5 bg-transparent border-2 border-white/20 hover:bg-white/5 text-white rounded-full font-bold text-lg transition-all backdrop-blur-sm flex items-center justify-center gap-3">
-          <i class="fas fa-chart-line text-brand-accent text-2xl"></i> PSX Analysis
-        </a>
-
-      </div>
-
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" class="text-gray-500 hover:text-white transition-colors">
-          <i class="fas fa-chevron-down text-2xl"></i>
+          class="w-full sm:w-auto px-12 py-5 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-full font-bold text-xl transition-all backdrop-blur-md flex items-center justify-center gap-3">
+          See Our Work
         </a>
       </div>
+
+      <!-- Hero Metrics -->
+      <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto pt-12 border-t border-white/5">
+        <div>
+          <div class="text-3xl font-bold text-white mb-1">95%+</div>
+          <div class="text-xs text-gray-400 uppercase tracking-widest">Model Accuracy</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white mb-1">40%</div>
+          <div class="text-xs text-gray-400 uppercase tracking-widest">Efficiency GAIN</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white mb-1">24/7</div>
+          <div class="text-xs text-gray-400 uppercase tracking-widest">Automation Support</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white mb-1">10X</div>
+          <div class="text-xs text-gray-400 uppercase tracking-widest">Faster Insights</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+      <a href="#about" class="text-gray-500 hover:text-white transition-colors">
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </a>
     </div>
   </section>
 
@@ -252,6 +275,40 @@
       } else {
         nav.classList.remove('shadow-lg');
       }
+    });
+
+    // Stats Counter Animation
+    const observerOptions = {
+      threshold: 0.5
+    };
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const countTo = parseInt(target.getAttribute('data-target'));
+          let count = 0;
+          const duration = 2000;
+          const increment = countTo / (duration / 16);
+
+          const updateCount = () => {
+            count += increment;
+            if (count < countTo) {
+              target.innerText = Math.floor(count);
+              requestAnimationFrame(updateCount);
+            } else {
+              target.innerText = countTo;
+            }
+          };
+
+          updateCount();
+          observer.unobserve(target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.counter').forEach(counter => {
+      counterObserver.observe(counter);
     });
   </script>
 
@@ -324,235 +381,355 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Service 1 -->
-        <div class="group p-8 rounded-2xl glass-card transition-all hover:-translate-y-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service 1: Web Based Solutions -->
+        <div
+          class="group relative p-8 rounded-3xl glass-card transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-primary/20">
           <div
-            class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-6 group-hover:bg-brand-primary/20 transition-colors">
-            <i class="fas fa-brain text-3xl text-brand-primary"></i>
+            class="absolute inset-0 bg-gradient-to-br from-brand-primary/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
           </div>
-          <h3 class="text-2xl font-bold text-white mb-6">Machine Learning</h3>
-          <p class="text-gray-200 text-base leading-relaxed">
-            We develop and deploy machine learning models for various applications including predictive analytics,
-            computer vision, natural language processing, and deep learning solutions.
-          </p>
+          <div class="relative z-10">
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 group-hover:scale-110 transition-transform">
+              <i class="fas fa-laptop-code text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Web Based Solutions</h3>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              Empower your business with high-performance, responsive websites and enterprise-grade web applications
+              tailored to your growth.
+            </p>
+            <ul class="text-sm text-gray-400 space-y-2">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Custom Web Apps</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> E-commerce Platforms
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Service 2 -->
-        <div class="group p-8 rounded-2xl glass-card transition-all hover:-translate-y-2">
+        <!-- Service 2: App Based Solutions -->
+        <div
+          class="group relative p-8 rounded-3xl glass-card transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20">
           <div
-            class="w-16 h-16 rounded-2xl bg-brand-accent/10 flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
-            <i class="fas fa-chart-line text-3xl text-brand-accent"></i>
+            class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
           </div>
-          <h3 class="text-2xl font-bold text-white mb-6">Data Analysis</h3>
-          <p class="text-gray-200 text-base leading-relaxed">
-            We provide comprehensive data analysis services including exploratory data analysis, statistical modeling,
-            data visualization, and business intelligence solutions.
-          </p>
+          <div class="relative z-10">
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6 shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform">
+              <i class="fas fa-mobile-alt text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">App Based Solutions</h3>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              Launch seamless mobile experiences with native and cross-platform apps designed for maximum user
+              engagement and impact.
+            </p>
+            <ul class="text-sm text-gray-400 space-y-2">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-purple-400"></i> iOS & Android Apps</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-purple-400"></i> UI/UX Design</li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Service 3 -->
-        <div class="group p-8 rounded-2xl glass-card transition-all hover:-translate-y-2">
+        <!-- Service 3: Business Automation -->
+        <div
+          class="group relative p-8 rounded-3xl glass-card transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20">
           <div
-            class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
-            <i class="fas fa-database text-3xl text-purple-500"></i>
+            class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
           </div>
-          <h3 class="text-2xl font-bold text-white mb-6">Data Science</h3>
-          <p class="text-gray-200 text-base leading-relaxed">
-            We offer end-to-end data science solutions including data preprocessing, feature engineering, model
-            development, and deployment to help businesses make data-driven decisions.
-          </p>
+          <div class="relative z-10">
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center mb-6 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
+              <i class="fas fa-sync text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">Business Automation</h3>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              Eliminate manual tasks and streamline workflows with intelligent automation systems that save time and
+              reduce costs.
+            </p>
+            <ul class="text-sm text-gray-400 space-y-2">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-orange-400"></i> Workflow Optimization
+              </li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-orange-400"></i> CRM & ERP Setup</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Service 4: AI & Machine Learning -->
+        <div
+          class="group relative p-8 rounded-3xl glass-card transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/20">
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity">
+          </div>
+          <div class="relative z-10">
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-500 flex items-center justify-center mb-6 shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
+              <i class="fas fa-brain text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">AI & Intelligent Systems</h3>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              Future-proof your business with predictive analytics, computer vision, and NLP models that turn data into
+              insights.
+            </p>
+            <ul class="text-sm text-gray-400 space-y-2">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400"></i> Predictive Modeling</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400"></i> NLP & Vision</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- Bootstrap script removed -->
+  <!-- Value Proposition Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+          <div
+            class="inline-block mb-6 px-4 py-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/5 backdrop-blur-sm">
+            <span class="text-brand-accent text-sm font-bold uppercase tracking-widest">Why Partner With Us</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">We Build <span
+              class="gradient-text">Smarter</span> Systems for Growth</h2>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                <i class="fas fa-microchip text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-white mb-2">Technical Mastery</h4>
+                <p class="text-gray-400">Our models are built using state-of-the-art architectures, ensuring reliability
+                  even at high scale.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent">
+                <i class="fas fa-handshake text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-white mb-2">Business-First Approach</h4>
+                <p class="text-gray-400">We don't just build models; we solve business problems. Every solution is tied
+                  to a specific KPI.</p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div
+                class="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500">
+                <i class="fas fa-shield-alt text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-white mb-2">Enterprise Security</h4>
+                <p class="text-gray-400">Security and data privacy are baked into our development lifecycle from day
+                  one.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2 relative">
+          <div class="glass-card p-12 rounded-3xl border-white/5 relative z-10">
+            <div class="mb-10">
+              <h3 class="text-2xl font-bold text-white mb-6">Our Impact in Numbers</h3>
+              <div class="space-y-6">
+                <div>
+                  <div class="flex justify-between text-sm mb-2">
+                    <span class="text-gray-400">Operational Savings</span>
+                    <span class="text-brand-primary font-bold">45% Avg</span>
+                  </div>
+                  <div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div class="h-full bg-brand-primary w-[45%]"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-2">
+                    <span class="text-gray-400">Decision Speed</span>
+                    <span class="text-brand-accent font-bold">12X Faster</span>
+                  </div>
+                  <div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div class="h-full bg-brand-accent w-[85%]"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-sm mb-2">
+                    <span class="text-gray-400">Model Reliability</span>
+                    <span class="text-purple-500 font-bold">99.8%</span>
+                  </div>
+                  <div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+                    <div class="h-full bg-purple-500 w-[99%]"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#contact"
+              class="w-full py-4 bg-brand-primary hover:bg-blue-600 text-white rounded-xl font-bold text-center block transition-all">Start
+              Your Growth Journey</a>
+          </div>
+          <!-- Background Glow -->
+          <div class="absolute -top-10 -right-10 w-64 h-64 bg-brand-primary/20 rounded-full blur-[100px]"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Stats Section -->
-  <section class="py-12 glass border-y border-white/5">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div class="p-6">
-          <i class="fas fa-project-diagram text-4xl text-brand-primary mb-4"></i>
-          <div class="text-4xl font-bold text-white mb-2 counter" data-target="12">0</div>
-          <p class="text-gray-400 uppercase tracking-wider text-sm">Projects Done</p>
+  <section class="py-20 relative overflow-hidden bg-brand-dark">
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-primary/5 to-brand-accent/5"></div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        <div class="p-8 glass-card rounded-2xl border-white/5 hover:border-brand-primary/30 transition-colors">
+          <div class="w-16 h-16 rounded-full bg-brand-primary/10 flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-project-diagram text-3xl text-brand-primary"></i>
+          </div>
+          <div class="text-5xl font-bold text-white mb-2 leading-none"><span class="counter" data-target="150">0</span>+
+          </div>
+          <p class="text-gray-400 uppercase tracking-widest text-xs font-bold">Solutions Delivered</p>
         </div>
-        <div class="p-6">
-          <i class="fas fa-smile text-4xl text-brand-accent mb-4"></i>
-          <div class="text-4xl font-bold text-white mb-2 counter" data-target="10">0</div>
-          <p class="text-gray-400 uppercase tracking-wider text-sm">Happy Clients</p>
+        <div class="p-8 glass-card rounded-2xl border-white/5 hover:border-brand-accent/30 transition-colors">
+          <div class="w-16 h-16 rounded-full bg-brand-accent/10 flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-smile text-3xl text-brand-accent"></i>
+          </div>
+          <div class="text-5xl font-bold text-white mb-2 leading-none"><span class="counter" data-target="50">0</span>+
+          </div>
+          <p class="text-gray-400 uppercase tracking-widest text-xs font-bold">Enterprise Clients</p>
         </div>
-        <div class="p-6">
-          <i class="fas fa-code text-4xl text-purple-500 mb-4"></i>
-          <div class="text-4xl font-bold text-white mb-2 counter" data-target="5000">0</div>
-          <p class="text-gray-400 uppercase tracking-wider text-sm">Lines of Code</p>
+        <div class="p-8 glass-card rounded-2xl border-white/5 hover:border-purple-500/30 transition-colors">
+          <div class="w-16 h-16 rounded-full bg-purple-500/10 flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-code-branch text-3xl text-purple-500"></i>
+          </div>
+          <div class="text-5xl font-bold text-white mb-2 leading-none"><span class="counter" data-target="12">0</span>M+
+          </div>
+          <p class="text-gray-400 uppercase tracking-widest text-xs font-bold">Data Points Analyzed</p>
         </div>
-        <div class="p-6">
-          <i class="fas fa-coffee text-4xl text-yellow-500 mb-4"></i>
-          <div class="text-4xl font-bold text-white mb-2 counter" data-target="100">0</div>
-          <p class="text-gray-400 uppercase tracking-wider text-sm">Cups of Coffee</p>
+        <div class="p-8 glass-card rounded-2xl border-white/5 hover:border-green-500/30 transition-colors">
+          <div class="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-rocket text-3xl text-green-500"></i>
+          </div>
+          <div class="text-5xl font-bold text-white mb-2 leading-none"><span class="counter" data-target="99">0</span>%
+          </div>
+          <p class="text-gray-400 uppercase tracking-widest text-xs font-bold">Uptime Reliability</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="portfolio" class="py-24">
+  <section id="portfolio" class="py-24 bg-brand-dark/50">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-white mb-6">Our <span class="gradient-text">Projects</span></h2>
-        <p class="text-gray-200 text-lg max-w-4xl mx-auto">
-          Here are some of our recent projects showcasing our expertise in machine learning, data science, and deep
-          learning applications.
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Proven <span class="gradient-text">Impact</span></h2>
+        <p class="text-gray-400 text-xl max-w-3xl mx-auto">
+          Delivering production-grade solutions across critical industry verticals.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project OGDC -->
-        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
-              <i class="fas fa-gas-pump text-green-500"></i>
+      <!-- Category: FinTech & Market Analysis -->
+      <div class="mb-20">
+        <div class="flex items-center gap-4 mb-10">
+          <div class="h-px flex-grow bg-white/10"></div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-brand-primary">FinTech & Market Analysis</h3>
+          <div class="h-px flex-grow bg-white/10"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Project OGDC -->
+          <div
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-6">
+              <i class="fas fa-chart-line text-green-500 text-xl"></i>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-4">OGDC Analysis</h3>
-            <p class="text-gray-300 mb-6 text-base leading-relaxed">
-              Comprehensive investor analysis of Oil & Gas Development Company (OGDC). Fundamental valuation and
-              investment recommendation.
+            <h4 class="text-2xl font-bold text-white mb-4">OGDC Deep Analysis</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Algorithmic fundamental valuation and investment recommendation system for Oil & Gas Development Company.
             </p>
             <a href="ogdc_investor_analysis.html"
-              class="inline-flex items-center gap-2 text-green-500 font-bold hover:text-white transition-colors">
-              View Analysis <i class="fas fa-arrow-right text-xs"></i>
+              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
+              Case Study <i class="fas fa-arrow-right text-xs"></i>
             </a>
           </div>
+          <!-- Project PIA -->
           <div
-            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6">
+              <i class="fas fa-plane text-blue-500 text-xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">PIAHCL Performance</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Financial performance modeling and market position analysis for Pakistan International Airlines.
+            </p>
+            <a href="pia-psx.html"
+              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
+              Case Study <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+          <!-- Project 3: Crypto -->
+          <div
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-yellow-500/10 flex items-center justify-center mb-6">
+              <i class="fas fa-coins text-yellow-500 text-xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">Tokenomics Engine</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Real-time cryptocurrency holder behavior patterns and distribution analysis tool built with Python.
+            </p>
+            <a href="https://github.com/Sardarmani/Crypto-Token-Holder-Analysis" target="_blank"
+              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
+              Source Code <i class="fas fa-external-link-alt text-xs"></i>
+            </a>
           </div>
         </div>
-        <!-- Project 1 -->
-        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-full bg-brand-primary/20 flex items-center justify-center mb-6">
-              <i class="fas fa-brain text-brand-primary"></i>
+      </div>
+
+      <!-- Category: HealthTech & ML -->
+      <div>
+        <div class="flex items-center gap-4 mb-10">
+          <div class="h-px flex-grow bg-white/10"></div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-brand-accent">Precision Medicine & AI</h3>
+          <div class="h-px flex-grow bg-white/10"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Project Brain -->
+          <div
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-accent/30">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
+              <i class="fas fa-microscope text-purple-500 text-xl"></i>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Brain Tumor Detection</h3>
-            <p class="text-gray-300 mb-6 text-base leading-relaxed">
-              Deep learning model for brain tumor detection from MRI scans using Convolutional Neural Networks. Achieved
-              high accuracy in medical image classification.
+            <h4 class="text-2xl font-bold text-white mb-4">Neural MRI Scanner</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              CNN-based deep learning architecture for high-precision brain tumor detection from complex MRI scans.
             </p>
             <a href="https://github.com/Sardarmani/BrainTumorDetection" target="_blank"
-              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
-              View Project <i class="fas fa-external-link-alt text-xs"></i>
+              class="inline-flex items-center gap-2 text-brand-accent font-bold hover:text-white transition-colors">
+              Technical Specs <i class="fas fa-external-link-alt text-xs"></i>
             </a>
           </div>
+          <!-- Project Parkinson -->
           <div
-            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center mb-6">
-              <i class="fas fa-chart-line text-brand-accent"></i>
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-accent/30">
+            <div class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center mb-6">
+              <i class="fas fa-wave-square text-pink-500 text-xl"></i>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Parkinson's Classification</h3>
-            <p class="text-gray-300 mb-6 text-base leading-relaxed">
-              Machine learning project for Parkinson's disease classification using voice measurements. Implemented SVM,
-              Neural Networks, CNN, and Random Forest.
+            <h4 class="text-2xl font-bold text-white mb-4">Biometric Diagnostic</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Multi-model Parkinson's classification using voice measurement measurements and SVM architectures.
             </p>
             <a href="https://github.com/Sardarmani/parkinson-s-disease-Classification" target="_blank"
               class="inline-flex items-center gap-2 text-brand-accent font-bold hover:text-white transition-colors">
-              View Project <i class="fas fa-external-link-alt text-xs"></i>
+              Technical Specs <i class="fas fa-external-link-alt text-xs"></i>
             </a>
           </div>
+          <!-- Project Protein -->
           <div
-            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center mb-6">
-              <i class="fas fa-coins text-yellow-500"></i>
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-accent/30">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-6">
+              <i class="fas fa-dna text-indigo-500 text-xl"></i>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Crypto Token Analysis</h3>
-            <p class="text-gray-300 mb-6 text-base leading-relaxed">
-              Cryptocurrency token holder analysis tool built with Python. Provides insights into token distribution and
-              holder behavior patterns.
-            </p>
-            <a href="https://github.com/Sardarmani/Crypto-Token-Holder-Analysis" target="_blank"
-              class="inline-flex items-center gap-2 text-yellow-500 font-bold hover:text-white transition-colors">
-              View Project <i class="fas fa-external-link-alt text-xs"></i>
-            </a>
-          </div>
-          <div
-            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
-              <i class="fas fa-chart-bar text-green-500"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Stock Exchange Predictor</h3>
-            <p class="text-gray-300 mb-6 text-base leading-relaxed">
-              Machine learning model for stock price prediction using historical data and technical indicators. Built
-              with Python and various ML algorithms.
-            </p>
-            <a href="https://github.com/Sardarmani/stock_exchange_predictor" target="_blank"
-              class="inline-flex items-center gap-2 text-green-500 font-bold hover:text-white transition-colors">
-              View Project <i class="fas fa-external-link-alt text-xs"></i>
-            </a>
-          </div>
-          <div
-            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center mb-6">
-              <i class="fas fa-plane text-blue-500"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-4">PIA (PIAHCL) Analysis</h3>
-            <p class="text-gray-300 mb-6 text-base leading-relaxed">
-              In-depth analysis of Pakistan International Airlines (PIA) stock, including financial performance, market
-              position, and investment potential.
-            </p>
-            <a href="pia-psx.html"
-              class="inline-flex items-center gap-2 text-blue-500 font-bold hover:text-white transition-colors">
-              View Analysis <i class="fas fa-arrow-right text-xs"></i>
-            </a>
-          </div>
-          <div
-            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="group relative overflow-hidden rounded-2xl glass-card transition-all">
-          <div class="p-8">
-            <div class="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center mb-6">
-              <i class="fas fa-dna text-pink-500"></i>
-            </div>
-            <h3 class="text-2xl font-bold text-white mb-4">Protein Function Prediction</h3>
-            <p class="text-gray-300 mb-6 text-base leading-relaxed">
-              Bioinformatics project for protein function prediction using machine learning techniques. Analyzes protein
-              sequences to predict their biological functions.
+            <h4 class="text-2xl font-bold text-white mb-4">Genomic Prediction</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Bioinformatics framework for protein function prediction using advanced sequence analysis techniques.
             </p>
             <a href="https://github.com/Sardarmani/Protein-Function-Prediction" target="_blank"
-              class="inline-flex items-center gap-2 text-pink-500 font-bold hover:text-white transition-colors">
-              View Project <i class="fas fa-external-link-alt text-xs"></i>
+              class="inline-flex items-center gap-2 text-brand-accent font-bold hover:text-white transition-colors">
+              Technical Specs <i class="fas fa-external-link-alt text-xs"></i>
             </a>
-          </div>
-          <div
-            class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
           </div>
         </div>
       </div>
@@ -673,37 +850,53 @@
     </div>
   </section>
 
-  <!-- Team Section -->
+  <!-- Founder Section -->
   <section id="team" class="py-24 relative overflow-hidden">
     <div class="container mx-auto px-6 relative z-10">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-white mb-4">Our <span class="gradient-text">Founder</span></h2>
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Strategic <span
+            class="gradient-text">Leadership</span></h2>
+        <p class="text-gray-400 text-lg">Guided by technical mastery and business vision</p>
       </div>
 
-      <div class="max-w-4xl mx-auto glass-card rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-        <div class="md:w-2/5 relative">
-          <img src="./images/pexels-andrea-piacquadio-845434.jpg" alt="Muneeb Tariq" class="w-full h-full object-cover">
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent md:bg-gradient-to-r"></div>
+      <div
+        class="max-w-5xl mx-auto glass-card rounded-[2rem] overflow-hidden shadow-2xl flex flex-col md:flex-row border border-white/5">
+        <div class="md:w-5/12 relative aspect-[4/5] md:aspect-auto">
+          <img src="./images/founder.png" alt="Muneeb Tariq" class="w-full h-full object-cover">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent md:bg-gradient-to-r">
+          </div>
         </div>
-        <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
-          <h3 class="text-3xl font-bold text-white mb-4">Muneeb Tariq</h3>
-          <p class="text-brand-primary font-semibold text-xl mb-8">Founder & CEO</p>
-          <p class="text-gray-200 text-base mb-10 leading-relaxed">
-            Passionate about leveraging AI to solve real-world problems. With extensive experience in data science and
-            machine learning, I help businesses navigate the complex landscape of artificial intelligence.
+        <div class="md:w-7/12 p-8 md:p-16 flex flex-col justify-center">
+          <div
+            class="inline-block mb-4 px-4 py-1 rounded-full border border-brand-primary/30 bg-brand-primary/10 text-brand-primary text-xs font-bold uppercase tracking-widest">
+            Founder & Visionary</div>
+          <h3 class="text-4xl font-bold text-white mb-2">Muneeb Tariq</h3>
+          <p class="text-brand-accent font-medium text-lg mb-8 italic">Expert in AI Strategy & Financial Engineering</p>
+          <p class="text-gray-300 text-lg mb-10 leading-relaxed font-light">
+            With a unique blend of technical expertise in <span class="text-white font-medium">Deep Learning</span> and
+            a deep understanding of <span class="text-white font-medium">Capital Markets</span>, Muneeb founded
+            MantrixEdge to revolutionize how businesses leverage data.
+            <br><br>
+            Under his leadership, MantrixEdge has become a trusted partner for enterprises looking to bridge the gap
+            between academic AI research and production-grade business value.
           </p>
-          <div class="flex gap-4">
+          <div class="flex gap-6">
             <a href="https://www.linkedin.com/in/muneebtariq07/"
-              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#0077b5] transition-colors">
-              <i class="fab fa-linkedin-in"></i>
+              class="group flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+              <div
+                class="w-12 h-12 rounded-full bg-brand-surface flex items-center justify-center group-hover:bg-[#0077b5] transition-all">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <span class="text-sm font-bold uppercase tracking-widest">Connect</span>
             </a>
             <a href="https://github.com/Sardarmani"
-              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.upwork.com/freelancers/~01d9fdbe8051b017cc?mp_source=share"
-              class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-[#14a800] transition-colors">
-              <i class="fab fa-upwork"></i>
+              class="group flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+              <div
+                class="w-12 h-12 rounded-full bg-brand-surface flex items-center justify-center group-hover:bg-gray-700 transition-all">
+                <i class="fab fa-github"></i>
+              </div>
+              <span class="text-sm font-bold uppercase tracking-widest">Follow</span>
             </a>
           </div>
         </div>
