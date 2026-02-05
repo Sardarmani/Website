@@ -146,9 +146,28 @@
             class="text-gray-200 hover:text-brand-accent transition-colors text-base font-bold uppercase tracking-wider">Services</a>
           <a href="#portfolio"
             class="text-gray-200 hover:text-brand-accent transition-colors text-base font-bold uppercase tracking-wider">Projects</a>
-          <a href="psx-analysis.html"
-            class="text-brand-accent hover:text-white transition-colors text-base font-bold uppercase tracking-wider border-2 border-brand-accent/50 px-8 py-3 rounded-full hover:bg-brand-accent/10">PSX
-            Analysis</a>
+          <!-- Investment Hub Dropdown -->
+          <div class="relative group">
+            <button
+              class="flex items-center gap-2 text-brand-accent hover:text-white transition-colors text-base font-bold uppercase tracking-wider border-2 border-brand-accent/50 px-8 py-3 rounded-full hover:bg-brand-accent/10">
+              Investment Hub <i class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+            </button>
+            <div
+              class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+              <div class="bg-brand-dark/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-2xl">
+                <a href="psx-analysis.html"
+                  class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-gray-200 hover:text-brand-accent">
+                  <i class="fas fa-chart-bar w-5"></i>
+                  <span class="font-medium capitalize">PSX Hub / Analysis</span>
+                </a>
+                <a href="zakat-calculator.html"
+                  class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-gray-200 hover:text-brand-accent">
+                  <i class="fas fa-calculator w-5"></i>
+                  <span class="font-medium capitalize">Zakat on Shares</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
           <a href="#contact"
             class="bg-brand-primary hover:bg-blue-600 text-white px-10 py-4 rounded-full transition-all transform hover:scale-105 text-base font-bold shadow-lg shadow-blue-500/30">Contact</a>
@@ -169,7 +188,16 @@
         <a href="#about" class="text-gray-200 hover:text-brand-accent block py-2 text-lg font-bold">About</a>
         <a href="#service" class="text-gray-200 hover:text-brand-accent block py-2 text-lg font-bold">Services</a>
         <a href="#portfolio" class="text-gray-200 hover:text-brand-accent block py-2 text-lg font-bold">Projects</a>
-        <a href="psx-analysis.html" class="text-brand-accent font-bold block py-2 text-lg">PSX Analysis</a>
+        <div class="border-t border-white/10 pt-4">
+          <span class="text-gray-500 text-xs uppercase tracking-widest font-bold block mb-4">Solutions</span>
+          <a href="psx-analysis.html" class="text-brand-accent font-bold block py-2 text-lg flex items-center gap-3">
+            <i class="fas fa-chart-line"></i> PSX Hub
+          </a>
+          <a href="zakat-calculator.html"
+            class="text-brand-accent font-bold block py-2 text-lg flex items-center gap-3">
+            <i class="fas fa-calculator"></i> Zakat Calculator
+          </a>
+        </div>
 
         <a href="#contact" class="text-brand-primary font-bold block py-2 text-lg">Contact Us</a>
       </div>
@@ -660,6 +688,22 @@
               Case Study <i class="fas fa-arrow-right text-xs"></i>
             </a>
           </div>
+          <!-- Project Zakat Calculator -->
+          <div
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6">
+              <i class="fas fa-calculator text-emerald-500 text-xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">Zakat on Shares</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Premium real-time Zakat calculator for stock market investors, supporting both trading and long-term
+              portfolio assessments.
+            </p>
+            <a href="zakat-calculator.html"
+              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
+              Launch Tool <i class="fas fa-rocket text-xs"></i>
+            </a>
+          </div>
           <!-- Project 3: Crypto -->
           <div
             class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-primary/30">
@@ -729,6 +773,90 @@
             <a href="https://github.com/Sardarmani/Protein-Function-Prediction" target="_blank"
               class="inline-flex items-center gap-2 text-brand-accent font-bold hover:text-white transition-colors">
               Technical Specs <i class="fas fa-external-link-alt text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category: Automated Intelligence & Scraping -->
+      <div class="mt-20">
+        <div class="flex items-center gap-4 mb-10">
+          <div class="h-px flex-grow bg-white/10"></div>
+          <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-brand-primary">Automated Intelligence & Scraping
+          </h3>
+          <div class="h-px flex-grow bg-white/10"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Project: X (Twitter) -->
+          <div
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-blue-400/10 flex items-center justify-center mb-6">
+              <i class="fab fa-twitter text-blue-400 text-xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">MantrixEdge X Intelligence</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Internal X (Twitter) Engine for tracking market narratives and sentiment without API limits. Tracks
+              engagement, reach, and generates analytics-ready reports.
+            </p>
+            <ul class="text-sm text-gray-400 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Custom Date Range
+                Tracking</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Engagement & Reach
+                Metrics</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Dashboard & CSV Export
+              </li>
+            </ul>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
+              Request Sample <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+          <!-- Project: Reddit -->
+          <div
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center mb-6">
+              <i class="fab fa-reddit-alien text-orange-500 text-xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">Reddit Narrative Scraper</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Advanced scraping tool for cross-subreddit trend analysis and community sentiment tracking for crypto and
+              niche markets.
+            </p>
+            <ul class="text-sm text-gray-400 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Subreddit Trend
+                Analysis</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Comment Sentiment
+                Scoring</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Real-time Monitoring
+              </li>
+            </ul>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
+              Case Study <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+          <!-- Project: CoinMarketCap -->
+          <div
+            class="group relative overflow-hidden rounded-3xl glass-card transition-all p-8 hover:border-brand-primary/30">
+            <div class="w-12 h-12 rounded-xl bg-blue-600/10 flex items-center justify-center mb-6">
+              <i class="fas fa-coins text-blue-600 text-xl"></i>
+            </div>
+            <h4 class="text-2xl font-bold text-white mb-4">CMC Intelligence Engine</h4>
+            <p class="text-gray-400 mb-6 text-base leading-relaxed">
+              Real-time data extraction system for CoinMarketCap, monitoring token listings, community posts, and price
+              action patterns.
+            </p>
+            <ul class="text-sm text-gray-400 space-y-2 mb-6">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Listing & Alert System
+              </li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Community Post
+                Sentiment</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-brand-accent"></i> Portfolio Tracking API
+              </li>
+            </ul>
+            <a href="#contact"
+              class="inline-flex items-center gap-2 text-brand-primary font-bold hover:text-white transition-colors">
+              Source Code <i class="fas fa-external-link-alt text-xs"></i>
             </a>
           </div>
         </div>

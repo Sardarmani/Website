@@ -106,9 +106,30 @@
                         class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Services</a>
                     <a href="index.html#portfolio"
                         class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-medium uppercase tracking-wider">Projects</a>
-                    <a href="psx-analysis.html"
-                        class="text-brand-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wider border border-brand-accent/30 px-4 py-2 rounded-full hover:bg-brand-accent/10">PSX
-                        Analysis</a>
+                    <!-- Investment Hub Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-brand-accent hover:text-white transition-colors text-sm font-bold uppercase tracking-wider border border-brand-accent/30 px-6 py-2 rounded-full hover:bg-brand-accent/10">
+                            Investment Hub <i
+                                class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                            <div
+                                class="bg-brand-dark/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-2xl">
+                                <a href="psx-analysis.html"
+                                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-gray-200 hover:text-brand-accent text-sm">
+                                    <i class="fas fa-chart-bar w-5 text-sm"></i>
+                                    <span class="font-medium capitalize">PSX Hub / Analysis</span>
+                                </a>
+                                <a href="zakat-calculator.html"
+                                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-gray-200 hover:text-brand-accent text-sm">
+                                    <i class="fas fa-calculator w-5 text-sm"></i>
+                                    <span class="font-medium capitalize">Zakat on Shares</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="index.html#contact"
                         class="bg-brand-primary hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-all transform hover:scale-105 text-sm font-bold shadow-lg shadow-blue-500/30">Contact</a>
                 </div>
@@ -128,7 +149,17 @@
                 <a href="index.html#about" class="text-gray-300 hover:text-brand-accent block py-2">About</a>
                 <a href="index.html#service" class="text-gray-300 hover:text-brand-accent block py-2">Services</a>
                 <a href="index.html#portfolio" class="text-gray-300 hover:text-brand-accent block py-2">Projects</a>
-                <a href="psx-analysis.html" class="text-brand-accent font-bold block py-2">PSX Analysis</a>
+                <div class="border-t border-white/10 pt-4">
+                    <span class="text-gray-500 text-[10px] uppercase tracking-widest font-bold block mb-4">Investment
+                        Hub</span>
+                    <a href="psx-analysis.html" class="text-brand-accent font-bold block py-2 flex items-center gap-3">
+                        <i class="fas fa-chart-line"></i> PSX Hub
+                    </a>
+                    <a href="zakat-calculator.html"
+                        class="text-brand-accent font-bold block py-2 flex items-center gap-3">
+                        <i class="fas fa-calculator"></i> Zakat Calculator
+                    </a>
+                </div>
                 <a href="index.html#contact" class="text-brand-primary font-bold block py-2">Contact Us</a>
             </div>
         </div>

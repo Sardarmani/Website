@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat on Shares - MantrixEdge</title>
+    <meta name="description"
+        content="Calculate your Zakat obligations on stock market shares accurately with MantrixEdge's AI-powered calculator.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#06b6d4',
+                            surface: '#1e293b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="icon" href="./images/mantrix_edge_logo.png">
+
+    <!-- Glass Theme -->
+    <link rel="stylesheet" href="./css/glass-theme.css">
+    <link rel="stylesheet" href="./css/zakat-calculator.css">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Override some zakat-calculator.css defaults to match the main theme better */
+        .zakat-calculator-root {
+            background: transparent;
+            min-height: auto;
+            padding: 0;
+        }
+
+        .zakat-calculator-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .zakat-calculator-root input,
+        .zakat-calculator-root select {
+            background: rgba(15, 23, 42, 0.4) !important;
+            /* Force a darker background for better text contrast */
+            color: #ffffff !important;
+        }
+
+        .zakat-calculator-root input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body class="text-white font-sans antialiased leading-relaxed relative selection:bg-pink-500 selection:text-white">
+
+    <!-- Floating Background Blobs -->
+    <div class="blob blob-blue top-0 left-0"></div>
+    <div class="blob blob-purple bottom-0 right-0"></div>
+    <div class="blob blob-cyan top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 shadow-lg" id="mainNav">
+        <div class="absolute inset-0 glass-panel"></div>
+        <div class="container mx-auto px-6 py-4 relative">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div
+                        class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-lg shadow-brand-primary/20 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-chart-line text-white text-lg"></i>
+                        <div
+                            class="absolute inset-0 bg-white/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <span class="text-2xl font-bold text-white tracking-tight">Mantrix<span
+                            class="text-brand-accent">Edge</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="index.html#home"
+                        class="text-gray-200 hover:text-brand-accent transition-colors text-base font-bold uppercase tracking-wider">Home</a>
+                    <a href="index.html#about"
+                        class="text-gray-200 hover:text-brand-accent transition-colors text-base font-bold uppercase tracking-wider">About</a>
+                    <a href="index.html#service"
+                        class="text-gray-200 hover:text-brand-accent transition-colors text-base font-bold uppercase tracking-wider">Services</a>
+                    <a href="index.html#portfolio"
+                        class="text-gray-200 hover:text-brand-accent transition-colors text-base font-bold uppercase tracking-wider">Projects</a>
+
+                    <!-- Investment Hub Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-2 text-brand-accent hover:text-white transition-colors text-base font-bold uppercase tracking-wider border-2 border-brand-accent/50 px-8 py-3 rounded-full hover:bg-brand-accent/10">
+                            Investment Hub <i
+                                class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top scale-95 group-hover:scale-100 z-50">
+                            <div
+                                class="bg-brand-dark/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-2xl">
+                                <a href="psx-analysis.html"
+                                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-gray-200 hover:text-brand-accent">
+                                    <i class="fas fa-chart-bar w-5"></i>
+                                    <span class="font-medium capitalize">PSX Hub / Analysis</span>
+                                </a>
+                                <a href="zakat-calculator.html"
+                                    class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/5 transition-colors text-gray-200 hover:text-brand-accent">
+                                    <i class="fas fa-calculator w-5"></i>
+                                    <span class="font-medium capitalize">Zakat on Shares</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="index.html#contact"
+                        class="bg-brand-primary hover:bg-blue-600 text-white px-10 py-4 rounded-full transition-all transform hover:scale-105 text-base font-bold shadow-lg shadow-blue-500/30">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark/95 backdrop-blur-xl border-b border-white/10 py-6">
+            <div class="flex flex-col space-y-6 px-8">
+                <a href="index.html#home"
+                    class="text-gray-200 hover:text-brand-accent block py-2 text-lg font-bold">Home</a>
+                <a href="index.html#about"
+                    class="text-gray-200 hover:text-brand-accent block py-2 text-lg font-bold">About</a>
+                <a href="index.html#service"
+                    class="text-gray-200 hover:text-brand-accent block py-2 text-lg font-bold">Services</a>
+                <a href="index.html#portfolio"
+                    class="text-gray-200 hover:text-brand-accent block py-2 text-lg font-bold">Projects</a>
+                <div class="border-t border-white/10 pt-4">
+                    <span class="text-gray-500 text-xs uppercase tracking-widest font-bold block mb-4">Solutions</span>
+                    <a href="psx-analysis.html"
+                        class="text-brand-accent font-bold block py-2 text-lg flex items-center gap-3">
+                        <i class="fas fa-chart-line"></i> PSX Hub
+                    </a>
+                    <a href="zakat-calculator.html"
+                        class="text-brand-accent font-bold block py-2 text-lg flex items-center gap-3">
+                        <i class="fas fa-calculator"></i> Zakat Calculator
+                    </a>
+                </div>
+                <a href="index.html#contact" class="text-brand-primary font-bold block py-2 text-lg">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="pt-32 pb-24 zakat-calculator-root">
+        <div class="container mx-auto px-6">
+
+            <!-- Hero Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                    Zakat on <span class="gradient-text">Shares</span>
+                </h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Calculate your stock market Zakat obligations accurately using Shariah-compliant principles for both
+                    trading and long-term investment portfolios.
+                </p>
+            </div>
+
+            <div class="zakat-calculator-container">
+                <!-- Nisab Configuration -->
+                <section class="zakat-glass-card mb-12">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div>
+                            <h2 class="text-xl font-bold text-white mb-2"><i
+                                    class="fas fa-balance-scale mr-2 text-brand-accent"></i> Nisab Threshold</h2>
+                            <p class="text-gray-400 text-sm">Zakat only applies if your total wealth exceeds this value.
+                            </p>
+                        </div>
+                        <div class="zakat-form-group w-full md:w-64">
+                            <input type="number" id="zakat-nisab" placeholder="e.g., 100000" class="w-full">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Input Form -->
+                <section class="zakat-glass-card mb-12">
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-brand-accent mb-2"><i class="fas fa-plus-circle mr-2"></i>
+                            Add Asset</h2>
+                        <p class="text-gray-400">Enter details of your share holdings.</p>
+                    </div>
+
+                    <div class="zakat-form-grid">
+                        <div class="zakat-form-group">
+                            <label for="zakat-company"><i class="fas fa-building mr-2 text-brand-primary"></i>
+                                Company</label>
+                            <input type="text" id="zakat-company" placeholder="e.g., PSX: MLCF">
+                        </div>
+                        <div class="zakat-form-group">
+                            <label for="zakat-shares"><i class="fas fa-coins mr-2 text-brand-primary"></i> Shares
+                                Count</label>
+                            <input type="number" id="zakat-shares" placeholder="e.g., 1000">
+                        </div>
+                        <div class="zakat-form-group">
+                            <label for="zakat-price"><i class="fas fa-chart-line mr-2 text-brand-primary"></i> Current
+                                Price</label>
+                            <input type="number" id="zakat-price" placeholder="e.g., 45.50">
+                        </div>
+                        <div class="zakat-form-group">
+                            <label for="zakat-share-type"><i class="fas fa-briefcase mr-2 text-brand-primary"></i>
+                                Holding Type</label>
+                            <select id="zakat-share-type">
+                                <option value="">Select type</option>
+                                <option value="trading">Trading (Short-term)</option>
+                                <option value="investment">Investment (Long-term)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Investment Specific Fields -->
+                    <div id="zakat-investment-fields" class="mt-6 p-6 bg-white/5 rounded-2xl border border-white/5"
+                        style="display: none; animation: zakatFadeIn 0.3s ease-out;">
+                        <div class="zakat-form-grid">
+                            <div class="zakat-form-group">
+                                <label for="zakat-assets"><i
+                                        class="fas fa-file-invoice-dollar mr-2 text-brand-accent"></i> Zakatable
+                                    Assets</label>
+                                <input type="number" id="zakat-assets" placeholder="Cash + Inventory + Receivables">
+                            </div>
+                            <div class="zakat-form-group">
+                                <label for="zakat-total-assets"><i class="fas fa-chart-pie mr-2 text-brand-accent"></i>
+                                    Total Company Assets</label>
+                                <input type="number" id="zakat-total-assets" placeholder="Total balance sheet assets">
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 italic">
+                            <i class="fas fa-info-circle mr-1"></i> These figures can be found in the latest
+                            quarterly/annual financial reports.
+                        </p>
+                    </div>
+
+                    <button id="zakat-add-btn" class="zakat-btn zakat-btn-primary w-full mt-8 py-4 text-lg">
+                        <i class="fas fa-plus mr-2"></i> Add to Portfolio
+                    </button>
+                </section>
+
+                <!-- Portfolio List -->
+                <section id="zakat-portfolio-section" class="zakat-glass-card mb-12" style="display: none;">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+                        <h2 class="text-2xl font-bold text-white"><i class="fas fa-wallet mr-2 text-brand-accent"></i>
+                            Your Portfolio (<span id="zakat-holdings-count">0</span>)</h2>
+                        <div class="flex gap-4 w-full md:w-auto">
+                            <button id="zakat-clear-btn" class="zakat-btn zakat-btn-danger flex-1 px-6">
+                                <i class="fas fa-trash-alt mr-2"></i> Clear
+                            </button>
+                            <button id="zakat-calculate-btn" class="zakat-btn zakat-btn-gold flex-1 px-8">
+                                <i class="fas fa-calculator mr-2"></i> Calculate Zakat
+                            </button>
+                        </div>
+                    </div>
+                    <div id="zakat-holdings-list">
+                        <!-- Dynamic content -->
+                    </div>
+                </section>
+
+                <!-- Result -->
+                <section id="zakat-result-card" class="zakat-glass-card zakat-result-hero text-center mb-12"
+                    style="display: none;">
+                    <h2 class="text-2xl font-bold text-white mb-6">Total Zakat Assessment</h2>
+                    <div class="zakat-total-amount mb-4">
+                        <span class="text-3xl align-top text-brand-accent -mt-4">Rs.</span>
+                        <span id="zakat-final-amount" class="text-6xl font-bold">0.00</span>
+                    </div>
+                    <p class="text-gray-400 mb-8 text-lg">
+                        Calculated on a total portfolio market value of <strong class="text-white">Rs. <span
+                                id="zakat-portfolio-value">0.00</span></strong>
+                    </p>
+                    <button onclick="window.print()" class="zakat-btn zakat-btn-gold px-12 py-4">
+                        <i class="fas fa-print mr-2"></i> Save Results as PDF
+                    </button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass border-t border-white/10 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">About Us</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Home</a></li>
+                        <li><a href="index.html#about"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">About us</a></li>
+                        <li><a href="index.html#service"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Our services</a></li>
+                        <li><a href="index.html#portfolio"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Projects</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Investment Tools</h4>
+                    <ul class="space-y-3">
+                        <li><a href="psx-analysis.html"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">PSX Hub</a></li>
+                        <li><a href="zakat-calculator.html" class="text-brand-primary font-bold">Zakat Calculator</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="text-gray-400 hover:text-brand-primary transition-colors">Get Free Audit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Us</h4>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        MantrixEdge<br>
+                        Islamabad, Pakistan<br>
+                        <br>
+                        <a href="mailto:neurofinancelab@gmail.com"
+                            class="hover:text-brand-primary transition-colors">neurofinancelab@gmail.com</a>
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/muneebtariq07/"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-brand-primary transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Sardarmani"
+                            class="w-10 h-10 rounded-full bg-brand-surface flex items-center justify-center text-white hover:bg-gray-600 transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Updates -->
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Market Updates</h4>
+                    <p class="text-gray-400 mb-4">Subscribe for PSX analysis alerts.</p>
+                    <form action="" method="post" class="flex gap-2">
+                        <input type="email" placeholder="Your email"
+                            class="bg-brand-surface border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-brand-primary w-full">
+                        <button type="submit"
+                            class="bg-brand-primary hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 MantrixEdge. All Rights Reserved. Precision Financial Solutions.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" id="backToTop"
+        class="fixed bottom-8 right-8 bg-brand-primary hover:bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all transform hover:scale-110 z-50 opacity-0 invisible">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/zakat-calculator.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        const nav = document.getElementById('mainNav');
+
+        if (btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = btn.querySelector('i');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+
+            // Back to Top Visibility
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+            }
+        });
+    </script>
+</body>
+
+</html>
