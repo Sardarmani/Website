@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPL – Pakistan Petroleum Ltd. | Deep Dive Analysis 2026 | MantrixEdge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --surface: #111827;
+      --surface2: #1c2436;
+      --border: #1e2d45;
+      --accent: #00d4ff;
+      --accent2: #f59e0b;
+      --green: #22c55e;
+      --red: #ef4444;
+      --text: #e2e8f0;
+      --muted: #6b7280;
+      --label: #94a3b8;
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-mono: 'Outfit', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.65;
+    }
+
+    /* NAV */
+    nav {
+      background: rgba(10, 14, 26, 0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--accent);
+      letter-spacing: -.5px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--label);
+      font-size: .85rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 72px 32px 56px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 212, 255, .08);
+      border: 1px solid rgba(0, 212, 255, .25);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: .75rem;
+      font-family: var(--font-mono);
+      color: var(--accent);
+      margin-bottom: 22px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .5;
+        transform: scale(1.3)
+      }
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 8px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      color: var(--label);
+      font-size: .95rem;
+      margin-bottom: 32px;
+      max-width: 560px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .tag {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: .75rem;
+      font-family: var(--font-mono);
+      color: var(--label);
+    }
+
+    /* PRICE BAR */
+    .price-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .price-stat .label {
+      font-size: .72rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 4px;
+    }
+
+    .price-stat .val {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .price-stat .val.big {
+      font-size: 2rem;
+      color: var(--text);
+    }
+
+    .price-stat .val.up {
+      color: var(--green);
+    }
+
+    .price-stat .val.down {
+      color: var(--red);
+    }
+
+    .price-stat .val.neutral {
+      color: var(--accent2);
+    }
+
+    /* RECOMMENDATION BADGE */
+    .rec-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, rgba(34, 197, 94, .15), rgba(0, 212, 255, .08));
+      border: 1.5px solid var(--green);
+      border-radius: 12px;
+      padding: 16px 24px;
+      margin-bottom: 40px;
+    }
+
+    .rec-pill .rec-label {
+      font-size: .72rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .rec-pill .rec-val {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .rec-pill .rec-target {
+      font-size: .85rem;
+      color: var(--label);
+      margin-left: 8px;
+    }
+
+    /* SECTIONS */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    .section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -.5px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(0, 212, 255, .12);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+    }
+
+    h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--label);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-size: .8rem;
+    }
+
+    /* GRID CARDS */
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .grid3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .grid4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    @media(max-width:700px) {
+
+      .grid2,
+      .grid3,
+      .grid4 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width:480px) {
+
+      .grid2,
+      .grid3,
+      .grid4 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      transition: .2s;
+    }
+
+    .card:hover {
+      border-color: rgba(0, 212, 255, .25);
+    }
+
+    .card .c-label {
+      font-size: .7rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 6px;
+    }
+
+    .card .c-val {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .card .c-note {
+      font-size: .75rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .card .c-val.green {
+      color: var(--green);
+    }
+
+    .card .c-val.amber {
+      color: var(--accent2);
+    }
+
+    .card .c-val.blue {
+      color: var(--accent);
+    }
+
+    .card .c-val.red {
+      color: var(--red);
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+
+    th {
+      background: var(--surface2);
+      color: var(--label);
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, .02);
+    }
+
+    td.green {
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    td.red {
+      color: var(--red);
+      font-weight: 600;
+    }
+
+    td.amber {
+      color: var(--accent2);
+      font-weight: 600;
+    }
+
+    td.blue {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* PROGRESS BARS */
+    .prog-row {
+      margin-bottom: 16px;
+    }
+
+    .prog-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: .8rem;
+      margin-bottom: 6px;
+    }
+
+    .prog-label span:first-child {
+      color: var(--label);
+    }
+
+    .prog-label span:last-child {
+      font-family: var(--font-mono);
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .prog-bg {
+      height: 6px;
+      background: var(--border);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .prog-fill {
+      height: 100%;
+      border-radius: 100px;
+    }
+
+    /* BULL/BEAR */
+    .bull-bear {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .bb-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .bb-card.bull {
+      border-top: 3px solid var(--green);
+    }
+
+    .bb-card.bear {
+      border-top: 3px solid var(--red);
+    }
+
+    .bb-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 12px;
+    }
+
+    .bb-title.bull {
+      color: var(--green);
+    }
+
+    .bb-title.bear {
+      color: var(--red);
+    }
+
+    .bb-item {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: .82rem;
+      color: var(--label);
+      line-height: 1.5;
+    }
+
+    .bb-item::before {
+      content: '';
+      min-width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .bb-card.bull .bb-item::before {
+      background: var(--green);
+    }
+
+    .bb-card.bear .bb-item::before {
+      background: var(--red);
+    }
+
+    /* SWOT */
+    .swot {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .swot-card {
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .swot-card.s {
+      background: rgba(34, 197, 94, .07);
+      border: 1px solid rgba(34, 197, 94, .2);
+    }
+
+    .swot-card.w {
+      background: rgba(239, 68, 68, .07);
+      border: 1px solid rgba(239, 68, 68, .2);
+    }
+
+    .swot-card.o {
+      background: rgba(0, 212, 255, .07);
+      border: 1px solid rgba(0, 212, 255, .2);
+    }
+
+    .swot-card.t {
+      background: rgba(245, 158, 11, .07);
+      border: 1px solid rgba(245, 158, 11, .2);
+    }
+
+    .swot-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .swot-card.s .swot-title {
+      color: var(--green);
+    }
+
+    .swot-card.w .swot-title {
+      color: var(--red);
+    }
+
+    .swot-card.o .swot-title {
+      color: var(--accent);
+    }
+
+    .swot-card.t .swot-title {
+      color: var(--accent2);
+    }
+
+    .swot-sub {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .swot-item {
+      font-size: .82rem;
+      color: var(--label);
+      margin-bottom: 6px;
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .swot-item::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      font-size: .7rem;
+    }
+
+    /* VALUATION METER */
+    .val-meter {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .meter-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .meter-label {
+      min-width: 160px;
+      font-size: .8rem;
+      color: var(--label);
+    }
+
+    .meter-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: var(--border);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .meter-bar-fill {
+      height: 100%;
+      border-radius: 100px;
+    }
+
+    .meter-val {
+      min-width: 70px;
+      text-align: right;
+      font-family: var(--font-mono);
+      font-size: .8rem;
+      color: var(--text);
+    }
+
+    /* FORECAST */
+    .forecast-row {
+      display: flex;
+      gap: 0;
+      align-items: stretch;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .fc-item {
+      flex: 1;
+      padding: 20px 16px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .fc-item:last-child {
+      border-right: none;
+    }
+
+    .fc-case {
+      font-size: .7rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .fc-price {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 800;
+    }
+
+    .fc-price.bear {
+      color: var(--red);
+    }
+
+    .fc-price.base {
+      color: var(--accent2);
+    }
+
+    .fc-price.bull {
+      color: var(--green);
+    }
+
+    .fc-note {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* DIVIDEND TIMELINE */
+    .div-timeline {
+      display: flex;
+      gap: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .div-item {
+      flex: 1;
+      padding: 18px 14px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .div-item:last-child {
+      border-right: none;
+    }
+
+    .div-year {
+      font-size: .7rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .div-amt {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent2);
+    }
+
+    .div-bar {
+      height: 4px;
+      background: var(--border);
+      margin-top: 8px;
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .div-bar-fill {
+      height: 100%;
+      background: var(--accent2);
+      border-radius: 100px;
+    }
+
+    /* INSIDER BOX */
+    .insider-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .insider-item:last-child {
+      border-bottom: none;
+    }
+
+    .insider-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(0, 212, 255, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: .9rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .insider-info {
+      flex: 1;
+    }
+
+    .insider-name {
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    .insider-role {
+      font-size: .72rem;
+      color: var(--muted);
+    }
+
+    .insider-action {
+      font-size: .8rem;
+      font-family: var(--font-mono);
+    }
+
+    .insider-action.buy {
+      color: var(--green);
+    }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      font-size: .75rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .disclaimer strong {
+      color: var(--label);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    footer .f-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      color: var(--accent);
+      font-size: .9rem;
+    }
+
+    footer .f-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    footer .f-links a {
+      color: var(--muted);
+      font-size: .78rem;
+      text-decoration: none;
+    }
+
+    footer .f-copy {
+      color: var(--muted);
+      font-size: .75rem;
+    }
+
+    /* SECTION DIVIDER LABEL */
+    .section-eye {
+      display: inline-block;
+      font-size: .68rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--accent);
+      background: rgba(0, 212, 255, .08);
+      border: 1px solid rgba(0, 212, 255, .2);
+      border-radius: 4px;
+      padding: 2px 8px;
+      margin-bottom: 10px;
+    }
+
+    /* INLINE INFO ROW */
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .85rem;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-row .ir-key {
+      color: var(--muted);
+    }
+
+    .info-row .ir-val {
+      font-weight: 500;
+      text-align: right;
+    }
+
+    /* ANIMATION */
+    .fade-in {
+      animation: fadeUp .6s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .fade-in:nth-child(1) {
+      animation-delay: .05s
+    }
+
+    .fade-in:nth-child(2) {
+      animation-delay: .12s
+    }
+
+    .fade-in:nth-child(3) {
+      animation-delay: .19s
+    }
+
+    .fade-in:nth-child(4) {
+      animation-delay: .26s
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="https://mantrixedge.com/index.html" class="nav-logo">MantrixEdge</a>
+    <div class="nav-links">
+      <a href="https://mantrixedge.com/index.html">Home</a>
+      <a href="https://mantrixedge.com/psx-analysis.html">PSX Analysis</a>
+      <a href="https://mantrixedge.com/index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge"><span class="badge-dot"></span>Analysis Date: March 14, 2026</div>
+    <h1>Pakistan Petroleum<br><span>Limited (PPL)</span></h1>
+    <p class="hero-sub">Deep Dive Equity Research & Strategic Asset Evaluation — Pakistan's Pioneer in Natural Gas & Oil
+      Exploration since 1950.</p>
+    <div class="hero-meta">
+      <span class="tag">PSX: PPL</span>
+      <span class="tag">Oil & Gas Exploration</span>
+      <span class="tag">SOE | PSWF Majority</span>
+      <span class="tag">KSE-100 Component</span>
+      <span class="tag">Fiscal Year End: June</span>
+    </div>
+
+    <!-- PRICE BAR -->
+    <div class="price-bar">
+      <div class="price-stat">
+        <div class="label">Current Price</div>
+        <div class="val big">PKR 210.62</div>
+      </div>
+      <div class="price-stat">
+        <div class="label">1-Day Change</div>
+        <div class="val down">-1.92%</div>
+      </div>
+      <div class="price-stat">
+        <div class="label">52-Week Range</div>
+        <div class="val neutral">128.56 – 284.60</div>
+      </div>
+      <div class="price-stat">
+        <div class="label">Market Cap</div>
+        <div class="val">PKR 573B</div>
+      </div>
+      <div class="price-stat">
+        <div class="label">P/E Ratio (TTM)</div>
+        <div class="val">7.06x</div>
+      </div>
+      <div class="price-stat">
+        <div class="label">YTD Change</div>
+        <div class="val down">-10.58%</div>
+      </div>
+      <div class="price-stat">
+        <div class="label">1-Year Return</div>
+        <div class="val up">+14.32%</div>
+      </div>
+      <div class="price-stat">
+        <div class="label">Analyst Target (Avg)</div>
+        <div class="val up">PKR 317</div>
+      </div>
+    </div>
+
+    <!-- RECOMMENDATION -->
+    <div class="rec-pill">
+      <div>
+        <div class="rec-label">MantrixEdge Rating</div>
+        <div class="rec-val">Strong Buy</div>
+      </div>
+      <div class="rec-target">Target Range: <strong style="color:var(--green)">PKR 270 – 320</strong> &nbsp;|&nbsp;
+        Upside: <strong style="color:var(--green)">+28% to +52%</strong> &nbsp;|&nbsp; Horizon: 12-18 Months</div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- KEY METRICS -->
+    <div class="section">
+      <span class="section-eye">Snapshot</span>
+      <h2><span class="icon">📊</span> Key Financial Metrics</h2>
+      <div class="grid4">
+        <div class="card fade-in">
+          <div class="c-label">EPS (FY25 Annual)</div>
+          <div class="c-val amber">PKR 33.82</div>
+          <div class="c-note">vs PKR 42.01 FY24 (-19.5% YoY)</div>
+        </div>
+        <div class="card fade-in">
+          <div class="c-label">EPS H1 FY26 (Latest)</div>
+          <div class="c-val blue">PKR 14.84</div>
+          <div class="c-note">Q1: 7.38 + Q2: 7.46 (cumulative)</div>
+        </div>
+        <div class="card fade-in">
+          <div class="c-label">Book Value / Share</div>
+          <div class="c-val">PKR 269.51</div>
+          <div class="c-note">P/B Ratio: 0.78x — Trading Below Book</div>
+        </div>
+        <div class="card fade-in">
+          <div class="c-label">Gross Profit Margin</div>
+          <div class="c-val green">62.59%</div>
+          <div class="c-note">World-class for E&P sector</div>
+        </div>
+        <div class="card fade-in">
+          <div class="c-label">Net Profit Margin</div>
+          <div class="c-val green">37.95%</div>
+          <div class="c-note">FY25 — Highly sustainable</div>
+        </div>
+        <div class="card fade-in">
+          <div class="c-label">Return on Equity</div>
+          <div class="c-val amber">13.04%</div>
+          <div class="c-note">Expected FY26: 10.14%</div>
+        </div>
+        <div class="card fade-in">
+          <div class="c-label">Return on Assets</div>
+          <div class="c-val">9.93%</div>
+          <div class="c-note">ROCE: 18.55% — Solid</div>
+        </div>
+        <div class="card fade-in">
+          <div class="c-label">Current Ratio</div>
+          <div class="c-val green">4.57x</div>
+          <div class="c-note">Excellent liquidity buffer</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCIALS TABLE -->
+    <div class="section">
+      <span class="section-eye">Financials</span>
+      <h2><span class="icon">📋</span> Annual Income Statement (PKR '000s)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>FY2022</th>
+              <th>FY2023</th>
+              <th>FY2024</th>
+              <th>FY2025</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Net Revenue</td>
+              <td>202,199,183</td>
+              <td>286,480,252</td>
+              <td>288,797,413</td>
+              <td class="red">242,516,363</td>
+            </tr>
+            <tr>
+              <td>Profit After Tax</td>
+              <td>53,546,164</td>
+              <td>97,937,106</td>
+              <td>114,309,077</td>
+              <td class="amber">92,027,450</td>
+            </tr>
+            <tr>
+              <td>EPS (PKR)</td>
+              <td>19.68</td>
+              <td>35.99</td>
+              <td class="green">42.01</td>
+              <td class="amber">33.82</td>
+            </tr>
+            <tr>
+              <td>EPS Growth YoY</td>
+              <td>+2.13%</td>
+              <td class="green">+82.88%</td>
+              <td class="green">+16.73%</td>
+              <td class="red">-19.50%</td>
+            </tr>
+            <tr>
+              <td>Gross Margin</td>
+              <td>65.09%</td>
+              <td class="green">66.86%</td>
+              <td class="green">65.58%</td>
+              <td>62.59%</td>
+            </tr>
+            <tr>
+              <td>Net Margin</td>
+              <td>26.48%</td>
+              <td>34.19%</td>
+              <td class="green">39.58%</td>
+              <td>37.95%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.75rem;color:var(--muted);margin-top:10px;">Source: PSX Data Portal | All figures
+        unconsolidated</p>
+    </div>
+
+    <!-- QUARTERLY FINANCIALS -->
+    <div class="section">
+      <span class="section-eye">Recent Performance</span>
+      <h2><span class="icon">📈</span> Quarterly Financials — FY26 in Focus (PKR '000s)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Quarter</th>
+              <th>Sales</th>
+              <th>PAT</th>
+              <th>EPS (PKR)</th>
+              <th>QoQ EPS Change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q2 FY25 (Oct-Dec 24)</td>
+              <td>60,720,556</td>
+              <td>27,336,299</td>
+              <td class="green">10.05</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Q3 FY25 (Jan-Mar 25)</td>
+              <td>63,824,951</td>
+              <td>21,795,150</td>
+              <td>8.01</td>
+              <td class="red">-20.3%</td>
+            </tr>
+            <tr>
+              <td>Q1 FY26 (Jul-Sep 25)</td>
+              <td>56,812,356</td>
+              <td>20,087,951</td>
+              <td>7.38</td>
+              <td class="red">-7.9%</td>
+            </tr>
+            <tr>
+              <td>Q2 FY26 (Oct-Dec 25)</td>
+              <td>61,189,733</td>
+              <td>20,299,146</td>
+              <td class="amber">7.46</td>
+              <td class="green">+1.1% (stabilising)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.78rem;color:var(--label);margin-top:12px;line-height:1.7;">
+        <strong>Key Observation:</strong> After a sharp decline from Q2 FY25's strong PKR 10.05 EPS, PPL's earnings have
+        now stabilised around PKR 7.4–7.5 per quarter in H1 FY26. The QoQ uptick in Q2 FY26 signals that the bottom is
+        likely in. Next earnings release is expected <strong>Apr 28, 2026</strong>.
+      </p>
+    </div>
+
+    <!-- VALUATION -->
+    <div class="section">
+      <span class="section-eye">Valuation</span>
+      <h2><span class="icon">🎯</span> Valuation Analysis & Peer Comparison</h2>
+      <div class="grid2" style="margin-bottom:16px;">
+        <div class="val-meter card" style="padding:24px;">
+          <h3>Valuation Metrics</h3>
+          <div class="meter-row">
+            <div class="meter-label">P/E Ratio (TTM)</div>
+            <div class="meter-bar-bg">
+              <div class="meter-bar-fill" style="width:35%;background:var(--green);"></div>
+            </div>
+            <div class="meter-val green">7.06x</div>
+          </div>
+          <div class="meter-row">
+            <div class="meter-label">Expected P/E (FY26)</div>
+            <div class="meter-bar-bg">
+              <div class="meter-bar-fill" style="width:38%;background:var(--accent);"></div>
+            </div>
+            <div class="meter-val blue">7.06x</div>
+          </div>
+          <div class="meter-row">
+            <div class="meter-label">Price / Book Value</div>
+            <div class="meter-bar-bg">
+              <div class="meter-bar-fill" style="width:39%;background:var(--green);"></div>
+            </div>
+            <div class="meter-val green">0.78x</div>
+          </div>
+          <div class="meter-row">
+            <div class="meter-label">EV / EBITDA</div>
+            <div class="meter-bar-bg">
+              <div class="meter-bar-fill" style="width:44%;background:var(--accent2);"></div>
+            </div>
+            <div class="meter-val amber">4.41x</div>
+          </div>
+          <div class="meter-row">
+            <div class="meter-label">Price / Sales</div>
+            <div class="meter-bar-bg">
+              <div class="meter-bar-fill" style="width:42%;background:var(--accent2);"></div>
+            </div>
+            <div class="meter-val amber">2.35x</div>
+          </div>
+          <div class="meter-row">
+            <div class="meter-label">EV / Sales</div>
+            <div class="meter-bar-bg">
+              <div class="meter-bar-fill" style="width:52%;background:var(--accent2);"></div>
+            </div>
+            <div class="meter-val amber">2.64x</div>
+          </div>
+        </div>
+        <div class="card" style="padding:24px;">
+          <h3>Fair Value Scenarios</h3>
+          <div class="info-row"><span class="ir-key">DDM (6% yield assumption)</span><span class="ir-val"
+              style="color:var(--green)">PKR 270 – 290</span></div>
+          <div class="info-row"><span class="ir-key">P/E Rerating (10x × EPS 30)</span><span class="ir-val"
+              style="color:var(--green)">PKR 300</span></div>
+          <div class="info-row"><span class="ir-key">Price-to-Book (1x NAV)</span><span class="ir-val"
+              style="color:var(--accent)">PKR 269</span></div>
+          <div class="info-row"><span class="ir-key">Analyst Consensus Average</span><span class="ir-val"
+              style="color:var(--green)">PKR 317</span></div>
+          <div class="info-row"><span class="ir-key">Analyst Consensus High</span><span class="ir-val"
+              style="color:var(--green)">PKR 421</span></div>
+          <div class="info-row"><span class="ir-key">MantrixEdge Base Target</span><span class="ir-val"
+              style="color:var(--green);font-weight:700">PKR 270 – 320</span></div>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);">
+            <div style="font-size:.78rem;color:var(--label);">PPL currently trades at a <strong
+                style="color:var(--green)">26%+ discount to book value</strong> and at near-historic P/E lows. At 7.06x,
+              it is significantly cheaper than OGDC (6.7x) sector peer average, and far below PSX market average of
+              15–20x.</div>
+          </div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>P/E Ratio</th>
+              <th>P/B Ratio</th>
+              <th>Net Margin</th>
+              <th>Div Yield</th>
+              <th>Market Cap (PKR B)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>PPL</strong></td>
+              <td class="green">7.06x</td>
+              <td class="green">0.78x</td>
+              <td>37.95%</td>
+              <td class="amber">~3.6%</td>
+              <td>573</td>
+            </tr>
+            <tr>
+              <td>OGDC</td>
+              <td>6.7x</td>
+              <td>0.84x</td>
+              <td>42.4%</td>
+              <td>5.5%</td>
+              <td>1,120</td>
+            </tr>
+            <tr>
+              <td>POL</td>
+              <td>~8x</td>
+              <td>~1.2x</td>
+              <td>~35%</td>
+              <td>12%+</td>
+              <td>187</td>
+            </tr>
+            <tr>
+              <td>MARI</td>
+              <td>~9x</td>
+              <td>~1.1x</td>
+              <td>~38%</td>
+              <td>~4%</td>
+              <td>~260</td>
+            </tr>
+            <tr>
+              <td>PSX Market Avg</td>
+              <td>15-20x</td>
+              <td>1.5x+</td>
+              <td>Variable</td>
+              <td>~4-5%</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FORECAST -->
+    <div class="section">
+      <span class="section-eye">Price Targets</span>
+      <h2><span class="icon">🔭</span> Price Forecast — 12 to 18 Month Outlook</h2>
+      <div class="forecast-row">
+        <div class="fc-item">
+          <div class="fc-case">Bear Case</div>
+          <div class="fc-price bear">PKR 200</div>
+          <div class="fc-note">Oil price crash below $65/bbl, heavy circular debt, no policy support</div>
+        </div>
+        <div class="fc-item">
+          <div class="fc-case">Base Case</div>
+          <div class="fc-price base">PKR 270 – 295</div>
+          <div class="fc-note">Stable oil prices, gradual debt recovery, Reko Diq progress on track</div>
+        </div>
+        <div class="fc-item">
+          <div class="fc-case">Bull Case</div>
+          <div class="fc-price bull">PKR 320 – 360</div>
+          <div class="fc-note">Oil >$85/bbl, circular debt resolution, new discoveries, Reko Diq re-rating</div>
+        </div>
+        <div class="fc-item">
+          <div class="fc-case">Analyst High</div>
+          <div class="fc-price bull">PKR 421</div>
+          <div class="fc-note">Max estimate from 8 buy-rated analysts (Investing.com consensus)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIVIDENDS -->
+    <div class="section">
+      <span class="section-eye">Income</span>
+      <h2><span class="icon">💰</span> Dividend Profile & History</h2>
+      <div class="grid3" style="margin-bottom:16px;">
+        <div class="card">
+          <div class="c-label">Last Annual Dividend</div>
+          <div class="c-val amber">PKR 7.50</div>
+          <div class="c-note">FY25 — Payout Ratio: ~22%</div>
+        </div>
+        <div class="card">
+          <div class="c-label">H1 FY26 Dividend Paid</div>
+          <div class="c-val green">PKR 4.00</div>
+          <div class="c-note">1st Interim: Rs.2 | 2nd Interim: Rs.2 (Mar 12, 2026 credit)</div>
+        </div>
+        <div class="card">
+          <div class="c-label">Dividend Yield (TTM)</div>
+          <div class="c-val amber">3.6%</div>
+          <div class="c-note">Dividend cover: 4.51x — Very safe</div>
+        </div>
+      </div>
+      <div class="div-timeline">
+        <div class="div-item">
+          <div class="div-year">FY2022</div>
+          <div class="div-amt">PKR 4.5</div>
+          <div class="div-bar">
+            <div class="div-bar-fill" style="width:50%"></div>
+          </div>
+        </div>
+        <div class="div-item">
+          <div class="div-year">FY2023</div>
+          <div class="div-amt">PKR 8.5</div>
+          <div class="div-bar">
+            <div class="div-bar-fill" style="width:70%"></div>
+          </div>
+        </div>
+        <div class="div-item">
+          <div class="div-year">FY2024</div>
+          <div class="div-amt">PKR 9.0</div>
+          <div class="div-bar">
+            <div class="div-bar-fill" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="div-item">
+          <div class="div-year">FY2025</div>
+          <div class="div-amt">PKR 7.5</div>
+          <div class="div-bar">
+            <div class="div-bar-fill" style="width:65%"></div>
+          </div>
+        </div>
+        <div class="div-item">
+          <div class="div-year">FY26 H1 (So Far)</div>
+          <div class="div-amt">PKR 4.0</div>
+          <div class="div-bar">
+            <div class="div-bar-fill" style="width:42%"></div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:10px;">Note: PPL's low payout ratio (~22%) means
+        dividends are not a primary draw vs peers like POL. However, the payout is extremely safe (4.51x cover) with
+        room to grow if earnings recover.</p>
+    </div>
+
+    <!-- OPERATIONS -->
+    <div class="section">
+      <span class="section-eye">Business</span>
+      <h2><span class="icon">🛢️</span> Operational Overview & Exploration Portfolio</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Core Production Fields</h3>
+          <div class="info-row"><span class="ir-key">Sui (Balochistan)</span><span class="ir-val">Largest producing
+              field — gas dominant</span></div>
+          <div class="info-row"><span class="ir-key">Adhi (Punjab)</span><span class="ir-val">Multi-product: oil, gas,
+              NGL</span></div>
+          <div class="info-row"><span class="ir-key">Kandhkot (Sindh)</span><span class="ir-val">Gas — major operated
+              block</span></div>
+          <div class="info-row"><span class="ir-key">Chachar (Sindh)</span><span class="ir-val">Gas producing</span>
+          </div>
+          <div class="info-row"><span class="ir-key">Mazarani, Adam, Shadadpur</span><span class="ir-val">Multiple
+              southern Sindh fields</span></div>
+          <div class="info-row"><span class="ir-key">Total Producing Fields</span><span class="ir-val blue">~16
+              Producing Fields</span></div>
+        </div>
+        <div class="card">
+          <h3>Exploration Portfolio</h3>
+          <div class="info-row"><span class="ir-key">Total Exploration Assets</span><span class="ir-val blue">~52
+              Blocks</span></div>
+          <div class="info-row"><span class="ir-key">Operated Blocks (Onshore)</span><span class="ir-val">29+ (incl.
+              offshore)</span></div>
+          <div class="info-row"><span class="ir-key">Partner Operated Blocks</span><span class="ir-val">23 (incl. Yemen
+              concession)</span></div>
+          <div class="info-row"><span class="ir-key">Abu Dhabi (UAE) — Offshore Block 5</span><span
+              class="ir-val green">PIOL — Active Exploration</span></div>
+          <div class="info-row"><span class="ir-key">Reko Diq (Copper & Gold)</span><span class="ir-val amber">PMPL —
+              25% indirect stake</span></div>
+          <div class="info-row"><span class="ir-key">Baragzai X-01 (Mar 2026)</span><span class="ir-val green">New HC
+              Discovery — Nashpa Block</span></div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px;padding:20px 24px;">
+        <h3>Strategic Highlights — 2025/26</h3>
+        <div
+          style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:.82rem;color:var(--label);line-height:1.7;">
+          <div>
+            <strong style="color:var(--accent)">Reko Diq Project:</strong> PPL holds an indirect 25% non-operating stake
+            via PMPL in Reko Diq — one of the world's largest undeveloped copper-gold deposits. This is a major
+            long-term re-rating catalyst as the mine moves towards production.
+          </div>
+          <div>
+            <strong style="color:var(--accent)">Baragzai Discovery (2026):</strong> In February and March 2026, PPL
+            announced hydrocarbon discoveries from the Baragzai X-01 well (Slant) in both Lumshiwal Formation and
+            Lockhart Limestone — a positive signal for reserve additions.
+          </div>
+          <div>
+            <strong style="color:var(--accent)">Abu Dhabi Offshore:</strong> PIOL (associated company) is progressing on
+            Block 5 offshore Abu Dhabi. Finalization of development plan for the block is underway — international
+            diversification play.
+          </div>
+          <div>
+            <strong style="color:var(--accent)">Circular Debt Recovery:</strong> Major receivables are from SSGC and
+            SNGPL. Back-to-back consumer gas price increases have started improving collections from 2H FY25. This is
+            the single most important near-term catalyst.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCIAL HEALTH -->
+    <div class="section">
+      <span class="section-eye">Balance Sheet</span>
+      <h2><span class="icon">🏦</span> Financial Health & Balance Sheet</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Liquidity & Solvency</h3>
+          <div class="prog-row">
+            <div class="prog-label"><span>Current Ratio</span><span>4.57x</span></div>
+            <div class="prog-bg">
+              <div class="prog-fill" style="width:92%;background:var(--green);"></div>
+            </div>
+          </div>
+          <div class="prog-row">
+            <div class="prog-label"><span>Quick Ratio</span><span>4.81x</span></div>
+            <div class="prog-bg">
+              <div class="prog-fill" style="width:95%;background:var(--green);"></div>
+            </div>
+          </div>
+          <div class="prog-row">
+            <div class="prog-label"><span>Equity to Assets</span><span>76.13%</span></div>
+            <div class="prog-bg">
+              <div class="prog-fill" style="width:76%;background:var(--accent);"></div>
+            </div>
+          </div>
+          <div class="prog-row">
+            <div class="prog-label"><span>Debt to Equity</span><span>31.94%</span></div>
+            <div class="prog-bg">
+              <div class="prog-fill" style="width:32%;background:var(--accent2);"></div>
+            </div>
+          </div>
+          <div class="prog-row">
+            <div class="prog-label"><span>Long-Term Debt / Equity</span><span>10.56%</span></div>
+            <div class="prog-bg">
+              <div class="prog-fill" style="width:11%;background:var(--green);"></div>
+            </div>
+          </div>
+          <div class="prog-row">
+            <div class="prog-label"><span>Effective Tax Rate</span><span>33.83%</span></div>
+            <div class="prog-bg">
+              <div class="prog-fill" style="width:34%;background:var(--muted);"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Key Balance Sheet Items</h3>
+          <div class="info-row"><span class="ir-key">Total Assets (Q3 FY25)</span><span class="ir-val">PKR 963
+              Billion</span></div>
+          <div class="info-row"><span class="ir-key">Shareholders' Equity (est.)</span><span class="ir-val">PKR 733
+              Billion</span></div>
+          <div class="info-row"><span class="ir-key">Book Value Per Share</span><span class="ir-val">PKR 269.51</span>
+          </div>
+          <div class="info-row"><span class="ir-key">Cash Per Share</span><span class="ir-val">PKR 4.79</span></div>
+          <div class="info-row"><span class="ir-key">Enterprise Value</span><span class="ir-val">PKR 634 Billion</span>
+          </div>
+          <div class="info-row"><span class="ir-key">EV Per Share</span><span class="ir-val">PKR 233.16</span></div>
+          <div class="info-row"><span class="ir-key">Long-term Debt / Assets</span><span class="ir-val green">8.00% —
+              Conservative</span></div>
+          <div class="info-row"><span class="ir-key">Interest Coverage</span><span class="ir-val green">Excellent (high
+              EBITDA)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSIDER -->
+    <div class="section">
+      <span class="section-eye">Insider Signal</span>
+      <h2><span class="icon">👁️</span> Insider Transactions — Bullish Signal</h2>
+      <div class="card">
+        <div class="insider-item">
+          <div class="insider-avatar">PU</div>
+          <div class="insider-info">
+            <div class="insider-name">Pir Muhammad Usman</div>
+            <div class="insider-role">Executive — PPL</div>
+          </div>
+          <div class="insider-action buy">BUY 4,500 shares @ PKR 265.00 — Feb 6, 2026</div>
+        </div>
+        <div class="insider-item">
+          <div class="insider-avatar">PU</div>
+          <div class="insider-info">
+            <div class="insider-name">Pir Muhammad Usman</div>
+            <div class="insider-role">Executive — PPL</div>
+          </div>
+          <div class="insider-action buy">BUY 2,000 shares @ PKR 275.00 — Feb 2, 2026</div>
+        </div>
+        <div class="insider-item">
+          <div class="insider-avatar">PU</div>
+          <div class="insider-info">
+            <div class="insider-name">Pir Muhammad Usman</div>
+            <div class="insider-role">Executive — PPL</div>
+          </div>
+          <div class="insider-action buy">BUY 2,001 shares @ PKR 278.00 — Jan 30, 2026</div>
+        </div>
+      </div>
+      <p style="font-size:.78rem;color:var(--label);margin-top:10px;line-height:1.7;">
+        <strong>Significance:</strong> An executive accumulating shares at PKR 265–278 — well above the current price of
+        ~PKR 210 — is a meaningful bullish signal. Insiders buying at higher prices than today's market confirms a value
+        disconnect. The stock has fallen ~24% from insider purchase levels, representing a compelling entry for
+        long-term investors.
+      </p>
+    </div>
+
+    <!-- SWOT -->
+    <div class="section">
+      <span class="section-eye">Strategic</span>
+      <h2><span class="icon">⚡</span> SWOT Analysis</h2>
+      <div class="swot">
+        <div class="swot-card s">
+          <div class="swot-title">S</div>
+          <div class="swot-sub">Strengths</div>
+          <div class="swot-item">Pioneer & dominant E&P player — incorporated 1950, 75+ years of operations</div>
+          <div class="swot-item">Exceptional margins: 62.6% gross, 38% net — world-class for E&P</div>
+          <div class="swot-item">Huge, diversified exploration portfolio: ~52 blocks across Pakistan + UAE + Yemen</div>
+          <div class="swot-item">Deep value: P/B 0.78x, P/E 7x — significantly undervalued vs peers and book</div>
+          <div class="swot-item">Strong liquidity: Current ratio 4.57x, near-zero long-term debt at 8% of assets</div>
+          <div class="swot-item">Reko Diq strategic stake — billion-dollar copper-gold optionality</div>
+          <div class="swot-item">Insider buying at PKR 265-278 confirms fundamental value</div>
+          <div class="swot-item">SOE backing — Government of Pakistan via PSWF — systemic importance</div>
+        </div>
+        <div class="swot-card w">
+          <div class="swot-title">W</div>
+          <div class="swot-sub">Weaknesses</div>
+          <div class="swot-item">Revenue fell -16% YoY in FY25 due to lower oil prices + declining production</div>
+          <div class="swot-item">EPS declined -19.5% YoY in FY25 — negative earnings momentum</div>
+          <div class="swot-item">Natural field decline: production depletes without constant new discoveries</div>
+          <div class="swot-item">Circular debt: massive receivables tied up in SSGC and SNGPL</div>
+          <div class="swot-item">Low dividend yield (~3.6%) vs peers like POL (12%) — less income-oriented</div>
+          <div class="swot-item">Heavy exposure to domestic gas pricing — regulated prices limit upside</div>
+          <div class="swot-item">Large workforce (2,488 employees) — higher cost structure vs lean E&Ps</div>
+        </div>
+        <div class="swot-card o">
+          <div class="swot-title">O</div>
+          <div class="swot-sub">Opportunities</div>
+          <div class="swot-item">Reko Diq re-rating: as copper-gold mine progresses, asset value will be unlocked</div>
+          <div class="swot-item">Abu Dhabi offshore Block 5: development plan finalization — international upside</div>
+          <div class="swot-item">New discoveries (Baragzai, Nashpa Block, Mar 2026) replenish reserves</div>
+          <div class="swot-item">Circular debt resolution: gas price hikes improving SSGC/SNGPL collections</div>
+          <div class="swot-item">Pakistan's offshore campaign: 23 of 40 offshore blocks bid — sector-wide tailwind</div>
+          <div class="swot-item">Falling interest rates → higher P/E multiple re-rating potential for the stock</div>
+          <div class="swot-item">Tight gas and unconventional reserves — next frontier for domestic exploration</div>
+        </div>
+        <div class="swot-card t">
+          <div class="swot-title">T</div>
+          <div class="swot-sub">Threats</div>
+          <div class="swot-item">Global oil price decline (brent below $70) would directly compress revenue</div>
+          <div class="swot-item">Pakistan's energy transition risk — long-term gas demand may plateau</div>
+          <div class="swot-item">Regulatory/taxation changes — petroleum policy shifts or windfall taxes</div>
+          <div class="swot-item">Geopolitical risk — Yemen concession and cross-border operational risk</div>
+          <div class="swot-item">Currency risk: oil priced in USD, but costs partially in PKR — PKR appreciation risk
+          </div>
+          <div class="swot-item">Circular debt spiral worsening if consumer gas prices are frozen again</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BULL / BEAR -->
+    <div class="section">
+      <span class="section-eye">Investment Case</span>
+      <h2><span class="icon">⚖️</span> Bull vs. Bear Case</h2>
+      <div class="bull-bear">
+        <div class="bb-card bull">
+          <div class="bb-title bull">🟢 The Bull Case — Why Buy PPL Now</div>
+          <div class="bb-item">Trading at 0.78x book value — a rare deep discount for a profitable, state-backed E&P
+            giant</div>
+          <div class="bb-item">Insiders bought at PKR 265–278 (24% above today's price) — they see intrinsic value</div>
+          <div class="bb-item">EPS has stabilised in Q2 FY26 — the worst of the earnings downturn appears over</div>
+          <div class="bb-item">Reko Diq is a massive hidden asset — copper-gold mine can unlock billions in value</div>
+          <div class="bb-item">8 out of 8 analysts rate PPL Strong Buy with consensus target of PKR 317 (+51% upside)
+          </div>
+          <div class="bb-item">New hydrocarbon discoveries in 2026 signal active reserve replenishment</div>
+          <div class="bb-item">Gas price increases improving circular debt collections — the key financial blockage is
+            clearing</div>
+          <div class="bb-item">Pakistan's offshore bidding boom brings sector-wide attention and re-rating</div>
+          <div class="bb-item">Falling domestic interest rates make PPL's yield and growth attractive vs. savings
+            accounts</div>
+        </div>
+        <div class="bb-card bear">
+          <div class="bb-title bear">🔴 The Bear Case — Key Risks to Monitor</div>
+          <div class="bb-item">EPS down -19.5% YoY in FY25; H1 FY26 EPS of PKR 14.84 annualises to ~PKR 30 — below
+            FY25's PKR 33.82</div>
+          <div class="bb-item">YTD 2026 price down -10.58% even after already correcting from 52-week high of PKR 284
+          </div>
+          <div class="bb-item">Revenue shrinkage: FY25 sales fell 16% — structural production decline continues</div>
+          <div class="bb-item">Circular debt remains a drag on cash conversion — collections still uncertain timeline
+          </div>
+          <div class="bb-item">Oil price risk: every $5/bbl drop in crude directly impacts EPS by ~PKR 1.5–2</div>
+          <div class="bb-item">Low dividend yield (3.6%) underperforms government savings rates — competes poorly as
+            income stock</div>
+          <div class="bb-item">No near-term re-rating catalyst visible unless Reko Diq or Abu Dhabi delivers news</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OWNERSHIP -->
+    <div class="section">
+      <span class="section-eye">Ownership</span>
+      <h2><span class="icon">🏛️</span> Ownership Structure & Corporate Profile</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Shareholding</h3>
+          <div class="info-row"><span class="ir-key">Total Shares Outstanding</span><span
+              class="ir-val">2,720,967,548</span></div>
+          <div class="info-row"><span class="ir-key">Majority Shareholder</span><span class="ir-val">Pakistan Sovereign
+              Wealth Fund (PSWF) — via transfer from GOP</span></div>
+          <div class="info-row"><span class="ir-key">Free Float Shares</span><span class="ir-val">669,385,480</span>
+          </div>
+          <div class="info-row"><span class="ir-key">Free Float %</span><span class="ir-val">24.60%</span></div>
+          <div class="info-row"><span class="ir-key">Paid-Up Capital</span><span class="ir-val">PKR 27.21 Billion</span>
+          </div>
+          <div class="info-row"><span class="ir-key">Authorized Capital</span><span class="ir-val">PKR 50 Billion</span>
+          </div>
+          <div class="info-row"><span class="ir-key">Beta</span><span class="ir-val amber">1.39 — Moderate-High
+              Volatility</span></div>
+        </div>
+        <div class="card">
+          <h3>Management & Key People</h3>
+          <div class="info-row"><span class="ir-key">CEO</span><span class="ir-val">Mohammad Khalid Rehman</span></div>
+          <div class="info-row"><span class="ir-key">Chairperson</span><span class="ir-val">Shahab Rizvi</span></div>
+          <div class="info-row"><span class="ir-key">Company Secretary</span><span class="ir-val">Ali Jaffar</span>
+          </div>
+          <div class="info-row"><span class="ir-key">Auditor</span><span class="ir-val">KPMG Taseer Hadi & Co.</span>
+          </div>
+          <div class="info-row"><span class="ir-key">Registered Address</span><span class="ir-val">PIDC House, Dr.
+              Ziauddin Ahmed Road, Karachi</span></div>
+          <div class="info-row"><span class="ir-key">Total Employees</span><span class="ir-val">~2,488 (as of
+              2026)</span></div>
+          <div class="info-row"><span class="ir-key">Next Earnings Date</span><span class="ir-val green">April 28,
+              2026</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTION PLAN -->
+    <div class="section">
+      <span class="section-eye">Strategy</span>
+      <h2><span class="icon">📌</span> Investor Action Plan</h2>
+      <div class="grid3">
+        <div class="card">
+          <div class="c-label">Entry Strategy</div>
+          <div class="c-val blue" style="font-size:1.1rem;">PKR 195 – 220</div>
+          <div class="c-note" style="margin-top:8px;line-height:1.7;">Accumulate in the current zone of PKR 195–220.
+            Strong support at ~PKR 195 (near 52-week lows). Scale in on any dips toward PKR 190. <strong
+              style="color:var(--accent)">Staggered entry</strong> is preferred over lump-sum given current downtrend
+            momentum.</div>
+        </div>
+        <div class="card">
+          <div class="c-label">Time Horizon</div>
+          <div class="c-val amber" style="font-size:1.1rem;">12 – 24 Months</div>
+          <div class="c-note" style="margin-top:8px;line-height:1.7;">PPL is a patient investor's play. Catalysts
+            include Q3 FY26 earnings (Apr 28, 2026), circular debt resolution, Reko Diq news flow, and any oil price
+            recovery above $85/bbl. Long-term holders benefit from compounding and potential dividend growth.</div>
+        </div>
+        <div class="card">
+          <div class="c-label">Risk Profile</div>
+          <div class="c-val red" style="font-size:1.1rem;">Moderate-High</div>
+          <div class="c-note" style="margin-top:8px;line-height:1.7;">Beta of 1.39 means PPL moves ~40% more than the
+            KSE-100. Suitable for investors with 2+ year horizon comfortable with commodity price and policy risk.
+            <strong style="color:var(--red)">Stop Loss:</strong> PKR 180 — below this level, thesis needs re-evaluation.
+          </div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:16px;padding:24px;">
+        <h3>Position Sizing Guidelines</h3>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px;">
+          <div style="text-align:center;padding:16px;background:var(--surface2);border-radius:10px;">
+            <div
+              style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">
+              Conservative</div>
+            <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--accent);">3–5%
+            </div>
+            <div style="font-size:.75rem;color:var(--muted);margin-top:4px;">of portfolio — for income-focused investors
+            </div>
+          </div>
+          <div style="text-align:center;padding:16px;background:var(--surface2);border-radius:10px;">
+            <div
+              style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">
+              Moderate</div>
+            <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--accent2);">5–10%
+            </div>
+            <div style="font-size:.75rem;color:var(--muted);margin-top:4px;">of portfolio — balanced growth + value play
+            </div>
+          </div>
+          <div style="text-align:center;padding:16px;background:var(--surface2);border-radius:10px;">
+            <div
+              style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;">
+              Aggressive</div>
+            <div style="font-family:var(--font-display);font-size:1.4rem;font-weight:800;color:var(--green);">10–15%
+            </div>
+            <div style="font-size:.75rem;color:var(--muted);margin-top:4px;">of portfolio — high-conviction deep value
+              bet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VERDICT -->
+    <div class="section">
+      <div
+        style="background:linear-gradient(135deg,rgba(0,212,255,.07),rgba(34,197,94,.07));border:1.5px solid rgba(34,197,94,.3);border-radius:18px;padding:36px 32px;text-align:center;">
+        <div
+          style="font-size:.72rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:14px;">
+          MantrixEdge Final Verdict</div>
+        <div
+          style="font-family:var(--font-display);font-size:clamp(1.6rem,4vw,2.5rem);font-weight:800;color:var(--green);margin-bottom:12px;">
+          STRONG BUY — THE DEEP VALUE ENERGY GIANT</div>
+        <p style="color:var(--label);max-width:680px;margin:0 auto 20px;font-size:.9rem;line-height:1.8;">PPL is
+          Pakistan's oldest and most strategically significant E&P company, currently trading at a rare 22% discount to
+          book value and at just 7x earnings — near historic lows. While FY25 earnings disappointed due to lower oil
+          prices and production declines, the earnings have now stabilised in H1 FY26. The Reko Diq copper-gold stake,
+          active new discoveries, improving circular debt collections, and 8 analysts rating it Strong Buy with a PKR
+          317 average target (51% upside) make this a compelling contrarian opportunity for patient investors.</p>
+        <div style="display:inline-flex;gap:24px;flex-wrap:wrap;justify-content:center;">
+          <div style="text-align:center;">
+            <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;">Rating</div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--green);">Strong Buy
+            </div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;">Target</div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--green);">PKR 270 –
+              320</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;">Upside</div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--green);">+28% to
+              +52%</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;">Stop Loss
+            </div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--red);">PKR 180
+            </div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;">Horizon</div>
+            <div style="font-family:var(--font-display);font-weight:800;font-size:1.3rem;color:var(--amber);">12–24
+              Months</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOURCES -->
+    <div class="section">
+      <h2><span class="icon">📚</span> Sources & Data</h2>
+      <div class="card">
+        <div style="font-size:.8rem;color:var(--label);line-height:2;">
+          • PSX Data Portal (dps.psx.com.pk) — Price, financials, announcements, insider transactions<br>
+          • Pakistan Petroleum Limited Official Website (ppl.com.pk) — Dividend notices, corporate briefings<br>
+          • Standard Capital SCS Trade (scstrade.com) — Ratios, equity metrics, distributions<br>
+          • Investing.com — Analyst consensus, price targets, 8 analyst ratings<br>
+          • MarketScreener — PPL Analyst Briefing Presentation 2025<br>
+          • Federal SOE Annual Aggregate Report FY2025 — Profit comparison across state enterprises<br>
+          • PSX Financial Results Announcements (Q1 & Q2 FY26) — Feb 13, 2026<br>
+          • All data as of <strong style="color:var(--accent)">March 14, 2026</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This analysis report is produced by MantrixEdge for informational and educational
+      purposes only. It does not constitute financial advice, a solicitation to buy or sell, or an investment
+      recommendation. Past performance is not indicative of future results. All investment decisions involve risk,
+      including the possible loss of principal. Please consult a SECP-registered financial advisor before making any
+      investment. Data sourced from PSX, company filings, and third-party financial platforms — accuracy is not
+      guaranteed. MantrixEdge and its contributors hold no responsibility for investment outcomes based on this report.
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div
+    style="border-top:1px solid var(--border);padding:28px 32px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <span
+      style="font-family:var(--font-display);font-weight:800;color:var(--accent);font-size:.9rem;">MantrixEdge</span>
+    <div style="display:flex;gap:20px;">
+      <a href="https://mantrixedge.com/psx-analysis.html"
+        style="color:var(--muted);font-size:.78rem;text-decoration:none;">PSX Analysis</a>
+      <a href="https://mantrixedge.com/disclaimer.html"
+        style="color:var(--muted);font-size:.78rem;text-decoration:none;">Disclaimer</a>
+      <a href="https://mantrixedge.com/privacy-policy.html"
+        style="color:var(--muted);font-size:.78rem;text-decoration:none;">Privacy Policy</a>
+    </div>
+    <span style="color:var(--muted);font-size:.75rem;">Copyright © 2026 MantrixEdge. All Rights Reserved.</span>
+  </div>
+
+</body>
+
+</html>
